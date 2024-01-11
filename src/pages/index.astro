@@ -104,13 +104,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section> -->
 	<section>
 		<h1 class="title mb-6">Hey, I'm Justine!</h1>
-		<p class="mb-8">
+		<p class="mb-4">
 			I'm a CS graduate student at UT Dallas (May '24), with a keen interest in backend systems. I
 			have over 3 years of experience working as a Full Stack Software Engineer at Oracle Finance
 			and Resi Media. I love all things tech.
 		</p>
+		<SocialList />
 
-		<p class="mb-4">Some stuff I'm working on:</p>
+		<p class="mb-4 mt-8 lg:font-black">Some stuff I'm working on:</p>
 		<ul class="mb-8 list-inside list-disc">
 			<li>
 				<a
@@ -136,7 +137,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 
 		<p class="mb-4">Few of the previous projects:</p>
-		<ul class="mb-8 list-inside list-disc">
+		<ul class="mb-4 list-inside list-disc">
 			<li>
 				<a
 					target="_blank"
@@ -179,8 +180,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				 - Predict customer churn in a telco using a dataset containing demographic and service data
 			</li>
 		</ul>
-
-		<SocialList />
+		<p class="mb-4">
+			<a href="/posts" aria-label="View all projects" class="sm:hover:text-accent"
+				>View all projects →</a
+			>
+		</p>
 	</section>
 	<section aria-label="Blog post list" class="mt-10">
 		<h2 class="title mb-4 text-xl">Posts</h2>
