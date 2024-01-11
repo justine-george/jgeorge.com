@@ -1,0 +1,109 @@
+---
+// import { Image } from "astro:assets";
+
+import SocialList from "@/components/SocialList";
+import PageLayout from "@/layouts/Base";
+// import aboutImg from "@/assets/about-astro.png";
+
+const meta = {
+	title: "Links",
+	description: "I'm a starter theme for Astro.build",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Links</h1>
+		<p class="mb-4">Super important links to things.</p>
+
+		<h1 class="title">Featured projects</h1>
+		<ul class="mb-8 list-inside list-disc">
+			<li>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					href="https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=jgeorgeportfolio"
+					>Tab Keeper</a
+				>
+				 - Efficiently save and synchronize chrome tabs across devices without the need for personal
+				logins (Featured on Chrome Web Store)
+			</li>
+			<li>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					href="https://github.com/justine-george/book-fellow-backend-spring">Book Fellow</a
+				>
+				 - A social media platform for book lovers to share their favorite books and connect with
+				other readers
+			</li>
+		</ul>
+
+		<h1 class="title">Featured posts</h1>
+		<ul class="mb-8 list-inside list-disc">
+			<li>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					href="https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=jgeorgeportfolio"
+					>Tab Keeper</a
+				>
+				 - Efficiently save and synchronize chrome tabs across devices without the need for personal
+				logins (Featured on Chrome Web Store)
+			</li>
+			<li>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cactus-link inline-block"
+					href="https://github.com/justine-george/book-fellow-backend-spring">Book Fellow</a
+				>
+				 - A social media platform for book lovers to share their favorite books and connect with
+				other readers
+			</li>
+		</ul>
+
+		<SocialList />
+
+		<!-- <p class="mb-4">
+			Welcome to my space! I'm a passionate Full Stack Software Engineer and a current Master of
+			Science in Computer Science candidate at UT Dallas, set to graduate in May 2024. My
+			professional journey includes a fulfilling three-year tenure at Oracle Finance and a dynamic
+			summer internship at Resi Media in 2023, where I honed my skills in backend systems.
+		</p>
+		<p class="mb-4">
+			My expertise lies in full-stack development with a keen focus on backend technologies. Over my
+			career, I've amassed over three years of hands-on experience, contributing to innovative
+			projects and solutions. I'm always excited about the endless possibilities in technology and
+			how they can be leveraged to solve real-world problems.
+		</p>
+		<p class="mb-4">
+			If you're new here, I invite you to explore my blog for insights into my professional
+			experiences and thoughts on the latest in tech. Also, take a moment to peruse my projects and
+			resume to get a deeper understanding of my work and skills.
+		</p>
+		<SocialList /> -->
+
+		<!-- <div class="flex justify-center">
+			<Image
+				src={aboutImg}
+				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				loading="eager"
+				fetchpriority="high"
+			/>
+		</div> -->
+		<!-- <p>Here are my some of my awesome built in features:</p>
+		<ul class="list-inside list-disc">
+			<li>I'm ultra fast as I'm a static site</li>
+			<li>I'm fully responsive</li>
+			<li>I come with a light and dark mode</li>
+			<li>I'm easy to customise and add additional content</li>
+			<li>I have Tailwind CSS styling</li>
+			<li>Shiki code syntax highlighting</li>
+			<li>Satori for auto generating OG images for blog posts</li>
+		</ul> -->
+	</div>
+</PageLayout>

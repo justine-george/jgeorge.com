@@ -1,18 +1,21 @@
 import { defineConfig } from "astro/config";
-import fs from "fs";
+import { readFileSync } from "fs";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
 import remarkUnwrapImages from "remark-unwrap-images";
+import rehypeExternalLinks from "rehype-external-links";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
 
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
+	site: "https://jgeorge.pages.dev/",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		rehypePlugins: [
+			[rehypeExternalLinks, { target: "_blank", rel: ["nofollow, noopener, noreferrer"] }],
+		],
 		remarkRehype: { footnoteLabelProperties: { className: [""] } },
 		shikiConfig: {
 			theme: "dracula",
@@ -25,11 +28,12 @@ export default defineConfig({
 			applyBaseStyles: false,
 		}),
 		sitemap(),
-		prefetch(),
 	],
 	image: {
 		domains: ["webmention.io"],
 	},
+	// https://docs.astro.build/en/guides/prefetch/
+	prefetch: true,
 	vite: {
 		plugins: [rawFonts([".ttf"])],
 		optimizeDeps: {
@@ -45,7 +49,7 @@ function rawFonts(ext: Array<string>) {
 		// @ts-ignore:next-line
 		transform(_, id) {
 			if (ext.some((e) => id.endsWith(e))) {
-				const buffer = fs.readFileSync(id);
+				const buffer = readFileSync(id);
 				return {
 					code: `export default ${JSON.stringify(buffer)}`,
 					map: null,
