@@ -82,3 +82,15 @@ export type Summary = {
 	"content-type": string;
 	value: string;
 };
+
+export type Project = {
+	title: string;
+	description: string;
+	isFeatured?: boolean;
+	isDisabled?: boolean;
+	isOtherProject?: boolean;
+	links: {
+		github?: string;
+		demo?: string;
+	};
+};

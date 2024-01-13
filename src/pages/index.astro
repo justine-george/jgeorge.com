@@ -3,190 +3,77 @@ import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { getAllPosts, sortMDByDate } from "@/utils";
+import { projects } from "@/site-config";
+
+const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
+const otherProjects = projects.filter((project) => project.isOtherProject && !project.isDisabled);
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-// const cactusTech: Array<{ title: string; desc: string; href: string }> = [
-// 	{
-// 		title: "Astro",
-// 		desc: "Build fast websites, faster.",
-// 		href: "https://astro.build",
-// 	},
-// 	{
-// 		title: "Astro Assets",
-// 		desc: "Built-in optimized asset support.",
-// 		href: "https://docs.astro.build/en/guides/assets/",
-// 	},
-// 	{
-// 		title: "Tailwind CSS",
-// 		desc: "Rapidly build modern websites without ever leaving your HTML.",
-// 		href: "https://tailwindcss.com",
-// 	},
-// 	{
-// 		title: "Markdown",
-// 		desc: "Simple and easy-to-use markup language.",
-// 		href: "https://www.markdownguide.org/",
-// 	},
-// 	{
-// 		title: "MDX",
-// 		desc: "Markdown for the component era.",
-// 		href: "https://mdxjs.com/",
-// 	},
-// 	{
-// 		title: "Satori",
-// 		desc: "Generating png Open Graph images for blog posts.",
-// 		href: "https://github.com/vercel/satori",
-// 	},
-// 	{
-// 		title: "Pagefind",
-// 		desc: "A fully static search library.",
-// 		href: "https://pagefind.app/",
-// 	},
-// 	{
-// 		title: "Astro Icon",
-// 		desc: "An easy to use Icon component for Astro.",
-// 		href: "https://github.com/natemoo-re/astro-icon#readme",
-// 	},
-// ];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<!-- <section>
+	<section class="space-y-6">
 		<h1 class="title mb-6">Hey, I'm Justine!</h1>
-		<p class="mb-4">
-			Full Stack Software Engineer | MSCS '24 UT Dallas | Specializing in Backend | Formerly at
-			Oracle Finance & Resi Media
-		</p>
-		<p class="mb-4">
-			I'm a CS Grad @ UT Dallas (Expected May '24), a Full Stack Software Engineer with over 3 years
-			of working experience. Prev @
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				class="cactus-link inline-block"
-				href="mailto:justine.george.work@gmail.com">Oracle Finance</a
-			>,
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				class="cactus-link inline-block"
-				href="mailto:justine.george.work@gmail.com">Resi Media</a
-			>. I love all things tech.
-		</p>
-		<p class="mb-4">
-			Ways to get in touch with me:
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				class="cactus-link inline-block"
-				href="mailto:justine.george.work@gmail.com">Email</a
-			>,
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				class="cactus-link inline-block"
-				href="https://www.linkedin.com/in/justine-george/">LinkedIn</a
-			>, and
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				class="cactus-link inline-block"
-				href="https://twitter.com/jgeorge____">X</a
-			>.
-		</p>
+		<div>
+			<p class="mb-4">
+				I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
+				backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
+				Oracle Finance and Resi Media. Feel free to reach out if you want to talk tech, discuss
+				opportunities, or just send over your pet photos — I'm all ears (and paws)!
+			</p>
+			<SocialList />
+		</div>
 
-		<p class="mb-4">
-			If you are new here, checkout my blog posts below. Feel free to peruse my projects and resume
-			as well.
-		</p>
-	</section> -->
-	<section>
-		<h1 class="title mb-6">Hey, I'm Justine!</h1>
-		<p class="mb-4">
-			I'm a CS graduate student at UT Dallas (May '24), with a keen interest in backend systems. I
-			have over 3 years of experience working as a Full Stack Software Engineer at Oracle Finance
-			and Resi Media. I love all things tech.
-		</p>
-		<SocialList />
+		<div>
+			<p class="mb-4 mt-8 lg:font-black">Some stuff I'm working on:</p>
+			<ul class="mb-8 list-inside list-disc">
+				{
+					featuredProjects.map((project) => (
+						<li>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cactus-link inline-block"
+								href={project.links.demo || project.links.github}
+							>
+								{project.title}
+							</a>
+							- {project.description}
+						</li>
+					))
+				}
+			</ul>
+		</div>
 
-		<p class="mb-4 mt-8 lg:font-black">Some stuff I'm working on:</p>
-		<ul class="mb-8 list-inside list-disc">
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=jgeorgeportfolio"
-					>Tab Keeper</a
-				>
-				 - Efficiently save and synchronize chrome tabs across devices without the need for personal
-				logins (Featured on Chrome Web Store)
-			</li>
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/justine-george/book-fellow-backend-spring">Book Fellow</a
-				>
-				 - A social media platform for book lovers to share their favorite books and connect with
-				other readers
-			</li>
-		</ul>
-
-		<p class="mb-4">Few of the previous projects:</p>
-		<ul class="mb-4 list-inside list-disc">
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/anthea97/planet">Planet</a
-				>
-				 - An event planner application for both personal and professional event planning, built
-				with Next.js, React, MongoDB, and Redux
-			</li>
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads"
-					>Seeking Tutor Problem</a
-				>
-				 - A solution that synchronizes the activities of the coordinator, tutors, and students
-				using POSIX threads, mutex locks, and semaphores
-			</li>
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/justine-george/morris-game-variant-project">8 Men Morris Game</a
-				>
-				 - A variant of the classic nine men's morris board game, implemented using both MiniMax and
-				Alpha-Beta pruning algorithms
-			</li>
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/justine-george/telco-customer-churn-prediction"
-					>Customer Churn Predict Analysis</a
-				>
-				 - Predict customer churn in a telco using a dataset containing demographic and service data
-			</li>
-		</ul>
+		<div>
+			<p class="mb-4">And some older projects:</p>
+			<ul class="mb-4 list-inside list-disc">
+				{
+					otherProjects.map((project) => (
+						<li>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cactus-link inline-block"
+								href={project.links.demo || project.links.github}
+							>
+								{project.title}
+							</a>
+							- {project.description}
+						</li>
+					))
+				}
+			</ul>
+		</div>
 		<p class="mb-4">
-			<a href="/posts" aria-label="View all projects" class="sm:hover:text-accent"
+			<a href="/projects" aria-label="View all projects" class="sm:hover:text-accent"
 				>View all projects →</a
 			>
 		</p>
 	</section>
-	<section aria-label="Blog post list" class="mt-10">
+	<section aria-label="Blog post list" class="mt-8 space-y-6">
 		<h2 class="title mb-4 text-xl">Posts</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
@@ -207,17 +94,17 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<h2 class="title mb-4 text-xl">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
-				cactusTech.map(({ href, title, desc }) => (
+				otherProjects.map(({ links, title, description }) => (
 					<li>
 						<a
-							href={href}
+							href={links.demo || links.github}
 							target="_blank"
 							rel="noopener noreferrer"
 							class="cactus-link inline-block"
 						>
 							{title}
 						</a>
-						:<p class="inline-block sm:mt-2">{desc}</p>
+						:<p class="inline-block sm:mt-2">{description.slice(0, 10)}</p>
 					</li>
 				))
 			}
