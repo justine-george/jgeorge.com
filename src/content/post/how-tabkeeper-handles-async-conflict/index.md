@@ -5,6 +5,7 @@ description: "Tab Keeper has moved to an anonymous login system, leveraging chro
 publishDate: "04 Oct 2023"
 tags: ["tab keeper"]
 draft: false
+featured: true
 ---
 
 In the initial version of the app, users were required to register and log in to sync their data across devices. While this method was effective, it presented an extra step that could potentially hinder the smooth user experience we aimed to provide. Thus, to mitigate this friction, we transitioned to an anonymous login mechanism using `chrome.storage.sync`. This API, akin to `localStorage`, syncs data across devices as long as Chrome sync is enabled. This shift eradicated the need for manual user registration, simplifying the user’s first interaction with our app considerably.

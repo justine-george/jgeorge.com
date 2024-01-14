@@ -1,8 +1,8 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
-import SocialList from "@/components/SocialList";
 import { getAllPosts, sortMDByDate } from "@/utils";
+import SocialList from "@/components/SocialList";
 import { projects } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);

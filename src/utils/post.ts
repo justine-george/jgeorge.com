@@ -8,6 +8,12 @@ export async function getAllPosts() {
 	});
 }
 
+export async function getAllFeaturedPosts() {
+	return await getCollection("post", ({ data }) => {
+		return (import.meta.env.PROD ? data.draft !== true : true) && data.featured;
+	});
+}
+
 export function sortMDByDate(posts: Array<CollectionEntry<"post">>) {
 	return posts.sort((a, b) => {
 		const aDate = new Date(a.data.updatedDate ?? a.data.publishDate).valueOf();

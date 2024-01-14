@@ -4,6 +4,8 @@
 import SocialList from "@/components/SocialList";
 import PageLayout from "@/layouts/Base";
 // import aboutImg from "@/assets/about-astro.png";
+import PostPreview from "@/components/blog/PostPreview";
+import { getAllFeaturedPosts, sortMDByDate } from "@/utils";
 import { resumeLink } from "@/site-config";
 import { projects } from "@/site-config";
 
@@ -13,6 +15,10 @@ const meta = {
 };
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
+
+const MAX_POSTS = 2;
+const allPosts = await getAllFeaturedPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={meta}>
@@ -62,27 +68,13 @@ const featuredProjects = projects.filter((project) => project.isFeatured && !pro
 	<section class="mt-10 space-y-6">
 		<h1 class="title text-xl">Featured Posts</h1>
 		<ul class="list-inside list-disc">
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=jgeorgeportfolio"
-					>Tab Keeper</a
-				>
-				 - Efficiently save and synchronize chrome tabs across devices without the need for personal
-				logins (Featured on Chrome Web Store)
-			</li>
-			<li>
-				<a
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cactus-link inline-block"
-					href="https://github.com/justine-george/book-fellow-backend-spring">Book Fellow</a
-				>
-				 - A social media platform for book lovers to share their favorite books and connect with
-				other readers
-			</li>
+			{
+				allPostsByDate.map((p) => (
+					<li class="flex flex-col gap-x-2">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
 		</ul>
 		<p>
 			<a href="/posts" aria-label="View all posts" class="sm:hover:text-accent">View all posts →</a>
