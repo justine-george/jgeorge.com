@@ -4,6 +4,7 @@
 import SocialList from "@/components/SocialList";
 import PageLayout from "@/layouts/Base";
 // import aboutImg from "@/assets/about-astro.png";
+import { resumeLink } from "@/site-config";
 import { projects } from "@/site-config";
 
 const meta = {
@@ -18,13 +19,13 @@ const featuredProjects = projects.filter((project) => project.isFeatured && !pro
 	<section class="space-y-6">
 		<h1 class="title">Links</h1>
 		<div>
-			<p class="mb-4">
+			<p>
 				Here's my
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
 					class="cactus-link inline-block"
-					href="https://drive.google.com/file/d/1e2FBiYFpmFpnS23UB0Ym8NShkX4YZUVF/view?usp=drive_link"
+					href={resumeLink}
 				>
 					resume
 				</a>, and a couple of links to important things.
@@ -32,9 +33,9 @@ const featuredProjects = projects.filter((project) => project.isFeatured && !pro
 		</div>
 	</section>
 
-	<section class="mt-8 space-y-6">
-		<h1 class="title">Featured projects</h1>
-		<ul class="mb-8 list-inside list-disc">
+	<section class="mt-10 space-y-6">
+		<h1 class="title text-xl">Featured Projects</h1>
+		<ul class="list-inside list-disc">
 			{
 				featuredProjects.map((project) => (
 					<li>
@@ -51,16 +52,16 @@ const featuredProjects = projects.filter((project) => project.isFeatured && !pro
 				))
 			}
 		</ul>
-		<p class="mb-4">
+		<p>
 			<a href="/projects" aria-label="View all projects" class="sm:hover:text-accent"
 				>View all projects →</a
 			>
 		</p>
 	</section>
 
-	<section class="mt-8 space-y-6">
-		<h1 class="title">Featured posts</h1>
-		<ul class="mb-8 list-inside list-disc">
+	<section class="mt-10 space-y-6">
+		<h1 class="title text-xl">Featured Posts</h1>
+		<ul class="list-inside list-disc">
 			<li>
 				<a
 					target="_blank"
@@ -83,32 +84,13 @@ const featuredProjects = projects.filter((project) => project.isFeatured && !pro
 				other readers
 			</li>
 		</ul>
-		<p class="mb-4">
+		<p>
 			<a href="/posts" aria-label="View all posts" class="sm:hover:text-accent">View all posts →</a>
 		</p>
 	</section>
-	<section class="mt-8 space-y-6">
+	<section class="mt-10 space-y-6">
 		<SocialList />
 	</section>
-
-	<!-- <p class="mb-4">
-			Welcome to my space! I'm a passionate Full Stack Software Engineer and a current Master of
-			Science in Computer Science candidate at UT Dallas, set to graduate in May 2024. My
-			professional journey includes a fulfilling three-year tenure at Oracle Finance and a dynamic
-			summer internship at Resi Media in 2023, where I honed my skills in backend systems.
-		</p>
-		<p class="mb-4">
-			My expertise lies in full-stack development with a keen focus on backend technologies. Over my
-			career, I've amassed over three years of hands-on experience, contributing to innovative
-			projects and solutions. I'm always excited about the endless possibilities in technology and
-			how they can be leveraged to solve real-world problems.
-		</p>
-		<p class="mb-4">
-			If you're new here, I invite you to explore my blog for insights into my professional
-			experiences and thoughts on the latest in tech. Also, take a moment to peruse my projects and
-			resume to get a deeper understanding of my work and skills.
-		</p>
-		<SocialList /> -->
 
 	<!-- <div class="flex justify-center">
 			<Image

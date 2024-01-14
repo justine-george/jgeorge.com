@@ -21,7 +21,8 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	webmentions: {
-		link: "https://webmention.io/jgeorge.pages.dev/webmention",
+		link: "",
+		// link: "https://webmention.io/jgeorge.pages.dev/webmention",
 	},
 };
 
@@ -44,6 +45,9 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/posts/",
 	},
 ];
+
+export const resumeLink: string =
+	"https://drive.google.com/file/d/1e2FBiYFpmFpnS23UB0Ym8NShkX4YZUVF/view?usp=drive_link";
 
 export const projects: Array<Project> = [
 	{
@@ -69,7 +73,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Planet",
 		description:
-			"An event planner application built with NextJS, React, MongoDB, Redux, and Passport.js",
+			"An event planner application built with Next.js, React, MongoDB, Redux, and Passport.js",
 		links: {
 			github: "https://github.com/anthea97/planet",
 			demo: "",
@@ -94,6 +98,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
 		},
+		isOtherProject: true,
 	},
 	{
 		title: "8 Men Morris Game",

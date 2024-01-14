@@ -8,27 +8,25 @@ import { projects } from "@/site-config";
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
 const otherProjects = projects.filter((project) => project.isOtherProject && !project.isDisabled);
 
-const MAX_POSTS = 10;
+const MAX_POSTS = 2;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section class="space-y-6">
-		<h1 class="title mb-6">Hey, I'm Justine!</h1>
-		<div>
-			<p class="mb-4">
-				I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
-				backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
-				Oracle Finance and Resi Media. Feel free to reach out if you want to talk tech, discuss
-				opportunities, or just send over your pet photos — I'm all ears (and paws)!
-			</p>
-			<SocialList />
-		</div>
+		<h1 class="title">Hey, I'm Justine!</h1>
+		<p class="mb-4">
+			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
+			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
+			Oracle Finance and Resi Media. Feel free to reach out if you want to talk tech, discuss
+			opportunities, or just send over your pet photos — I'm all ears (and paws)!
+		</p>
+		<SocialList />
 
 		<div>
-			<p class="mb-4 mt-8 lg:font-black">Some stuff I'm working on:</p>
-			<ul class="mb-8 list-inside list-disc">
+			<p class="mb-4 lg:font-black">Some stuff I'm working on:</p>
+			<ul class="list-inside list-disc">
 				{
 					featuredProjects.map((project) => (
 						<li>
@@ -48,8 +46,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 
 		<div>
-			<p class="mb-4">And some older projects:</p>
-			<ul class="mb-4 list-inside list-disc">
+			<p class="mb-4 lg:font-black">And some older projects:</p>
+			<ul class="list-inside list-disc">
 				{
 					otherProjects.map((project) => (
 						<li>
@@ -67,24 +65,24 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				}
 			</ul>
 		</div>
-		<p class="mb-4">
+		<p>
 			<a href="/projects" aria-label="View all projects" class="sm:hover:text-accent"
 				>View all projects →</a
 			>
 		</p>
 	</section>
-	<section aria-label="Blog post list" class="mt-8 space-y-6">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4 sm:space-y-2">
+	<section aria-label="Blog post list" class="mt-10 space-y-6">
+		<h2 class="title text-xl">Recent Posts</h2>
+		<ul class="space-y-4 sm:space-y-4">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 sm:flex-row">
+					<li class="flex flex-col gap-x-2">
 						<PostPreview post={p} />
 					</li>
 				))
 			}
 		</ul>
-		<p class="mt-4">
+		<p>
 			<a href="/posts" aria-label="View all blog posts" class="sm:hover:text-accent"
 				>View all posts →</a
 			>
