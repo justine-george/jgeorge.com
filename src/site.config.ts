@@ -44,6 +44,14 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Posts",
 		path: "/posts/",
 	},
+	// {
+	// 	title: "Projects",
+	// 	path: "/projects/",
+	// },
+	// {
+	// 	title: "Resume",
+	// 	path: "/resume/",
+	// },
 ];
 
 export const resumeLink: string =
