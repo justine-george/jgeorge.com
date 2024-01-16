@@ -1,7 +1,7 @@
 ---
 title: "Deep Dive into Tab Keeper's Anonymous Login Mechanism"
 description: "An in-depth look at how Tab Keeper leverages the chrome.storage API for efficient and secure cross-device synchronization"
-publishDate: "04 Oct 2023"
+publishDate: "15 Jan 2024"
 tags: ["tab keeper", "chrome extension", "system design", "anonymous login"]
 draft: false
 featured: true
