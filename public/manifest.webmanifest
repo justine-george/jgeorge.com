@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Justine George's Portfolio",
+	"short_name": "jgeorge_blog",
+	"description": "Justine George's Personal Website and Blog",
 	"icons": [
 		{
 			"src": "/192x192.png",

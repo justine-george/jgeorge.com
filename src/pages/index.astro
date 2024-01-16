@@ -14,7 +14,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section class="space-y-6">
+	<section aria-label="Landing page intro" class="space-y-6">
 		<h1 class="title">Hey, I'm Justine!</h1>
 		<p class="mb-4">
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
@@ -23,54 +23,52 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			opportunities, or just send over your pet photos — I'm all ears (and paws)!
 		</p>
 		<SocialList />
+	</section>
+	<section aria-label="Projects list" class="mt-8 space-y-6">
+		<p class="mb-4 lg:font-black">Some stuff I'm working on:</p>
+		<ul class="list-inside list-disc space-y-2">
+			{
+				featuredProjects.map((project) => (
+					<li>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							class="cactus-link inline-block"
+							href={project.links.demo || project.links.github}
+						>
+							{project.title}
+						</a>
+						- {project.description}
+					</li>
+				))
+			}
+		</ul>
 
-		<div>
-			<p class="mb-4 lg:font-black">Some stuff I'm working on:</p>
-			<ul class="list-inside list-disc">
-				{
-					featuredProjects.map((project) => (
-						<li>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								class="cactus-link inline-block"
-								href={project.links.demo || project.links.github}
-							>
-								{project.title}
-							</a>
-							- {project.description}
-						</li>
-					))
-				}
-			</ul>
-		</div>
-
-		<div>
-			<p class="mb-4 lg:font-black">And some older projects:</p>
-			<ul class="list-inside list-disc">
-				{
-					otherProjects.map((project) => (
-						<li>
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								class="cactus-link inline-block"
-								href={project.links.demo || project.links.github}
-							>
-								{project.title}
-							</a>
-							- {project.description}
-						</li>
-					))
-				}
-			</ul>
-		</div>
+		<p class="mb-4 lg:font-black">And some older projects:</p>
+		<ul class="list-inside list-disc space-y-2">
+			{
+				otherProjects.map((project) => (
+					<li>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							class="cactus-link inline-block"
+							href={project.links.demo || project.links.github}
+						>
+							{project.title}
+						</a>
+						- {project.description}
+					</li>
+				))
+			}
+		</ul>
 		<p>
 			<a href="/projects" aria-label="View all projects" class="sm:hover:text-accent"
 				>View all projects →</a
 			>
 		</p>
 	</section>
+
 	<section aria-label="Blog post list" class="mt-10 space-y-6">
 		<h2 class="title text-xl">Recent Posts</h2>
 		<ul class="space-y-4 sm:space-y-4">

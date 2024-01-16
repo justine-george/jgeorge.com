@@ -6,7 +6,8 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: "Justine George",
 	// Meta property used as the default description meta property
-	description: "Justine George's portfolio website with a blog and projects.",
+	description:
+		"Hey, I'm Justine! I'm a software engineer based in USA, and I love to build things.",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -59,9 +60,9 @@ export const resumeLink: string =
 
 export const projects: Array<Project> = [
 	{
-		title: "Tab Keeper",
+		title: "Tab Keeper (Featured Chrome Extension)",
 		description:
-			"Efficiently save and synchronize chrome tabs across devices without the need for personal logins (Featured on Chrome Web Store)",
+			"Efficiently save and synchronize chrome tabs across devices without the need for personal logins",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
 			demo: "https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
@@ -79,7 +80,7 @@ export const projects: Array<Project> = [
 		isFeatured: true,
 	},
 	{
-		title: "Planet",
+		title: "Planet - Event Planner App",
 		description:
 			"An event planner application built with Next.js, React, MongoDB, Redux, and Passport.js",
 		links: {

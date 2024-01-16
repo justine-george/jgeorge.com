@@ -41,7 +41,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 	<section class="mt-10 space-y-6">
 		<h1 class="title text-xl">Featured Projects</h1>
-		<ul class="list-inside list-disc">
+		<ul class="list-inside list-disc space-y-2">
 			{
 				featuredProjects.map((project) => (
 					<li>
@@ -67,7 +67,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 	<section class="mt-10 space-y-6">
 		<h1 class="title text-xl">Featured Posts</h1>
-		<ul class="list-inside list-disc">
+		<ul class="list-inside list-disc space-y-2">
 			{
 				allPostsByDate.map((p) => (
 					<li class="flex flex-col gap-x-2">
