@@ -4,6 +4,7 @@ import PostPreview from "@/components/blog/PostPreview";
 import { getAllPosts, sortMDByDate } from "@/utils";
 import SocialList from "@/components/SocialList";
 import { projects } from "@/site-config";
+import { resumeLink } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
 const otherProjects = projects.filter((project) => project.isOtherProject && !project.isDisabled);
@@ -16,11 +17,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 <PageLayout meta={{ title: "Home" }}>
 	<section aria-label="Landing page intro" class="space-y-6">
 		<h1 class="title">Hey, I'm Justine!</h1>
-		<p class="mb-4">
+		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
 			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
 			Oracle Finance and Resi Media. Feel free to reach out if you want to talk tech, discuss
 			opportunities, or just send over your pet photos — I'm all ears (and paws)!
+		</p>
+		<p>
+			<a href={resumeLink} aria-label="View my resume" class="cactus-link inline-block"
+				>This is my resume.</a
+			>
 		</p>
 		<SocialList />
 	</section>
@@ -43,7 +49,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				))
 			}
 		</ul>
-
+	</section>
+	<section aria-label="Projects list" class="mt-8 space-y-6">
 		<p class="mb-4 lg:font-black">And some older projects:</p>
 		<ul class="list-inside list-disc space-y-2">
 			{

@@ -38,7 +38,7 @@ Based on user feedback, I'm exploring the idea of adding an optional login modul
 
 ## Impact on User Experience
 
-The shift to anonymous login has been a game-changer for Tab Keeper. This feature has not only streamlined the user experience, making the extension more efficient and secure, but it has also been instrumental in its growth to over 350 monthly active users worldwide. This increase in users is a testament to the appeal of hassle-free and seamless cross-device synchronization without the need for a cumbersome login process. As Tab Keeper continues to evolve, I remain committed to this journey of innovation, always with an ear to the ground for your invaluable feedback and suggestions.
+The shift to anonymous login has been a game-changer for Tab Keeper. This feature has not only streamlined the user experience, making the extension more efficient and secure, but it has also been instrumental in its growth to over 400 monthly active users worldwide. This increase in users is a testament to the appeal of hassle-free and seamless cross-device synchronization without the need for a cumbersome login process. As Tab Keeper continues to evolve, I remain committed to this journey of innovation, always with an ear to the ground for your invaluable feedback and suggestions.
 
 [^1]: [Tab Keeper GitHub Repository](https://github.com/justine-george/tab-keeper-react-chrome-extension)
 [^2]: [API reference for `chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)
