@@ -24,8 +24,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			opportunities, or just send over your pet photos — I'm all ears (and paws)!
 		</p>
 		<p>
-			<a href={resumeLink} aria-label="View my resume" class="cactus-link inline-block"
-				>This is my resume.</a
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				href={resumeLink}
+				aria-label="View my resume"
+				class="cactus-link inline-block">This is my resume.</a
 			>
 		</p>
 		<SocialList />
