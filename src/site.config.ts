@@ -33,10 +33,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Home",
 		path: "/",
 	},
-	{
-		title: "About",
-		path: "/about/",
-	},
+	// {
+	// 	title: "Work",
+	// 	path: "/work/",
+	// },
 	{
 		title: "Links",
 		path: "/links/",
@@ -45,18 +45,19 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Posts",
 		path: "/posts/",
 	},
-	// {
-	// 	title: "Projects",
-	// 	path: "/projects/",
-	// },
+	{
+		title: "About",
+		path: "/about/",
+	},
 	// {
 	// 	title: "Resume",
 	// 	path: "/resume/",
 	// },
 ];
 
-export const resumeLink: string =
-	"https://drive.google.com/file/d/1e2FBiYFpmFpnS23UB0Ym8NShkX4YZUVF/view?usp=drive_link";
+// export const resumeLink: string =
+// 	"https://drive.google.com/file/d/1e2FBiYFpmFpnS23UB0Ym8NShkX4YZUVF/view?usp=drive_link";
+export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
 export const projects: Array<Project> = [
 	{
