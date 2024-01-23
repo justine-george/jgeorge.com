@@ -70,7 +70,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<ul class="list-inside list-disc space-y-2">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2">
+					<li class="flex flex-col gap-2">
 						<PostPreview post={p} />
 					</li>
 				))
