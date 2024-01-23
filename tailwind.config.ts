@@ -29,6 +29,7 @@ export default {
 			},
 			fontFamily: {
 				// Add any custom fonts here
+				custom: ["Merriweather", "serif"],
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
 			},
