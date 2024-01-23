@@ -13,7 +13,7 @@ featured: true
 
 ## Rationale Behind the Shift
 
-It's amazing how a single comment can shift your perspective. That's what happened with Tab Keeper. After seeing a Reddit discussion pointing out the unnecessary hassle of the login process, it clicked: why not make things simpler? So, I decided to integrate the `chrome.storage` API for an anonymous login experience. The goal was to streamline the data synchronization across devices, emphasizing security and privacy without the cumbersome login steps. Long gone are the days when users had to sign up with their private email addresses just to enjoy seamless cross-device data synchronization.
+It's amazing how a single comment can shift your perspective. That's what happened with Tab Keeper. After seeing a discussion on Reddit, pointing out how forcing a new user to sign up manually could deter them from ever using the cloud sync feature, it clicked: why not make things simpler? So, I decided to integrate the `chrome.storage` API for an anonymous login experience. The goal was to streamline the data synchronization across devices, emphasizing security and privacy without the cumbersome login steps. Long gone are the days when users had to sign up with their private email addresses just to enjoy seamless cross-device data synchronization.
 
 ## How It Works
 

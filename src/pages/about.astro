@@ -1,6 +1,6 @@
 ---
 // import { Image } from "astro:assets";
-
+import { Icon } from "astro-icon";
 import SocialList from "@/components/SocialList";
 import PageLayout from "@/layouts/Base";
 // import aboutImg from "@/assets/about-astro.png";
@@ -10,6 +10,44 @@ const meta = {
 	title: "About",
 	description: "I'm a starter theme for Astro.build",
 };
+
+const technicalSkills: Array<{
+	name: string;
+	icon: string;
+	skills: Array<string>;
+}> = [
+	{
+		name: "Languages",
+		icon: "mdi:language",
+		skills: ["Java", "Python", "TypeScript", "JavaScript", "SQL", "C/C++", "Bash"],
+	},
+	{
+		name: "Backend",
+		icon: "mdi:server",
+		skills: ["Spring Framework", "Apache Kafka", "Node.js", "Express", "JUnit", "OAuth2"],
+	},
+	{
+		name: "Databases",
+		icon: "mdi:database",
+		skills: ["PostgreSQL", "MongoDB", "Oracle SQL", "MySQL", "Cassandra", "Redis"],
+	},
+	{
+		name: "DevOps",
+		// icon: "mdi:source-branch",
+		icon: "mdi:cogs",
+		skills: ["Docker", "GitHub Actions", "Jenkins", "Prometheus", "Grafana", "Terraform"],
+	},
+	{
+		name: "Cloud Platforms",
+		icon: "mdi:cloud",
+		skills: ["Google Cloud Platform (GCP)", "Amazon Web Services (AWS)"],
+	},
+	{
+		name: "Frontend",
+		icon: "mdi:monitor-dashboard",
+		skills: ["Next.js", "Astro", "React", "Redux", "Emotion CSS", "Tailwind CSS", "Jest"],
+	},
+];
 ---
 
 <PageLayout meta={meta}>
@@ -38,12 +76,20 @@ const meta = {
 		<div>
 			<p class="title mb-4 text-xl">Technical Skills:</p>
 			<ul class="list-inside list-disc space-y-2">
-				<li>Languages - Java, Python, TypeScript, JavaScript, SQL, C/C++, Bash</li>
-				<li>Backend - Spring Framework, Apache Kafka, Node.js, Express, JUnit, OAuth2</li>
-				<li>Databases - PostgreSQL, MongoDB, Oracle SQL, MySQL, Cassandra, Redis</li>
-				<li>DevOps - Docker, GitHub Actions, Jenkins, Prometheus, Grafana, Terraform</li>
-				<li>Cloud Platforms - Google Cloud Platform (GCP), Amazon Web Services (AWS)</li>
-				<li>Frontend - Next.js, Astro, React, Redux, Emotion CSS, Tailwind CSS, Jest</li>
+				{
+					technicalSkills.map((section) => (
+						<li>
+							{section.name}
+							<Icon
+								class="inline-block h-6 w-6"
+								name={section.icon}
+								aria-hidden="true"
+								focusable="false"
+							/>
+							- {section.skills.join(", ")}
+						</li>
+					))
+				}
 			</ul>
 		</div>
 		<p>
