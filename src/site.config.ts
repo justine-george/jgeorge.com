@@ -77,19 +77,8 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
 		isFeatured: true,
-	},
-	{
-		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
-		description:
-			"Multithreaded simulation of a tutoring center coordination system using POSIX threads, mutex locks, and semaphores in C",
-		links: {
-			github: "https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
-			demo: "",
-		},
-		technologies: ["React"],
-		isOtherProject: true,
 	},
 	{
 		title: "Lottery Scheduler Implementation in xv6",
@@ -97,6 +86,17 @@ export const projects: Array<Project> = [
 			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection",
 		links: {
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
+			demo: "",
+		},
+		technologies: ["React"],
+		isOtherProject: true,
+	},
+	{
+		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
+		description:
+			"Multithreaded simulation of a tutoring center coordination system using POSIX threads, mutex locks, and semaphores in C",
+		links: {
+			github: "https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
 			demo: "",
 		},
 		technologies: ["React"],

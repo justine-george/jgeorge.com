@@ -13,7 +13,7 @@ const { project, as: Tag = "div" } = Astro.props;
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		class="cactus-link inline-block"
+		class="cactus-link text-base inline-block"
 		href={project.links.demo || project.links.github}
 	>
 		{project.title}
@@ -21,7 +21,7 @@ const { project, as: Tag = "div" } = Astro.props;
 </Tag>
 <!-- <div>
 	{project.technologies.map((tech) => (
-		<span class="inline-block bg-slate-700 rounded-full px-3 py-1 text-sm text-gray-200 mr-2">
+		<span class="inline-block bg-accent rounded-full px-3 py-1 text-sm text-bgColor mr-3 mb-2">
 			{tech}
 		</span>
 	))}
