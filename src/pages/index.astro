@@ -35,7 +35,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<SocialList />
 	</section>
 	<section aria-label="Projects list" class="mt-8 space-y-6">
-		<p class="mb-4 font-semibold">Some stuff I'm working on:</p>
+		<p class="mb-4">Some stuff I'm working on:</p>
 		<ul class="list-inside list-disc space-y-2">
 			{
 				featuredProjects.map((project) => (
@@ -55,7 +55,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 	<section aria-label="Projects list" class="mt-8 space-y-6">
-		<p class="mb-4 font-semibold">And some older projects:</p>
+		<p class="mb-4">And some older projects:</p>
 		<ul class="list-inside list-disc space-y-2">
 			{
 				otherProjects.map((project) => (
