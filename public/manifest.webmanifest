@@ -1,7 +1,7 @@
 {
-	"name": "Justine George's Portfolio",
-	"short_name": "jgeorge_blog",
-	"description": "Justine George's Personal Website and Blog",
+	"name": "Justine George | jgeorge.dev",
+	"short_name": "jgeorge.dev",
+	"description": "Software Engineer and a CS Graduate student at UT Dallas.",
 	"icons": [
 		{
 			"src": "/192x192.png",
