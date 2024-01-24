@@ -24,7 +24,7 @@ const technicalSkills: Array<{
 	{
 		name: "Backend",
 		icon: "mdi:server",
-		skills: ["Spring Framework", "Apache Kafka", "Node.js", "Express", "JUnit", "OAuth2"],
+		skills: ["Spring Framework", "Apache Kafka", "Node.js", "Express", "Flask", "JUnit", "OAuth2"],
 	},
 	{
 		name: "Databases",
@@ -78,6 +78,21 @@ const technicalSkills: Array<{
 			<ul class="list-inside list-disc space-y-2">
 				{
 					technicalSkills.map((section) => (
+						<li class="list-none">
+							<Icon
+								class="me-2 inline-block h-6 w-6"
+								name={section.icon}
+								aria-hidden="true"
+								focusable="false"
+							/>
+							{section.name} - {section.skills.join(", ")}
+						</li>
+					))
+				}
+			</ul>
+			<!-- <ul class="list-inside list-disc space-y-2">
+				{
+					technicalSkills.map((section) => (
 						<li>
 							{section.name}
 							<Icon
@@ -90,7 +105,7 @@ const technicalSkills: Array<{
 						</li>
 					))
 				}
-			</ul>
+			</ul> -->
 		</div>
 		<p>
 			<a
