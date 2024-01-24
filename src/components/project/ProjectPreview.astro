@@ -1,0 +1,29 @@
+---
+import type { Project } from "@/types";
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+	project: Project;
+};
+
+const { project, as: Tag = "div" } = Astro.props;
+---
+
+<Tag>
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		class="cactus-link inline-block"
+		href={project.links.demo || project.links.github}
+	>
+		{project.title}
+	</a>
+</Tag>
+<!-- <div>
+	{project.technologies.map((tech) => (
+		<span class="inline-block bg-slate-700 rounded-full px-3 py-1 text-sm text-gray-200 mr-2">
+			{tech}
+		</span>
+	))}
+</div> -->
+<q class="line-clamp-3 block">{project.description}</q>

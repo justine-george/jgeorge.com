@@ -55,122 +55,131 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	// },
 ];
 
-// export const resumeLink: string =
-// 	"https://drive.google.com/file/d/1e2FBiYFpmFpnS23UB0Ym8NShkX4YZUVF/view?usp=drive_link";
 export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
 export const projects: Array<Project> = [
 	{
-		title: "Tab Keeper (Featured Chrome Extension)",
+		title: "Tab Keeper (Featured on Chrome Web Store)",
 		description:
-			"Efficiently save and synchronize chrome tabs across devices without the need for personal logins",
+			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
 			demo: "https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
 		},
+		technologies: ["TypeScript", "React", "Redux", "Cloud Firestore", "Emotion CSS", "Vitest"],
 		isFeatured: true,
 	},
 	{
-		title: "Book Fellow",
+		title: "Book Fellow: For Bibliophiles",
 		description:
-			"A social media platform for bibliophiles to share their favorite books and connect with other readers",
+			"Spring Boot and PostgreSQL-based social media platform for book enthusiasts to share favorites and connect with readers",
 		links: {
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
+		technologies: ["React"],
 		isFeatured: true,
 	},
 	{
-		title: "Planet - Event Planner App",
+		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
 		description:
-			"An event planner application built with Next.js, React, MongoDB, Redux, and Passport.js",
-		links: {
-			github: "https://github.com/anthea97/planet",
-			demo: "",
-		},
-		isOtherProject: true,
-	},
-	{
-		title: "Seeking Tutor Problem",
-		description:
-			"A solution that synchronizes the activities of the coordinator, tutors, and students using POSIX threads, mutex locks, and semaphores",
+			"Multithreaded simulation of a tutoring center coordination system using POSIX threads, mutex locks, and semaphores in C",
 		links: {
 			github: "https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
 			demo: "",
 		},
+		technologies: ["React"],
 		isOtherProject: true,
 	},
 	{
-		title: "Lottery Scheduler for Xv6",
+		title: "Lottery Scheduler Implementation in xv6",
 		description:
-			"Implementation of a lottery scheduler in the Xv6 kernel, replacing the round-robin algorithm for process scheduling",
+			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection",
 		links: {
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
 		},
+		technologies: ["React"],
+		isOtherProject: true,
 	},
 	{
-		title: "8 Men Morris Game",
+		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
 		description:
-			"A variant of the classic nine men's morris board game, implemented using both MiniMax and Alpha-Beta pruning algorithms",
+			"Implementation of the 8 Men Morris game using MiniMax and Alpha-Beta pruning algorithms, demonstrating AI strategies in game theory",
 		links: {
 			github: "https://github.com/justine-george/morris-game-variant-project",
 			demo: "",
 		},
+		technologies: ["React"],
 	},
 	{
-		title: "Customer Churn Predictor",
+		title: "Planet: Event Planner Application",
 		description:
-			"Predict customer churn in a telco using a dataset containing demographic and service data",
+			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management",
 		links: {
-			github: "https://github.com/justine-george/telco-customer-churn-prediction",
+			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
-	},
-
-	{
-		title: "URL Shortener",
-		description:
-			"A URL shortener microservice on node backend that returns a minified URL for a given input URL",
-		links: {
-			github: "https://github.com/justine-george/url-shortener-service",
-			demo: "",
-		},
+		technologies: ["React"],
 	},
 	{
-		title: "EZ Cart",
+		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
 		description:
-			"An ecommerce app built using React that allows users to browse through a list of products, view the details of a product, add it to a cart, and move items between the cart and wishlist",
-		links: {
-			github: "https://github.com/justine-george/EZCart-Web",
-			demo: "",
-		},
-	},
-	{
-		title: "Daily Catalog Generator for Businesses",
-		description:
-			"A tool made for local businesses to create their daily price catalogs, with local language support",
-		links: {
-			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
-			demo: "https://nanthalathstore-catalogue-generator.pages.dev/",
-		},
-	},
-	{
-		title: "File System Checker for Xv6",
-		description:
-			"A tool to check the consistency of the xv6 file system image, including analyzing the on-disk format and writing checks to verify the consistency of various parts of the file system structure",
-		links: {
-			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
-			demo: "",
-		},
-	},
-	{
-		title: "Judgement Predictor for the Indian Judiciary",
-		description:
-			"A tool that that allows users to input data related to a current case and receive possible judgement using machine learning",
+			"Machine learning interface for the Indian Judicial System, featuring NLP applications like case analysis, centralized databases, and bilingual translation",
 		links: {
 			github: "https://github.com/justine-george/Application-of-NLP-in-Indian-Judiciary",
 			demo: "",
 		},
+		technologies: ["React"],
+	},
+	{
+		title: "Customer Churn Prediction Using Machine Learning and Data Analysis",
+		description:
+			"Machine learning project for predicting telco customer churn, featuring extensive EDA, class imbalance handling, and multiple algorithm evaluations",
+		links: {
+			github: "https://github.com/justine-george/telco-customer-churn-prediction",
+			demo: "",
+		},
+		technologies: ["React"],
+	},
+	{
+		title: "URL Shortener Microservice",
+		description:
+			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection",
+		links: {
+			github: "https://github.com/justine-george/url-shortener-service",
+			demo: "",
+		},
+		technologies: ["React"],
+	},
+	{
+		title: "EZ Cart",
+		description:
+			"React-based ecommerce application enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration",
+		links: {
+			github: "https://github.com/justine-george/EZCart-Web",
+			demo: "",
+		},
+		technologies: ["React"],
+	},
+	{
+		title: "Vegetable Price Catalog Generator for Local Businesses",
+		description:
+			"Multilingual catalogue generator for local Kerala businesses, enabling effortless creation of PNG catalogues with dynamic pricing and vegetable selection",
+		links: {
+			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
+			demo: "",
+		},
+		technologies: ["React"],
+	},
+	{
+		title: "File System Integrity Validator for xv6",
+		description:
+			"File system consistency checker for xv6 ensuring inode and block integrity in file system Images",
+		links: {
+			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
+			demo: "",
+		},
+		technologies: ["React"],
 	},
 ];

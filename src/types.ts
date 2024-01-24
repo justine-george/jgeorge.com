@@ -89,6 +89,7 @@ export type Project = {
 	isFeatured?: boolean;
 	isDisabled?: boolean;
 	isOtherProject?: boolean;
+	technologies: string[];
 	links: {
 		github?: string;
 		demo?: string;
