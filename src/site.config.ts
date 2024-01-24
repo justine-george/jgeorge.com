@@ -108,7 +108,6 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
 		},
-		isOtherProject: true,
 	},
 	{
 		title: "8 Men Morris Game",
