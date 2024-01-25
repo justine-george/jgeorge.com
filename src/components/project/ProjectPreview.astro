@@ -23,8 +23,7 @@ const { project, as: Tag = "div" } = Astro.props;
 <div>
 	{project.technologies.map((tech: string, i: number) => (
 		<span class="inline-block font-mono rounded-full px-0.5 py-0 text-xs text-accent mr-1 mb-0">
-			{tech}
-			{i !== project.technologies.length - 1 && "•"}
+			{tech}{i !== project.technologies.length - 1 && ", "}
 		</span>
 	))}
 </div>
