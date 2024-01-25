@@ -2,7 +2,7 @@
 title: "Deep Dive into Tab Keeper's Anonymous Login Mechanism"
 description: "An in-depth look at how Tab Keeper leverages the chrome.storage API for efficient and secure cross-device synchronization"
 publishDate: "15 Jan 2024"
-tags: ["tab keeper", "chrome extension", "system design", "anonymous login"]
+tags: ["tab keeper", "chrome extension", "system design"]
 draft: false
 featured: true
 ---
@@ -24,7 +24,7 @@ The mechanism is straightforward:
 
 ## Technical Overview
 
-![Tab Keeper's Anonymous Login Flow](./handling-anonymous-login.png)
+![Tab Keeper's Anonymous Login Flow](./figure-1-dark.png)
 
 The system is designed to work optimally when users have Chrome sync enabled. If Chrome sync is not enabled, the extension uses a fallback strategy using `storage.local`, almost[^3] resembling `localStorage`, ensuring data persistence locally without synchronization.
 
