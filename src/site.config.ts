@@ -77,7 +77,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
-		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
+		technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "AWS EC2", "Monitoring", "JUnit"],
 		isFeatured: true,
 	},
 	{
@@ -160,7 +160,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/EZCart-Web",
 			demo: "",
 		},
-		technologies: ["React", "Material-UI", "Axios"],
+		technologies: ["Spring Boot", "React", "Material-UI", "Axios"],
 	},
 	{
 		title: "Vegetable Price Catalog Generator for Local Businesses",
