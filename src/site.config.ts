@@ -77,7 +77,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
-		technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "AWS EC2", "Monitoring", "JUnit"],
+		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
 		isFeatured: true,
 	},
 	{
