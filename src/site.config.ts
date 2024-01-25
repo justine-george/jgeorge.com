@@ -81,14 +81,14 @@ export const projects: Array<Project> = [
 		isFeatured: true,
 	},
 	{
-		title: "Lottery Scheduler Implementation in xv6",
+		title: "Planet: Event Planner Application",
 		description:
-			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection",
+			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management",
 		links: {
-			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
+			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
-		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
+		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
 		isOtherProject: true,
 	},
 	{
@@ -103,6 +103,16 @@ export const projects: Array<Project> = [
 		isOtherProject: true,
 	},
 	{
+		title: "Lottery Scheduler Implementation in xv6",
+		description:
+			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection",
+		links: {
+			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
+			demo: "",
+		},
+		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
+	},
+	{
 		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
 		description:
 			"Implementation of the 8 Men Morris game using MiniMax and Alpha-Beta pruning algorithms, demonstrating AI strategies in game theory",
@@ -111,16 +121,6 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Python", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
-	},
-	{
-		title: "Planet: Event Planner Application",
-		description:
-			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management",
-		links: {
-			github: "https://github.com/justine-george/planet-nextjs",
-			demo: "",
-		},
-		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
 	},
 	{
 		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
