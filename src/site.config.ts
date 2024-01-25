@@ -110,7 +110,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/morris-game-variant-project",
 			demo: "",
 		},
-		technologies: ["Java", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
+		technologies: ["Python", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
 	},
 	{
 		title: "Planet: Event Planner Application",
