@@ -19,11 +19,11 @@ const { project, as: Tag = "div" } = Astro.props;
 		{project.title}
 	</a>
 </Tag>
-<!-- <div>
+<q class="line-clamp-3 block">{project.description}</q>
+<div>
 	{project.technologies.map((tech) => (
-		<span class="inline-block bg-accent rounded-full px-3 py-1 text-sm text-bgColor mr-3 mb-2">
+		<span class="inline-block font-mono rounded-full px-1 py-0 text-xs text-accent mr-1 mb-0">
 			{tech}
 		</span>
 	))}
-</div> -->
-<q class="line-clamp-3 block">{project.description}</q>
+</div>

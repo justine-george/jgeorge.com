@@ -88,7 +88,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
 		isOtherProject: true,
 	},
 	{
@@ -99,7 +99,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["C", "POSIX Threads", "Mutex Locks", "Semaphores", "GDB"],
 		isOtherProject: true,
 	},
 	{
@@ -110,7 +110,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/morris-game-variant-project",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Java", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
 	},
 	{
 		title: "Planet: Event Planner Application",
@@ -120,7 +120,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
 	},
 	{
 		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
@@ -130,7 +130,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/Application-of-NLP-in-Indian-Judiciary",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Natural Language Processing", "Python", "Kivy", "NLTK", "Scikit-learn"],
 	},
 	{
 		title: "Customer Churn Prediction Using Machine Learning and Data Analysis",
@@ -140,7 +140,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/telco-customer-churn-prediction",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
 	},
 	{
 		title: "URL Shortener Microservice",
@@ -150,7 +150,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/url-shortener-service",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
 	},
 	{
 		title: "EZ Cart",
@@ -160,7 +160,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/EZCart-Web",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["React", "Material-UI", "Axios"],
 	},
 	{
 		title: "Vegetable Price Catalog Generator for Local Businesses",
@@ -170,7 +170,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
 	},
 	{
 		title: "File System Integrity Validator for xv6",
@@ -180,6 +180,6 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
 			demo: "",
 		},
-		technologies: ["React"],
+		technologies: ["C", "xv6", "GDB"],
 	},
 ];
