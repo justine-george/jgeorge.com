@@ -9,13 +9,13 @@
 		color-scheme: light;
 		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
 		--theme-bg: 0deg 0% 98%;
-		--theme-link: 172deg 18% 41%;
-		--theme-text: 203deg 11% 15%;
-		--theme-accent: 351deg 66% 48%;
+		--theme-link: 172deg 50% 40%;
+		--theme-text: 210deg 10% 20%;
+		--theme-accent: 172deg 40% 30%;
 		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 351deg 66% 48%;
+		--theme-quote: 172deg 50% 35%;
 		--theme-logo-border: 0deg 0% 98%;
-		--theme-logo-border-hover: 194deg 70% 27%;
+		--theme-logo-border-hover: 172deg 70% 27%;
 	}
 
 	:root.dark {
