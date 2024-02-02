@@ -8,11 +8,10 @@ const url = new URL(Astro.request.url);
 
 <header id="main-header" class="//sm:ps-[4.5rem] group relative mb-16 flex
 items-center">
-	<!-- <div class="flex sm:flex-col"> -->
 	<div class="flex space-x-1 sm:flex-row">
 		<a
 			href="/"
-			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			class="inline-flex items-center sm:relative sm:inline-block"
 			aria-current={url.pathname === "/" ? "page" : false}
 		>
 			<!-- <span class="text-xl font-bold sm:text-xl">Go To</span> -->
