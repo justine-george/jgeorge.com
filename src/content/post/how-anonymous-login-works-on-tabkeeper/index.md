@@ -8,8 +8,6 @@ draft: false
 featured: true
 ---
 
-## Introduction
-
 [Tab Keeper](https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio) is an open-source[^1] Chrome extension project I initiated, designed for efficient tab management and cross-device synchronization. In this post, I will explain in detail the technical aspects of implementing Tab Keeper's anonymous login mechanism, leveraging the `chrome.storage`[^2] API.
 
 ## Rationale Behind the Shift
