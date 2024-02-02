@@ -14,6 +14,8 @@
 		--theme-accent: 351deg 66% 48%;
 		--theme-accent-2: 0deg 0% 7%;
 		--theme-quote: 351deg 66% 48%;
+		--theme-logo-border: 0deg 0% 98%;
+		--theme-logo-border-hover: 194deg 70% 27%;
 	}
 
 	:root.dark {
@@ -24,6 +26,8 @@
 		--theme-accent: 159deg 64% 45%;
 		--theme-accent-2: 0deg 0% 93%;
 		--theme-quote: 102deg 100% 86%;
+		--theme-logo-border: 210deg 6% 12%;
+		--theme-logo-border-hover: 186deg 94% 82%;
 	}
 
 	html {
