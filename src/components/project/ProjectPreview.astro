@@ -14,7 +14,8 @@ const { project, as: Tag = "div" } = Astro.props;
 		target="_blank"
 		rel="noopener noreferrer"
 		class="cactus-link inline-block text-base"
-		href={project.links.demo || project.links.github}
+		title={`View ${project.title} on GitHub`}
+		href={project.links.github}
 	>
 		{project.title}
 	</a>

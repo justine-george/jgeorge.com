@@ -45,7 +45,7 @@ const socialLinks: Array<{
 ];
 ---
 
-<div class="flex flex-wrap items-end items-center
+<div class="flex flex-wrap items-end
 gap-x-4">
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
@@ -56,6 +56,7 @@ gap-x-4">
 						class="inline-block p-1 sm:hover:text-link"
 						href={link}
 						target="_blank"
+						title={friendlyName}
 						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
 						<Icon class="h-6 w-6" name={name} aria-hidden="true" focusable="false" />
