@@ -13,7 +13,7 @@ const { project, as: Tag = "div" } = Astro.props;
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		class="cactus-link inline-block text-base"
+		class="cactus-link inline-block text-lg sm:text-base"
 		title={`View ${project.title} on GitHub`}
 		href={project.links.github}
 	>
@@ -24,7 +24,7 @@ const { project, as: Tag = "div" } = Astro.props;
 <div>
 	{
 		project.technologies.map((tech: string, i: number) => (
-			<span class="mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-xs text-accent">
+			<span class="mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-sm text-accent sm:text-xs">
 				{tech}
 				{i !== project.technologies.length - 1 && "•"}
 			</span>
