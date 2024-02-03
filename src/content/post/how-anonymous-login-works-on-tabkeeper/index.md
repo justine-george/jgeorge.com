@@ -12,14 +12,14 @@ featured: true
 
 ## Rationale Behind the Shift
 
-It's amazing how a single comment can shift your perspective. That's what happened with Tab Keeper. After seeing a discussion on Reddit, pointing out how forcing a new user to sign up manually could deter them from ever using the cloud sync feature, it clicked: why not make things simpler? So, I decided to integrate the `chrome.storage` API for an anonymous login experience. The goal was to streamline the data synchronization across devices, emphasizing security and privacy without the cumbersome login steps. Long gone are the days when users had to sign up with their private email addresses just to enjoy seamless cross-device data synchronization.
+The idea to shift gears came from an unexpected place. A conversation on Reddit made me realize the potential hurdle of mandatory sign-up processes. It struck me: why not simplify access? That led to the adoption of the `chrome.storage` API for a smoother, anonymous login process. My aim was to make syncing data across devices as straightforward and secure as possible, removing the need for users to provide personal information just to use our syncing feature. Now, users can enjoy effortless cross-device synchronization without the hassle of traditional sign-up procedures.
 
 ## How It Works
 
-The mechanism is straightforward:
+The process is simple:
 
-- **For Returning User**: If a UUID is found in the user's `storage.sync`, it's used to pull data from Firebase Cloud Firestore.
-- **For New User**: Absence of a UUID triggers the generation and storage of a new one in `storage.sync`.
+- **For Returning User**: A version 4 UUID token in `storage.sync` serves as the document key to retrieve data from Firebase Cloud Firestore.
+- **For New User**: In the absence of a UUID, a new RFC version 4 (random) UUID token is generated and stored in `storage.sync`.
 
 ## Technical Overview
 
@@ -29,17 +29,19 @@ The system is designed to work optimally when users have Chrome sync enabled. If
 
 ## Why Firebase Cloud Firestore?
 
-Despite the efficient data syncing capabilities of the `chrome.storage` API, it has storage limitations (100KB in total, 8KB per item)[^4]. Therefore, Firebase Cloud Firestore is used for its scalability and flexibility, with the UUID serving as a unique reference to the user's data.
+While the `chrome.storage` API is great for data syncing, it has its limitations—specifically, a cap of 100KB total storage and just 8KB per item[^4]. Cloud Firestore was the right choice not just for its ability to scale and handle larger datasets, but also because its free tier helps manage user data efficiently without incurring costs[^5]. Using a UUID to track each user's data also made it simple to keep everyone's information secure and easily accessible, ensuring that the solution was both practical and cost-effective.
 
 ## Future Considerations
 
-Based on user feedback, I'm exploring the idea of adding an optional login module (something like Clerk) in the future so that users can access their data across devices without relying on Chrome sync.
+In response to some great feedback, I'm thinking about making Tab Keeper even better. One idea I'm excited about is adding a login feature, using a third-party service like Clerk[^6]. This would allow us to access our data across various devices, moving beyond the limitations of Chrome sync. This would not only make things more convenient but also add a personal touch, like being able to share tabs with our loved ones. For the moment, the anonymous login is working great, and I'm eager to see how it evolves.
 
 ## Impact on User Experience
 
-The shift to anonymous login has been a game-changer for Tab Keeper. This feature has not only streamlined the user experience, making the extension more efficient and secure, but it has also been instrumental in its growth to over 400 monthly active users worldwide. This increase in users is a testament to the appeal of hassle-free and seamless cross-device synchronization without the need for a cumbersome login process. As Tab Keeper continues to evolve, I remain committed to this journey of innovation, always with an ear to the ground for your invaluable feedback and suggestions.
+Switching to anonymous login for Tab Keeper has truly transformed its usability. It's made the extension smoother and more secure, which is a big reason why we've seen our community grow to **over 500 monthly active users** worldwide. This increase in users is a testament to the appeal of hassle-free and seamless cross-device synchronization without the need for a cumbersome login process. As Tab Keeper continues to evolve, I remain committed to this journey of innovation, always with an ear to the ground for your invaluable feedback and suggestions.
 
 [^1]: [Tab Keeper GitHub Repository](https://github.com/justine-george/tab-keeper-react-chrome-extension)
 [^2]: [API reference for `chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage)
 [^3]: [Details of various Chrome storage areas](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas)
 [^4]: [Storage limits of `storage.sync`](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas)
+[^5]: [Cloud Firestore pricing](https://firebase.google.com/pricing)
+[^6]: [User authentication using Clerk](https://clerk.com/)
