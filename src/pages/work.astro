@@ -30,7 +30,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					class="cactus-link inline-block"
+					class="cactus-link-mobile inline-block sm:cactus-link"
 					href={resumeLink}
 				>
 					resume
@@ -48,7 +48,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link inline-block"
+							class="cactus-link-mobile inline-block sm:cactus-link"
 							href={project.links.demo || project.links.github}
 						>
 							{project.title}

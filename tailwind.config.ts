@@ -128,7 +128,7 @@ export default {
 							"linear-gradient(transparent,transparent 4px,hsl(var(--theme-link)) 4px,hsl(var(--theme-link)))",
 					},
 				},
-				".cactus-link-no-hover": {
+				".cactus-link-mobile": {
 					"@apply bg-[size:100%_6px] bg-bottom bg-repeat-x": {},
 					backgroundImage:
 						"linear-gradient(transparent,transparent 4px,hsl(var(--theme-link)) 4px,hsl(var(--theme-link)))",

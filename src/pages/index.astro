@@ -30,7 +30,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				href={resumeLink}
 				aria-label="View my resume"
 				title="View my resume as a PDF"
-				class="cactus-link inline-block">This is my resume.</a
+				class="cactus-link-mobile inline-block sm:cactus-link">This is my resume.</a
 			>
 		</p>
 		<SocialList />
@@ -44,7 +44,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link inline-block"
+							class="cactus-link-mobile inline-block sm:cactus-link"
 							title={`View ${project.title} on GitHub`}
 							href={project.links.github}
 						>
@@ -65,7 +65,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link inline-block"
+							class="cactus-link-mobile inline-block sm:cactus-link"
 							title={`View ${project.title} on GitHub`}
 							href={project.links.demo || project.links.github}
 						>
