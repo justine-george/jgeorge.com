@@ -59,7 +59,8 @@ export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
 export const projects: Array<Project> = [
 	{
-		title: "Tab Keeper (Featured on Chrome Web Store)",
+		// title: "Tab Keeper (Featured on Chrome Web Store)",
+		title: "Tab Keeper (Featured on Web Store)",
 		description:
 			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API",
 		links: {
