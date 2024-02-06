@@ -10,10 +10,9 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 
 const { post, as: Tag = "div", withDesc = true } = Astro.props;
 // const postDate = post.data.updatedDate ?? post.data.publishDate;
-const postTitleClasses =
-	Tag === "h2"
-		? "sm:cactus-link cactus-link-mobile inline-block text-[1.04rem] sm:text-[1.04rem]"
-		: "sm:cactus-link cactus-link-mobile inline-block";
+const postTitleClasses = `sm:cactus-link cactus-link-mobile inline-block${
+	Tag === "h2" ? " text-[1.04rem]" : ""
+}`;
 ---
 
 <!-- <FormattedDate date={postDate} class="min-w-[120px] text-gray-600 dark:text-gray-400" /> -->

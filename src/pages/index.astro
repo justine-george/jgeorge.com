@@ -16,7 +16,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
 	<section aria-label="Landing page intro" class="space-y-6" data-pagefind-body>
-		<h1 class="title">Hey, I'm Justine!</h1>
+		<h1 class="font-customTitle title">Hey, I'm Justine!</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
 			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
@@ -84,7 +84,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 
 	<section aria-label="Blog post list" class="mt-10 space-y-6">
-		<h2 class="title text-xl">Recent Posts</h2>
+		<h2 class="title text-lg">Recent Posts</h2>
 		<ul class="space-y-4 sm:space-y-4">
 			{
 				allPostsByDate.map((p) => (
