@@ -32,6 +32,7 @@ export default {
 			fontFamily: {
 				// Add any custom fonts here
 				custom: ["Merriweather", "serif"],
+				customTitle: ["DM Serif Display", "serif"],
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
 			},
