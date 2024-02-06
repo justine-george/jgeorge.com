@@ -39,16 +39,13 @@
 		@apply mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-8 pt-16 font-custom text-sm font-normal text-textColor antialiased selection:bg-link;
 	}
 
-	p {
+	p,
+	q {
 		/* @apply text-base leading-[1.75rem] sm:text-sm sm:leading-[1.75rem]; */
 		@apply text-[0.95rem] leading-[1.75rem] sm:text-[0.95rem] sm:leading-[1.75rem];
 	}
 
-	q {
-		@apply text-[0.95rem] leading-[1.75rem] sm:text-[0.95rem] sm:leading-[1.75rem];
-		/* @apply text-[0.95rem] leading-[1.5rem] sm:text-[0.95rem] sm:leading-[1.5rem]; */
-	}
-
+	ul,
 	li {
 		/* @apply text-base leading-[1.5rem] sm:text-sm sm:leading-[1.5rem]; */
 		@apply text-[0.95rem] leading-[1.5rem] sm:text-[0.95rem] sm:leading-[1.5rem];
