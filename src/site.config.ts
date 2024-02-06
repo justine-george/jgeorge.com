@@ -37,9 +37,13 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	// 	title: "Work",
 	// 	path: "/work/",
 	// },
+	// {
+	// 	title: "Links",
+	// 	path: "/links/",
+	// },
 	{
-		title: "Links",
-		path: "/links/",
+		title: "Projects",
+		path: "/projects/",
 	},
 	{
 		title: "Posts",
