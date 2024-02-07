@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import defaultNotFoundImage from "@/assets/cat_not_working_1.jpeg";
 import { notFoundImages } from "@/site-config";
 
 export default function CatNotFound() {
-	const initialCatImgSrc =
-        notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
-    const [catImgSrc, setCatImgSrc] = useState(initialCatImgSrc.src);
+	const [catImgSrc, setCatImgSrc] = useState("");
+
+	useEffect(() => {
+        const catImg =
+            notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
+        setCatImgSrc(catImg.src);
+    }, []);
 
 	return (
 		<img
