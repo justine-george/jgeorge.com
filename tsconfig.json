@@ -1,6 +1,7 @@
 {
 	"extends": "astro/tsconfigs/strictest",
 	"compilerOptions": {
+		"jsx": "react",
 		"baseUrl": ".",
 		"lib": ["es2022", "dom", "dom.iterable"],
 		"paths": {
