@@ -135,7 +135,7 @@ export default {
 						"linear-gradient(transparent,transparent 4px,hsl(var(--theme-link)) 4px,hsl(var(--theme-link)))",
 				},
 				".title": {
-					"@apply text-2xl font-semibold text-accent-2": {},
+					"@apply text-3xl font-semibold text-accent-2": {},
 				},
 			});
 		}),
