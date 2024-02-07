@@ -46,7 +46,7 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/projects/",
 	},
 	{
-		title: "Posts",
+		title: "Blog",
 		path: "/posts/",
 	},
 	{
@@ -66,7 +66,7 @@ export const projects: Array<Project> = [
 		// title: "Tab Keeper (Featured on Chrome Web Store)",
 		title: "Tab Keeper (Featured on Web Store)",
 		description:
-			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API",
+			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API.",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
 			demo: "https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
@@ -77,7 +77,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Book Fellow: For Bibliophiles",
 		description:
-			"Spring Boot and PostgreSQL-based social media platform for book enthusiasts to share favorites and connect with readers",
+			"Spring Boot and PostgreSQL-based social media platform for book enthusiasts to share favorites and connect with readers.",
 		links: {
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
@@ -88,29 +88,31 @@ export const projects: Array<Project> = [
 	{
 		title: "Planet: Event Planner Application",
 		description:
-			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management",
+			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management.",
 		links: {
 			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
 		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
-		isOtherProject: true,
+		// isOtherProject: true,
+		isFeatured: true,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
 		description:
-			"Multithreaded simulation of a tutoring center coordination system using POSIX threads, mutex locks, and semaphores in C",
+			"Multithreaded simulation of a tutoring center coordination system using POSIX threads, mutex locks, and semaphores in C.",
 		links: {
 			github: "https://github.com/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
 			demo: "",
 		},
 		technologies: ["C", "POSIX Threads", "Mutex Locks", "Semaphores", "GDB"],
-		isOtherProject: true,
+		// isOtherProject: true,
+		// isFeatured: true,
 	},
 	{
 		title: "Lottery Scheduler Implementation in xv6",
 		description:
-			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection",
+			"Enhanced xv6 operating system kernel with a lottery scheduler, offering equitable CPU resource distribution through randomized process selection.",
 		links: {
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
@@ -120,7 +122,7 @@ export const projects: Array<Project> = [
 	{
 		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
 		description:
-			"Implementation of the 8 Men Morris game using MiniMax and Alpha-Beta pruning algorithms, demonstrating AI strategies in game theory",
+			"Implementation of the 8 Men Morris game using MiniMax and Alpha-Beta pruning algorithms, demonstrating AI strategies in game theory.",
 		links: {
 			github: "https://github.com/justine-george/morris-game-variant-project",
 			demo: "",
@@ -130,7 +132,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
 		description:
-			"Machine learning interface for the Indian Judicial System, featuring NLP applications like case analysis, centralized databases, and bilingual translation",
+			"Machine learning interface for the Indian Judicial System, featuring NLP applications like case analysis, centralized databases, and bilingual translation.",
 		links: {
 			github: "https://github.com/justine-george/Application-of-NLP-in-Indian-Judiciary",
 			demo: "",
@@ -140,7 +142,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Customer Churn Prediction Using Machine Learning and Data Analysis",
 		description:
-			"Machine learning project for predicting telco customer churn, featuring extensive EDA, class imbalance handling, and multiple algorithm evaluations",
+			"Machine learning project for predicting telco customer churn, featuring extensive EDA, class imbalance handling, and multiple algorithm evaluations.",
 		links: {
 			github: "https://github.com/justine-george/telco-customer-churn-prediction",
 			demo: "",
@@ -150,7 +152,7 @@ export const projects: Array<Project> = [
 	{
 		title: "URL Shortener Microservice",
 		description:
-			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection",
+			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection.",
 		links: {
 			github: "https://github.com/justine-george/url-shortener-service",
 			demo: "",
@@ -160,7 +162,7 @@ export const projects: Array<Project> = [
 	{
 		title: "EZ Cart",
 		description:
-			"React-based ecommerce application enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration",
+			"React-based ecommerce application enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
 		links: {
 			github: "https://github.com/justine-george/EZCart-Web",
 			demo: "",
@@ -170,7 +172,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Vegetable Price Catalog Generator for Local Businesses",
 		description:
-			"Multilingual catalogue generator for local Kerala businesses, enabling effortless creation of PNG catalogues with dynamic pricing and vegetable selection",
+			"Multilingual catalogue generator for local Kerala businesses, enabling effortless creation of PNG catalogues with dynamic pricing and vegetable selection.",
 		links: {
 			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
 			demo: "",
@@ -180,7 +182,7 @@ export const projects: Array<Project> = [
 	{
 		title: "File System Integrity Validator for xv6",
 		description:
-			"File system consistency checker for xv6 ensuring inode and block integrity in file system Images",
+			"File system consistency checker for xv6 ensuring inode and block integrity in file system Images.",
 		links: {
 			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
 			demo: "",
