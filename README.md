@@ -1,6 +1,6 @@
 # jgeorge.com
 
-This is the source code for my personal website, [jgeorge.pages.dev](https://jgeorge.pages.dev).
+This is the source code for my personal website, [jgeorge.pages.dev](https://www.jgeorge.dev).
 
 ## Acknowledgment
 
