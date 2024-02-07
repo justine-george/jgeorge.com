@@ -19,11 +19,21 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<!-- <h1 class="font-customTitle title">Hey, I'm Justine!</h1> -->
 		<h1 class="title font-customTitle text-4xl">Hello, I'm Justine 👋🏼</h1>
 		<p>
+			I'm a CS graduate student at UT Dallas, set to graduate in May '24. I am passionate about
+			building scalable and reliable backend systems, with a strong interest in distributed systems
+			and cloud computing. My journey includes over 3 years of experience as a Full Stack Software
+			Engineer at Resi Media and Oracle Finance, during which I've had the privilege of building
+			impactful software. I'm always open to discussing tech, opportunities, or swapping pet photos
+			— feel free to reach out!
+		</p>
+
+		<!-- <p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
 			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
 			Oracle Finance and Resi Media. Please feel free to reach out if you want to talk tech, discuss
 			opportunities, or just send over your pet photos!
-		</p>
+		</p> -->
+
 		<SocialList />
 	</section>
 	<section aria-label="Projects list" class="mt-10 space-y-6">
@@ -54,7 +64,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
 				<span>View all projects</span>
 				<span
-					class="inline-block transition-transform group-hover:-translate-y-0 group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
 					set:html={forwardArrow}
 				/>
 			</a>
@@ -76,7 +86,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			<a href="/posts" aria-label="View all blog posts" class="group sm:hover:text-accent">
 				<span>Read all blog posts</span>
 				<span
-					class="inline-block transition-transform group-hover:-translate-y-0 group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
 					set:html={forwardArrow}
 				/>
 			</a>
