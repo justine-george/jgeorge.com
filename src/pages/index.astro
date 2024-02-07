@@ -4,6 +4,7 @@ import PostPreview from "@/components/blog/PostPreview";
 import { getAllPosts, sortMDByDate } from "@/utils";
 import SocialList from "@/components/SocialList";
 import externalArrow from "@/assets/external_arrow.svg?raw";
+import forwardArrow from "@/assets/forward_arrow.svg?raw";
 import { projects } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
@@ -16,7 +17,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 <PageLayout meta={{ title: "Home" }}>
 	<section aria-label="Landing page intro" class="space-y-6" data-pagefind-body>
 		<!-- <h1 class="font-customTitle title">Hey, I'm Justine!</h1> -->
-		<h1 class="font-customTitle title text-4xl">Justine George</h1>
+		<h1 class="title font-customTitle text-4xl">Justine George</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
 			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
@@ -27,7 +28,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 	<section aria-label="Projects list" class="mt-10 space-y-6">
 		<!-- <p class="mb-4 font-semibold">Featured Projects</p> -->
-		<h2 class="font-customTitle title text-xl">Featured Projects</h2>
+		<h2 class="title font-customTitle text-xl">Featured Projects</h2>
 		<ul class="list-inside list-disc space-y-4">
 			{
 				featuredProjects.map((project) => (
@@ -35,12 +36,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link-mobile group inline-block sm:cactus-link"
+							class="group cactus-link-mobile inline-block sm:cactus-link"
 							title={`View ${project.title} on GitHub`}
 							href={project.links.github}
 						>
 							{project.title}
-							<span class="sm:group-hover:text-accent" set:html={externalArrow} />
+							<span
+								class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 sm:group-hover:text-accent"
+								set:html={externalArrow}
+							/>
 						</a>
 						<p class="project-description line-clamp-3 block">{project.description}</p>
 					</li>
@@ -48,14 +52,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 		<p>
-			<a href="/projects" aria-label="View all projects" class="sm:hover:text-accent"
-				>View all projects →</a
-			>
+			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
+				<span>View all projects</span>
+				<span
+					class="inline-block transition-transform group-hover:-translate-y-0 group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					set:html={forwardArrow}
+				/>
+			</a>
 		</p>
 	</section>
 
 	<section aria-label="Blog post list" class="mt-10 space-y-6">
-		<h2 class="font-customTitle title text-xl">Most Recent Posts</h2>
+		<h2 class="title font-customTitle text-xl">Most Recent Posts</h2>
 		<ul class="space-y-4 sm:space-y-4">
 			{
 				allPostsByDate.map((p) => (
@@ -66,9 +74,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 		<p>
-			<a href="/posts" aria-label="View all blog posts" class="sm:hover:text-accent"
-				>Read all blog posts →</a
-			>
+			<a href="/posts" aria-label="View all blog posts" class="group sm:hover:text-accent">
+				<span>Read all blog posts</span>
+				<span
+					class="inline-block transition-transform group-hover:-translate-y-0 group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					set:html={forwardArrow}
+				/>
+			</a>
 		</p>
 	</section>
 	<!-- <section class="mt-16">

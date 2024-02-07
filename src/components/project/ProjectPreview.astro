@@ -14,12 +14,15 @@ const { project, as: Tag = "div" } = Astro.props;
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		class="cactus-link-mobile group inline-block text-[1.04rem] sm:cactus-link sm:text-[1.04rem]"
+		class="group cactus-link-mobile inline-block text-[1.04rem] sm:cactus-link sm:text-[1.04rem]"
 		title={`View ${project.title} on GitHub`}
 		href={project.links.github}
 	>
 		{project.title}
-		<span class="sm:group-hover:text-accent" set:html={externalArrow} />
+		<span
+			class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 sm:group-hover:text-accent"
+			set:html={externalArrow}
+		/>
 	</a>
 </Tag>
 <p class="line-clamp-3 block">{project.description}</p>
