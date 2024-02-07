@@ -18,19 +18,6 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 };
 ---
 
-{
-	data.coverImage && (
-		<div class="aspect-h-9 aspect-w-16 mb-6">
-			<Image
-				src={data.coverImage.src}
-				alt={data.coverImage.alt}
-				class="object-cover"
-				loading="eager"
-				fetchpriority="high"
-			/>
-		</div>
-	)
-}
 {data.draft ? <span class="text-base text-red-500">(Draft)</span> : null}
 <h1 class="font-customTitle title mb-2 text-3xl sm:text-4xl">
 	{data.title}
@@ -49,6 +36,19 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 		)
 	}
 </div>
+{
+	data.coverImage && (
+		<div class="aspect-h-9 aspect-w-16 mt-6">
+			<Image
+				src={data.coverImage.src}
+				alt={data.coverImage.alt}
+				class="object-cover"
+				loading="eager"
+				fetchpriority="high"
+			/>
+		</div>
+	)
+}
 <!-- {
 	!!data.tags?.length && (
 		<div class="mt-3">

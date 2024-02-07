@@ -3,75 +3,46 @@ import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import { getAllPosts, sortMDByDate } from "@/utils";
 import SocialList from "@/components/SocialList";
+import externalArrow from "@/assets/external_arrow.svg?raw";
 import { projects } from "@/site-config";
-import { resumeLink } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
-const otherProjects = projects.filter((project) => project.isOtherProject && !project.isDisabled);
 
-const MAX_POSTS = 2;
+const MAX_POSTS = 3;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section aria-label="Landing page intro" class="space-y-6" data-pagefind-body>
-		<h1 class="font-customTitle title">Hey, I'm Justine!</h1>
+		<!-- <h1 class="font-customTitle title">Hey, I'm Justine!</h1> -->
+		<h1 class="font-customTitle title text-4xl">Justine George</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
 			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
 			Oracle Finance and Resi Media. Please feel free to reach out if you want to talk tech, discuss
 			opportunities, or just send over your pet photos!
 		</p>
-		<p>
-			<a
-				target="_blank"
-				rel="noopener noreferrer"
-				href={resumeLink}
-				aria-label="View my resume"
-				title="View my resume as a PDF"
-				class="cactus-link-mobile inline-block">This is my resume.</a
-			>
-		</p>
 		<SocialList />
 	</section>
-	<section aria-label="Projects list" class="mt-8 space-y-6">
-		<p class="mb-4 font-semibold">Some stuff I'm working on:</p>
-		<ul class="list-inside list-disc space-y-2">
+	<section aria-label="Projects list" class="mt-10 space-y-6">
+		<!-- <p class="mb-4 font-semibold">Featured Projects</p> -->
+		<h2 class="font-customTitle title text-xl">Featured Projects</h2>
+		<ul class="list-inside list-disc space-y-4">
 			{
 				featuredProjects.map((project) => (
-					<li>
+					<li class="flex list-none flex-wrap gap-y-2">
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link-mobile inline-block sm:cactus-link"
+							class="cactus-link-mobile group inline-block sm:cactus-link"
 							title={`View ${project.title} on GitHub`}
 							href={project.links.github}
 						>
 							{project.title}
+							<span class="sm:group-hover:text-accent" set:html={externalArrow} />
 						</a>
-						- {project.description}
-					</li>
-				))
-			}
-		</ul>
-	</section>
-	<section aria-label="Projects list" class="mt-8 space-y-6">
-		<p class="mb-4 font-semibold">And some older projects:</p>
-		<ul class="list-inside list-disc space-y-2">
-			{
-				otherProjects.map((project) => (
-					<li>
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cactus-link-mobile inline-block sm:cactus-link"
-							title={`View ${project.title} on GitHub`}
-							href={project.links.demo || project.links.github}
-						>
-							{project.title}
-						</a>
-						- {project.description}
+						<p class="project-description line-clamp-3 block">{project.description}</p>
 					</li>
 				))
 			}
@@ -84,7 +55,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 
 	<section aria-label="Blog post list" class="mt-10 space-y-6">
-		<h2 class="title text-lg">Recent Posts</h2>
+		<h2 class="font-customTitle title text-xl">Most Recent Posts</h2>
 		<ul class="space-y-4 sm:space-y-4">
 			{
 				allPostsByDate.map((p) => (
@@ -96,7 +67,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 		<p>
 			<a href="/posts" aria-label="View all blog posts" class="sm:hover:text-accent"
-				>View all posts →</a
+				>Read all blog posts →</a
 			>
 		</p>
 	</section>

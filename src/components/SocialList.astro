@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon";
+import { resumeLink } from "@/site-config";
+import externalArrow from "@/assets/external_arrow.svg?raw";
 
 /** 
 	Uses https://github.com/natemoo-re/astro-icon#readme
@@ -45,10 +47,20 @@ const socialLinks: Array<{
 ];
 ---
 
-<div class="flex flex-wrap items-end
-gap-x-4">
-	<p>Find me on</p>
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+<div class="me-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
+	<p>
+		<a
+			target="_blank"
+			rel="noopener noreferrer"
+			href={resumeLink}
+			aria-label="View my resume"
+			title="View my resume as a PDF"
+			class="cactus-link-mobile group inline-block"
+			>View my résumé
+			<span class="sm:group-hover:text-accent" set:html={externalArrow} />
+		</a>
+	</p>
+	<ul class="flex flex-initial items-center gap-x-2">
 		{
 			socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
 				<li class="flex">

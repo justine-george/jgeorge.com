@@ -13,6 +13,7 @@ const { post, as: Tag = "div", withDesc = true } = Astro.props;
 const postTitleClasses = `sm:cactus-link cactus-link-mobile inline-block${
 	Tag === "h2" ? " text-[1.04rem]" : ""
 }`;
+const postDescriptionClasses = `line-clamp-3 block${Tag === "h2" ? "" : " post-description"}`;
 ---
 
 <!-- <FormattedDate date={postDate} class="min-w-[120px] text-gray-600 dark:text-gray-400" /> -->
@@ -22,4 +23,4 @@ const postTitleClasses = `sm:cactus-link cactus-link-mobile inline-block${
 		{post.data.title}
 	</a>
 </Tag>
-{withDesc && <q class="line-clamp-3 block">{post.data.description}</q>}
+{withDesc && <q class={postDescriptionClasses}>{post.data.description}</q>}
