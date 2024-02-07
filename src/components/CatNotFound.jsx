@@ -5,6 +5,7 @@ import { notFoundImages } from "@/site-config";
 export default function CatNotFound() {
 	const catImg =
 		notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
+	console.log(catImg.src);
 
 	return (
 		<img
