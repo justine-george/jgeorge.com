@@ -4,18 +4,28 @@ import { notFoundImages } from "@/site-config";
 
 export default function CatNotFound() {
 	const [catImgSrc, setCatImgSrc] = useState("");
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 	useEffect(() => {
-        const catImg =
-            notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
-        setCatImgSrc(catImg.src);
+        const img = new Image();
+        const randomImage = notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
+        
+        img.onload = () => {
+            setCatImgSrc(randomImage.src);
+			setIsImageLoaded(true);
+        };
+        img.src = randomImage.src;
     }, []);
 
-	return (
-		<img
+	return isImageLoaded ? (
+			<img
 			src={catImgSrc}
 			className={"h-64 w-full rounded-lg object-cover object-center"}
 			alt="A confused cat stopped working, indicating its confused about the current page"
 		/>
-	);
+		): (
+			<div>
+				<code>Loading...</code>
+			</div>
+		);
 }
