@@ -1,0 +1,28 @@
+---
+import PageLayout from "@/layouts/Base";
+import ProjectPreview from "@/components/project/ProjectPreview";
+import { projects } from "@/site-config";
+
+const meta = {
+	title: "All Projects",
+	description:
+		"A list of projects I've done, including open source projects, personal projects, and freelance projects.",
+};
+
+const allProjects = projects.filter((project) => !project.isDisabled);
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-8 font-customTitle">Experience</h1>
+	<section class="space-y-6" data-pagefind-body>
+		<ul class="list-inside list-disc space-y-8">
+			{
+				allProjects.map((project) => (
+					<li class="flex flex-col flex-wrap gap-2 [&_q]:basis-full">
+						<ProjectPreview project={project} as="h2" />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</PageLayout>

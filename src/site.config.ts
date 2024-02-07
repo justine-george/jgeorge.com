@@ -52,17 +52,9 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/",
 	},
 	// {
-	// 	title: "Work",
-	// 	path: "/work/",
+	// 	title: "Experience",
+	// 	path: "/experience/",
 	// },
-	// {
-	// 	title: "Links",
-	// 	path: "/links/",
-	// },
-	{
-		title: "Experience",
-		path: "/experience/",
-	},
 	{
 		title: "Projects",
 		path: "/projects/",
@@ -71,10 +63,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Blog",
 		path: "/posts/",
 	},
-	// {
-	// 	title: "About",
-	// 	path: "/about/",
-	// },
+	{
+		title: "About",
+		path: "/about/",
+	},
 	// {
 	// 	title: "Resume",
 	// 	path: "/resume/",
