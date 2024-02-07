@@ -2,20 +2,25 @@
 import { Image } from "astro:assets";
 
 import PageLayout from "@/layouts/Base";
-import catImg from "@/assets/cat_not_working.jpeg";
+import defaultNotFoundImage from "@/assets/cat_not_working_1.jpeg";
+import { notFoundImages } from "@/site-config";
 
 const meta = {
 	title: "Oops! You found a missing page!",
 	description: "Oops! It looks like this page is lost in space!",
 };
+
+const catImg: ImageMetadata =
+	notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="font-customTitle title mb-6">404 | Oops something went wrong</h1>
+	<h1 class="title mb-6 font-customTitle">404 | Oops something went wrong</h1>
 	<p class="mb-8">Please use the navigation to find your way back</p>
 	<div class="my-4 grid justify-center">
 		<Image
 			src={catImg}
+			class={"w-full h-64 rounded-lg object-cover object-center"}
 			alt="A confused cat stopped working, indicating its confused about the current page"
 			loading="eager"
 		/>

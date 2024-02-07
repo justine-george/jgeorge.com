@@ -50,14 +50,13 @@ const technicalSkills: Array<{
 
 <PageLayout meta={meta}>
 	<section class="space-y-6">
-		<h1 class="font-customTitle title">About</h1>
+		<h1 class="title font-customTitle">About</h1>
 		<p>
 			Welcome to my space! As a software engineer with three years of
 			<!-- <a
 				target="_blank"
 				rel="noopener noreferrer"
 				class="cactus-link-mobile inline-block sm:cactus-link"
-				title="View my resume as a PDF"
 				href={resumeLink}>work experience</a
 			> -->
 
@@ -74,7 +73,7 @@ const technicalSkills: Array<{
 	</section>
 	<section class="mt-10 space-y-6" data-pagefind-body>
 		<div>
-			<p class="font-customTitle title mb-4 text-xl">Technical Skills:</p>
+			<p class="title mb-4 font-customTitle text-xl">Technical Skills:</p>
 			<ul class="list-inside list-disc space-y-2">
 				{
 					technicalSkills.map((section) => (

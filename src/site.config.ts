@@ -27,6 +27,16 @@ export const siteConfig: SiteConfig = {
 	},
 };
 
+const baseCatPath = "./assets/cat_not_working_";
+const numberOfCatImgs = 7;
+export const notFoundImages: Array<ImageMetadata> = await Promise.all(
+	Array.from(
+		{ length: numberOfCatImgs },
+		async (_, index) =>
+			(await import(/* @vite-ignore */ `${baseCatPath}${index + 1}.jpeg`)).default,
+	),
+);
+
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
