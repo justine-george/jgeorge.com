@@ -1,4 +1,11 @@
 import type { Project, SiteConfig } from "@/types";
+import cat1 from "./assets/cat_not_working_1.jpeg";
+import cat2 from "./assets/cat_not_working_2.jpeg";
+import cat3 from "./assets/cat_not_working_3.jpeg";
+import cat4 from "./assets/cat_not_working_4.jpeg";
+import cat5 from "./assets/cat_not_working_5.jpeg";
+import cat6 from "./assets/cat_not_working_6.jpeg";
+import cat7 from "./assets/cat_not_working_7.jpeg";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
@@ -27,15 +34,16 @@ export const siteConfig: SiteConfig = {
 	},
 };
 
-const baseCatPath = "./assets/cat_not_working_";
-const numberOfCatImgs = 7;
-export const notFoundImages: Array<ImageMetadata> = await Promise.all(
-	Array.from(
-		{ length: numberOfCatImgs },
-		async (_, index) =>
-			(await import(/* @vite-ignore */ `${baseCatPath}${index + 1}.jpeg`)).default,
-	),
-);
+// const baseCatPath = "./assets/cat_not_working_";
+// const numberOfCatImgs = 7;
+// export const notFoundImages: Array<ImageMetadata> = await Promise.all(
+// 	Array.from(
+// 		{ length: numberOfCatImgs },
+// 		async (_, index) =>
+// 			(await import(/* @vite-ignore */ `${baseCatPath}${index + 1}.jpeg`)).default,
+// 	),
+// );
+export const notFoundImages: Array<ImageMetadata> = [cat1, cat2, cat3, cat4, cat5, cat6, cat7];
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
@@ -52,6 +60,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	// 	path: "/links/",
 	// },
 	{
+		title: "Experience",
+		path: "/experience/",
+	},
+	{
 		title: "Projects",
 		path: "/projects/",
 	},
@@ -59,10 +71,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Blog",
 		path: "/posts/",
 	},
-	{
-		title: "About",
-		path: "/about/",
-	},
+	// {
+	// 	title: "About",
+	// 	path: "/about/",
+	// },
 	// {
 	// 	title: "Resume",
 	// 	path: "/resume/",
