@@ -9,7 +9,7 @@
 	:root {
 		color-scheme: light;
 		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
+		--theme-bg: 0deg 0% 97%;
 		--theme-link: 172deg 50% 40%;
 		--theme-text: 210deg 10% 20%;
 		--theme-accent: 172deg 40% 30%;
@@ -44,6 +44,11 @@
 	q {
 		/* @apply text-base leading-[1.75rem] sm:text-sm sm:leading-[1.75rem]; */
 		@apply text-[0.95rem] leading-[1.75rem] sm:text-[0.95rem] sm:leading-[1.75rem];
+	}
+
+	p.project-description,
+	q.post-description {
+		@apply text-[0.85rem] leading-[1.75rem] sm:text-[0.85rem] sm:leading-[1.75rem];
 	}
 
 	ul,
