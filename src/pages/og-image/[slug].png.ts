@@ -40,9 +40,23 @@ const markup = (title: string, pubDate: string) =>
 				<img src="https://jgeorge-com.pages.dev/192x192.png" alt="Logo" tw="w-12 h-12" />
 				<p tw="ml-3 font-semibold">${siteConfig.title}</p>
 			</div>
-			<p>by ${siteConfig.author}</p>
 		</div>
 	</div>`;
+
+// const markup = (title: string, pubDate: string) =>
+// 	html`<div tw="flex flex-col w-full h-full bg-[#1d1f21] text-[#c9cacc]">
+// 		<div tw="flex flex-col flex-1 w-full p-10 justify-center">
+// 			<p tw="text-2xl mb-6">${pubDate}</p>
+// 			<h1 tw="text-6xl font-bold leading-snug text-white">${title}</h1>
+// 		</div>
+// 		<div tw="flex items-center justify-between w-full p-10 border-t border-[#2bbc89] text-xl">
+// 			<div tw="flex items-center">
+// 				<img src="https://jgeorge-com.pages.dev/192x192.png" alt="Logo" tw="w-12 h-12" />
+// 				<p tw="ml-3 font-semibold">${siteConfig.title}</p>
+// 			</div>
+// 			<p>by ${siteConfig.author}</p>
+// 		</div>
+// 	</div>`;
 
 export async function GET({ params: { slug } }: APIContext) {
 	const post = await getEntryBySlug("post", slug!);
