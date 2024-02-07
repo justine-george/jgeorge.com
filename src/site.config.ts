@@ -48,7 +48,7 @@ export const notFoundImages: Array<ImageMetadata> = [cat1, cat2, cat3, cat4, cat
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
 	{
-		title: "Home",
+		title: "About",
 		path: "/",
 	},
 	// {
@@ -63,10 +63,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "Blog",
 		path: "/posts/",
 	},
-	{
-		title: "About",
-		path: "/about/",
-	},
+	// {
+	// 	title: "About",
+	// 	path: "/about/",
+	// },
 	// {
 	// 	title: "Resume",
 	// 	path: "/resume/",
