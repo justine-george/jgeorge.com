@@ -51,6 +51,10 @@
 		@apply text-[0.85rem] leading-[1.75rem] sm:text-[0.85rem] sm:leading-[1.75rem];
 	}
 
+	p.project-metrics {
+		@apply text-[0.85rem] leading-[1.5rem] sm:text-[0.85rem] sm:leading-[1.5rem];
+	}
+
 	ul,
 	li {
 		/* @apply text-base leading-[1.5rem] sm:text-sm sm:leading-[1.5rem]; */

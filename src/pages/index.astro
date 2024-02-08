@@ -6,6 +6,7 @@ import SocialList from "@/components/SocialList";
 import externalArrow from "@/assets/external_arrow.svg?raw";
 import forwardArrow from "@/assets/forward_arrow.svg?raw";
 import { projects } from "@/site-config";
+import { Icon } from "astro-icon";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
 
@@ -15,8 +16,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section aria-label="Landing page intro" class="space-y-6" data-pagefind-body>
-		<!-- <h1 class="font-customTitle title">Hey, I'm Justine!</h1> -->
+	<section aria-label="Landing page intro" class="space-y-8" data-pagefind-body>
 		<h1 class="title font-customTitle text-4xl">Hello, I'm Justine 👋🏼</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24. I am passionate about
@@ -26,36 +26,58 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			impactful software. I'm always open to discussing tech, opportunities, or swapping pet photos
 			— feel free to reach out!
 		</p>
-
-		<!-- <p>
-			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
-			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
-			Oracle Finance and Resi Media. Please feel free to reach out if you want to talk tech, discuss
-			opportunities, or just send over your pet photos!
-		</p> -->
-
 		<SocialList />
 	</section>
-	<section aria-label="Projects list" class="mt-10 space-y-6">
-		<!-- <p class="mb-4 font-semibold">Featured Projects</p> -->
+	<section aria-label="Projects list" class="mt-12 space-y-8">
 		<h2 class="title font-customTitle text-xl">Featured Projects</h2>
-		<ul class="list-inside list-disc space-y-4">
+		<ul class="list-inside list-disc space-y-8">
 			{
 				featuredProjects.map((project) => (
-					<li class="flex list-none flex-wrap gap-y-2">
+					<li class="group flex list-none flex-col-reverse gap-y-2 sm:flex-row sm:gap-x-4">
 						<a
+							class="mb-2 sm:mb-0"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="group cactus-link-mobile inline-block sm:cactus-link"
 							href={project.links.github}
 						>
-							{project.title}
-							<span
-								class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-								set:html={externalArrow}
+							<img
+								class="flex h-fit w-[14rem] min-w-[12rem] sm:w-[12rem]"
+								src={project.thumbnail}
+								alt={project.title}
 							/>
 						</a>
-						<p class="project-description line-clamp-3 block">{project.description}</p>
+						<div class="flex flex-col items-start">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								class="group cactus-link-mobile inline-block sm:cactus-link"
+								href={project.links.github}
+							>
+								{project.title}
+								<span
+									class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+									set:html={externalArrow}
+								/>
+							</a>
+							<p class="project-description mt-2 line-clamp-3 block">{project.description}</p>
+							{project.metrics && project.metrics.users && (
+								<a
+									class="mb-2 mt-2 flex flex-row items-center justify-start sm:hover:text-accent"
+									href={project.links.github}
+									target="_blank"
+									rel={`noopener noreferrer`}
+								>
+									<Icon
+										class="me-1 h-4 w-4"
+										name="ri:user-line"
+										aria-hidden="true"
+										focusable="false"
+									/>
+									<p class="project-metrics">{project.metrics!.users} weekly active users</p>
+									<span class="sr-only">{"Weekly Active Users Count"}</span>
+								</a>
+							)}
+						</div>
 					</li>
 				))
 			}
@@ -71,9 +93,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</p>
 	</section>
 
-	<section aria-label="Blog post list" class="mt-10 space-y-6">
+	<section aria-label="Blog post list" class="mt-12 space-y-6">
 		<h2 class="title font-customTitle text-xl">Most Recent Posts</h2>
-		<ul class="space-y-4 sm:space-y-4">
+		<ul class="space-y-4 sm:space-y-6">
 			{
 				allPostsByDate.map((p) => (
 					<li class="flex flex-col gap-2">

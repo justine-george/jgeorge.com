@@ -7,6 +7,10 @@ import cat5 from "./assets/cat_not_working_5.jpeg";
 import cat6 from "./assets/cat_not_working_6.jpeg";
 import cat7 from "./assets/cat_not_working_7.jpeg";
 
+import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
+import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
+import planetThumbnail from "/thumbnails/planet-thumbnail.png?url";
+
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: "Justine George",
@@ -75,9 +79,16 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 
 export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
+// async function fetchTabkeeperMetrics() {
+// 	const response = await fetch(
+// 		"https://project-metrics-flask.fly.dev/projects/usercount?name=tab-keeper-react-chrome-extension",
+// 	);
+// 	const data = await response.json();
+// 	return data;
+// }
+
 export const projects: Array<Project> = [
 	{
-		// title: "Tab Keeper (Featured on Chrome Web Store)",
 		title: "Tab Keeper (Featured on Web Store)",
 		description:
 			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API.",
@@ -87,6 +98,11 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["TypeScript", "React", "Redux", "Cloud Firestore", "Emotion CSS", "Vitest"],
 		isFeatured: true,
+		thumbnail: tabkeeperThumbnail,
+		metrics: {
+			users: 530,
+			// users: tabkeeperMetrics.users,
+		},
 	},
 	{
 		title: "Book Fellow: For Bibliophiles",
@@ -98,6 +114,7 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
 		isFeatured: true,
+		thumbnail: bookfellowThumbnail,
 	},
 	{
 		title: "Planet: Event Planner Application",
@@ -110,6 +127,7 @@ export const projects: Array<Project> = [
 		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
 		// isOtherProject: true,
 		isFeatured: true,
+		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
