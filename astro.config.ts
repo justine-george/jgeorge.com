@@ -7,6 +7,7 @@ import react from "@astrojs/react";
 import remarkUnwrapImages from "remark-unwrap-images";
 import rehypeExternalLinks from "rehype-external-links";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
 		}),
 		sitemap(),
 		react(),
+		icon(),
 	],
 	image: {
 		domains: ["webmention.io"],
