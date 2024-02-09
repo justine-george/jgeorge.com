@@ -1,12 +1,11 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import FeaturedProjects from "@/components/project/FeaturedProjects";
 import SocialList from "@/components/SocialList";
-import externalArrow from "@/assets/external_arrow.svg?raw";
-import forwardArrow from "@/assets/forward_arrow.svg?raw";
-import { projects } from "@/site-config";
+import { getAllPosts, sortMDByDate } from "@/utils";
 import { Icon } from "astro-icon";
+import { projects } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
 
@@ -30,64 +29,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 	<section aria-label="Projects list" class="mt-12 space-y-8">
 		<h2 class="title font-customTitle text-xl">Featured Projects</h2>
-		<ul class="list-inside list-disc space-y-8">
-			{
-				featuredProjects.map((project) => (
-					<li class="group flex list-none flex-col-reverse gap-y-2 sm:flex-row sm:gap-x-4">
-						<a
-							class="mb-2 sm:mb-0"
-							target="_blank"
-							rel="noopener noreferrer"
-							href={project.links.github}
-						>
-							<img
-								class="flex h-fit w-[14rem] min-w-[12rem] sm:w-[12rem]"
-								src={project.thumbnail}
-								alt={project.title}
-							/>
-						</a>
-						<div class="flex flex-col items-start">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								class="group cactus-link-mobile inline-block sm:cactus-link"
-								href={project.links.github}
-							>
-								{project.title}
-								<span
-									class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-									set:html={externalArrow}
-								/>
-							</a>
-							<p class="project-description mt-2 line-clamp-3 block">{project.description}</p>
-							{project.metrics && project.metrics.users && (
-								<a
-									class="mb-2 mt-2 flex flex-row items-center justify-start sm:hover:text-accent"
-									href={project.links.github}
-									target="_blank"
-									rel={`noopener noreferrer`}
-								>
-									<Icon
-										class="me-1 h-4 w-4"
-										name="ri:user-line"
-										aria-hidden="true"
-										focusable="false"
-									/>
-									<p class="project-metrics">{project.metrics!.users} weekly active users</p>
-									<span class="sr-only">{"Weekly Active Users Count"}</span>
-								</a>
-							)}
-						</div>
-					</li>
-				))
-			}
-		</ul>
+		<FeaturedProjects projects={featuredProjects} />
 		<p>
 			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
 				<span>View all projects</span>
-				<span
-					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
-					set:html={forwardArrow}
+				<Icon
+					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					name="ri:arrow-right-line"
+					aria-hidden="true"
+					focusable="false"
 				/>
 			</a>
 		</p>
@@ -107,15 +57,17 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<p>
 			<a href="/posts" aria-label="View all blog posts" class="group sm:hover:text-accent">
 				<span>Read all blog posts</span>
-				<span
-					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
-					set:html={forwardArrow}
+				<Icon
+					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					name="ri:arrow-right-line"
+					aria-hidden="true"
+					focusable="false"
 				/>
 			</a>
 		</p>
 	</section>
 	<!-- <section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+		<h2 class="mb-4 text-xl title">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				otherProjects.map(({ links, title, description }) => (
@@ -124,7 +76,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 							href={links.demo || links.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link inline-block"
+							class="inline-block cactus-link"
 						>
 							{title}
 						</a>

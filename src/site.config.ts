@@ -6,6 +6,8 @@ import cat4 from "./assets/cat_not_working_4.jpeg";
 import cat5 from "./assets/cat_not_working_5.jpeg";
 import cat6 from "./assets/cat_not_working_6.jpeg";
 import cat7 from "./assets/cat_not_working_7.jpeg";
+import cat8 from "./assets/cat_not_working_8.jpeg";
+import cat9 from "./assets/cat_not_working_9.jpeg";
 
 import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
 import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
@@ -47,7 +49,17 @@ export const siteConfig: SiteConfig = {
 // 			(await import(/* @vite-ignore */ `${baseCatPath}${index + 1}.jpeg`)).default,
 // 	),
 // );
-export const notFoundImages: Array<ImageMetadata> = [cat1, cat2, cat3, cat4, cat5, cat6, cat7];
+export const notFoundImages: Array<ImageMetadata> = [
+	cat1,
+	cat2,
+	cat3,
+	cat4,
+	cat5,
+	cat6,
+	cat7,
+	cat8,
+	cat9,
+];
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
@@ -79,14 +91,6 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 
 export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
-// async function fetchTabkeeperMetrics() {
-// 	const response = await fetch(
-// 		"https://project-metrics-flask.fly.dev/projects/usercount?name=tab-keeper-react-chrome-extension",
-// 	);
-// 	const data = await response.json();
-// 	return data;
-// }
-
 export const projects: Array<Project> = [
 	{
 		title: "Tab Keeper (Featured on Web Store)",
@@ -94,14 +98,14 @@ export const projects: Array<Project> = [
 			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API.",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
-			demo: "https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
+			storepage:
+				"https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
 		},
 		technologies: ["TypeScript", "React", "Redux", "Cloud Firestore", "Emotion CSS", "Vitest"],
 		isFeatured: true,
 		thumbnail: tabkeeperThumbnail,
 		metrics: {
-			users: 530,
-			// users: tabkeeperMetrics.users,
+			users: 531,
 		},
 	},
 	{
@@ -117,7 +121,7 @@ export const projects: Array<Project> = [
 		thumbnail: bookfellowThumbnail,
 	},
 	{
-		title: "Planet: Event Planner Application",
+		title: "Planet: Event Planner App",
 		description:
 			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management.",
 		links: {
@@ -125,7 +129,6 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
-		// isOtherProject: true,
 		isFeatured: true,
 		thumbnail: planetThumbnail,
 	},
@@ -138,7 +141,6 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["C", "POSIX Threads", "Mutex Locks", "Semaphores", "GDB"],
-		// isOtherProject: true,
 		// isFeatured: true,
 	},
 	{
@@ -194,7 +196,7 @@ export const projects: Array<Project> = [
 	{
 		title: "EZ Cart",
 		description:
-			"React-based ecommerce application enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
+			"React-based ecommerce app enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
 		links: {
 			github: "https://github.com/justine-george/EZCart-Web",
 			demo: "",

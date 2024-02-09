@@ -1,10 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon";
 
 import BaseLayout from "./Base.astro";
 import BlogHero from "@/components/blog/Hero";
 import TOC from "@/components/blog/TOC";
-import backArrow from "@/assets/back_arrow.svg?raw";
 import WebMentions from "@/components/blog/webmentions/index";
 
 interface Props {
@@ -36,9 +36,11 @@ const { headings } = await post.render();
 						aria-label="Back to all blog posts"
 						class="group bg-none hover:bg-none sm:hover:text-accent"
 					>
-						<span
-							class="inline-block -translate-y-[0.1rem] transition-transform group-hover:-translate-x-1.5 sm:group-hover:text-accent"
-							set:html={backArrow}
+						<Icon
+							class="me-0.5 inline-block h-4 w-4 -translate-y-[0.1rem] transition-transform group-hover:-translate-x-1.5 sm:group-hover:text-accent"
+							name="ri:arrow-left-line"
+							aria-hidden="true"
+							focusable="false"
 						/>
 						<span>Back to all blog posts</span>
 					</a>

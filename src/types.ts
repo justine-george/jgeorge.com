@@ -88,12 +88,12 @@ export type Project = {
 	description: string;
 	isFeatured?: boolean;
 	isDisabled?: boolean;
-	isOtherProject?: boolean;
 	technologies: string[];
 	thumbnail?: string;
 	links: {
 		github?: string;
 		demo?: string;
+		storepage?: string;
 	};
 	metrics?: {
 		users?: number;
