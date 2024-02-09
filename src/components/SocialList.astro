@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { IconifyMetadata } from "@/types";
 import { resumeLink } from "@/site-config";
 // import externalArrow from "@/assets/external_arrow.svg?raw";
 
@@ -7,6 +8,12 @@ import { resumeLink } from "@/site-config";
 	Uses https://github.com/natemoo-re/astro-icon#readme
 	Find icons @ https://icones.js.org/
 */
+
+const iconMeta: IconifyMetadata = {
+	type: "fill",
+	from: "ri",
+};
+
 const socialLinks: Array<{
 	name: string;
 	friendlyName: string;
@@ -14,36 +21,36 @@ const socialLinks: Array<{
 	isWebmention?: boolean;
 }> = [
 	{
-		name: "ri:github-fill",
+		name: `${iconMeta.from}:github-${iconMeta.type}`,
 		friendlyName: "GitHub",
 		link: "https://www.github.com/justine-george/",
 	},
 	{
-		name: "ri:linkedin-box-fill",
+		name: `${iconMeta.from}:linkedin-box-${iconMeta.type}`,
 		friendlyName: "LinkedIn",
 		link: "https://www.linkedin.com/in/justine-george/",
 	},
 	{
-		name: "ri:mail-fill",
+		name: `${iconMeta.from}:mail-${iconMeta.type}`,
 		friendlyName: "Email",
 		link: "mailto:justine.george.work@gmail.com",
 		isWebmention: true,
 	},
 	{
-		name: "ri:twitter-fill",
+		name: `${iconMeta.from}:phone-${iconMeta.type}`,
+		friendlyName: "Phone",
+		link: "tel:+19452096665",
+	},
+	{
+		name: `${iconMeta.from}:twitter-x-${iconMeta.type}`,
 		friendlyName: "Twitter",
 		link: "https://twitter.com/jgeorge____",
 	},
 	{
-		name: "ri:phone-fill",
-		friendlyName: "Phone",
-		link: "tel:+19452096665",
+		name: `${iconMeta.from}:instagram-${iconMeta.type}`,
+		friendlyName: "Instagram",
+		link: "https://www.instagram.com/justine.george__",
 	},
-	// {
-	// 	name: "ri:instagram-fill",
-	// 	friendlyName: "Instagram",
-	// 	link: "https://www.instagram.com/justine.george__",
-	// },
 ];
 ---
 
@@ -62,7 +69,7 @@ const socialLinks: Array<{
 			/> -->
 			<Icon
 				class="inline-block h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-				name="ri:arrow-right-up-line"
+				name={`ri:arrow-right-up-line`}
 				aria-hidden="true"
 				focusable="false"
 			/>
@@ -73,13 +80,18 @@ const socialLinks: Array<{
 			socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
 				<li class="flex">
 					<a
-						class="inline-block p-1 transition-transform hover:-translate-y-1 sm:hover:text-link"
+						class="inline-block p-1 transition-transform hover:-translate-y-0.5 sm:hover:text-link"
 						href={link}
 						target="_blank"
 						title={friendlyName}
 						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
-						<Icon class="h-6 w-6" name={name} aria-hidden="true" focusable="false" />
+						<Icon
+							class={friendlyName === "Twitter" ? "h-6 w-6" : "h-6 w-6"}
+							name={name}
+							aria-hidden="true"
+							focusable="false"
+						/>
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>

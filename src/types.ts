@@ -20,6 +20,11 @@ export type PaginationLink = {
 	srLabel?: string;
 };
 
+export type IconifyMetadata = {
+	type: "fill" | "line";
+	from: "mdi" | "ri";
+};
+
 export type SiteMeta = {
 	title: string;
 	description?: string;
