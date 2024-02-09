@@ -22,7 +22,7 @@ const { headings } = await post.render();
 ---
 
 <BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
-	<div class="lg:flex lg:items-start lg:gap-x-10">
+	<div class="font-customBlogText lg:flex lg:items-start lg:gap-x-10">
 		{!!headings.length && <TOC headings={headings} />}
 		<article class="flex-grow break-words" data-pagefind-body>
 			<div id="blog-hero"><BlogHero content={post} /></div>
@@ -42,7 +42,7 @@ const { headings } = await post.render();
 							aria-hidden="true"
 							focusable="false"
 						/>
-						<span>Back to all blog posts</span>
+						<span class="font-custom">Back to all blog posts</span>
 					</a>
 				</p>
 				<WebMentions />
