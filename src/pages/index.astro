@@ -17,7 +17,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
 	<section aria-label="Landing page intro" class="space-y-8" data-pagefind-body>
-		<h1 class="title font-customTitle text-4xl">Hello, I'm Justine 👋🏼</h1>
+		<h1 class="title text-4xl">Hello, I'm Justine 👋🏼</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24. I am passionate about
 			building scalable and reliable backend systems, with a strong interest in distributed systems
@@ -29,7 +29,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<SocialList />
 	</section>
 	<section aria-label="Projects list" class="mt-12 space-y-8">
-		<h2 class="title font-customTitle text-xl">Featured Projects</h2>
+		<h2 class="title text-xl">Featured Projects</h2>
 		<FeaturedProjects projects={featuredProjects} />
 		<p>
 			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
@@ -45,7 +45,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 	</section>
 
 	<section aria-label="Blog post list" class="mt-12 space-y-6">
-		<h2 class="title font-customTitle text-xl">Most Recent Posts</h2>
+		<h2 class="title text-xl">Most Recent Posts</h2>
 		<ul class="space-y-4 sm:space-y-6">
 			{
 				allPostsByDate.map((p) => (

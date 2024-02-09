@@ -30,9 +30,15 @@ export default {
 				logoBorderHoverColor: "hsl(var(--theme-logo-border-hover) / <alpha-value>)",
 			},
 			fontFamily: {
-				// Add any custom fonts here
+				// custom: [...fontFamily.sans],
 				custom: ["Merriweather", "serif"],
+				customBlogText: ["Merriweather", "serif"],
 				customTitle: ["DM Serif Display", "serif"],
+
+				// custom: ["Inter", "sans-serif"],
+				// customBlogText: ["Inter", "sans-serif"],
+				// customTitle: ["Inter", "sans-serif"],
+
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],
 			},
@@ -135,7 +141,7 @@ export default {
 						"linear-gradient(transparent,transparent 4px,hsl(var(--theme-link)) 4px,hsl(var(--theme-link)))",
 				},
 				".title": {
-					"@apply text-3xl font-semibold text-accent-2": {},
+					"@apply text-3xl font-customTitle font-semibold text-accent-2": {},
 				},
 			});
 		}),
