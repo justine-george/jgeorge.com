@@ -12,7 +12,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://jgeorge.pages.dev/",
+	site: "https://www.jgeorge.dev/",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
 		rehypePlugins: [

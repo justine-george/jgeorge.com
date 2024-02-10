@@ -4,4 +4,4 @@ Allow: /
 User-agent: GPTBot
 Disallow: /
 
-Sitemap: https://jgeorge.pages.dev/sitemap-index.xml
+Sitemap: https://www.jgeorge.dev/sitemap-index.xml

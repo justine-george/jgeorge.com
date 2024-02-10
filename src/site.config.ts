@@ -20,14 +20,14 @@ export const siteConfig: SiteConfig = {
 	title: "Justine George",
 	// Meta property used as the default description meta property
 	description:
-		"Hey, I'm Justine! I'm a software engineer based in USA, and I love to build things.",
+		"Hey, I'm Justine! I'm a software engineer based in the US, and I love to build things.",
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: "en-US",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "en_US",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "en-US",
 		options: {
 			day: "numeric",
 			month: "short",
@@ -36,7 +36,7 @@ export const siteConfig: SiteConfig = {
 	},
 	webmentions: {
 		link: "",
-		// link: "https://webmention.io/jgeorge.pages.dev/webmention",
+		// link: "https://webmention.io/www.jgeorge.dev/webmention",
 	},
 };
 

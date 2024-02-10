@@ -10,7 +10,7 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 
 const { post, as: Tag = "div", withDesc = true } = Astro.props;
 // const postDate = post.data.updatedDate ?? post.data.publishDate;
-const postTitleClasses = `sm:cactus-link cactus-link-mobile inline-block${
+const postTitleClasses = `sm:cactus-link cactus-link-mobile group-hover:cactus-link-mobile inline-block${
 	Tag === "h2" ? " text-[1.04rem]" : ""
 }`;
 const postDescriptionClasses = `line-clamp-3 block${Tag === "h2" ? "" : " post-description"}`;
