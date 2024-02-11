@@ -8,9 +8,8 @@ type Props = {
 
 const { experience } = Astro.props;
 
-const options = { year: "numeric", month: "long" };
 function getFormattedDate(date: Date) {
-	return date.toLocaleDateString("en-US", options).toUpperCase();
+	return date.toLocaleDateString("en-US", { year: "numeric", month: "long" }).toUpperCase();
 }
 ---
 

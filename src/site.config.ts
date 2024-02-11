@@ -104,11 +104,10 @@ export const experiences: Array<Experience> = [
 			"Java",
 			"Spring Boot",
 			"TypeScript",
-			"Cassandra",
-			"Redis",
 			"Docker",
 			"GCP",
-			"FFmpeg",
+			"Redis",
+			"Cassandra",
 			"TestNG",
 		],
 		links: {
@@ -126,10 +125,9 @@ export const experiences: Array<Experience> = [
 			"Java",
 			"Spring Boot",
 			"JUnit",
-			"Swagger",
-			"Oracle SQL",
 			"Docker",
-			"Knockout.js",
+			"Oracle SQL",
+			"Swagger",
 			"JavaScript",
 			"HTML",
 			"CSS",
@@ -147,13 +145,12 @@ export const experiences: Array<Experience> = [
 		description: "Storimart Team — B2B E-commerce Platform",
 		technologies: [
 			"Java",
-			"XML",
 			"Retrofit",
+			"Firebase",
+			"XML",
 			"SQlite (Room)",
 			"OkHttp",
-			"Picasso",
 			"Material Design",
-			"Firebase",
 		],
 		links: {
 			company: "https://storimart.com/",
@@ -224,6 +221,16 @@ export const projects: Array<Project> = [
 		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
 	},
 	{
+		title: "URL Shortener Microservice",
+		description:
+			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection.",
+		links: {
+			github: "https://github.com/justine-george/url-shortener-service",
+			demo: "",
+		},
+		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
+	},
+	{
 		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
 		description:
 			"Implementation of the 8 Men Morris game using MiniMax and Alpha-Beta pruning algorithms, demonstrating AI strategies in game theory.",
@@ -254,16 +261,6 @@ export const projects: Array<Project> = [
 		technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
 	},
 	{
-		title: "URL Shortener Microservice",
-		description:
-			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection.",
-		links: {
-			github: "https://github.com/justine-george/url-shortener-service",
-			demo: "",
-		},
-		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
-	},
-	{
 		title: "EZ Cart",
 		description:
 			"React-based ecommerce app enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
@@ -283,14 +280,14 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
 	},
-	{
-		title: "File System Integrity Validator for xv6",
-		description:
-			"File system consistency checker for xv6 ensuring inode and block integrity in file system Images.",
-		links: {
-			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
-			demo: "",
-		},
-		technologies: ["C", "xv6", "GDB"],
-	},
+	// {
+	// 	title: "File System Integrity Validator for xv6",
+	// 	description:
+	// 		"File system consistency checker for xv6 ensuring inode and block integrity in file system Images.",
+	// 	links: {
+	// 		github: "https://github.com/justine-george/File-System-Checker-for-XV6",
+	// 		demo: "",
+	// 	},
+	// 	technologies: ["C", "xv6", "GDB"],
+	// },
 ];
