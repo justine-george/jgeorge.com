@@ -1,12 +1,17 @@
 ---
-import { Icon } from "astro-icon";
-import { resumeLink } from "@/site-config";
-import externalArrow from "@/assets/external_arrow.svg?raw";
+import { Icon } from "astro-icon/components";
+import type { IconifyMetadata } from "@/types";
 
 /** 
 	Uses https://github.com/natemoo-re/astro-icon#readme
 	Find icons @ https://icones.js.org/
 */
+
+const iconMeta: IconifyMetadata = {
+	type: "fill",
+	from: "ri",
+};
+
 const socialLinks: Array<{
 	name: string;
 	friendlyName: string;
@@ -14,33 +19,33 @@ const socialLinks: Array<{
 	isWebmention?: boolean;
 }> = [
 	{
-		name: "ri:github-fill",
+		name: `${iconMeta.from}:github-${iconMeta.type}`,
 		friendlyName: "GitHub",
 		link: "https://www.github.com/justine-george/",
 	},
 	{
-		name: "ri:linkedin-box-fill",
+		name: `${iconMeta.from}:linkedin-box-${iconMeta.type}`,
 		friendlyName: "LinkedIn",
 		link: "https://www.linkedin.com/in/justine-george/",
 	},
 	{
-		name: "ri:mail-fill",
+		name: `${iconMeta.from}:mail-${iconMeta.type}`,
 		friendlyName: "Email",
 		link: "mailto:justine.george.work@gmail.com",
 		isWebmention: true,
 	},
 	{
-		name: "ri:twitter-fill",
-		friendlyName: "Twitter",
-		link: "https://twitter.com/jgeorge____",
-	},
-	{
-		name: "ri:phone-fill",
+		name: `${iconMeta.from}:phone-${iconMeta.type}`,
 		friendlyName: "Phone",
 		link: "tel:+19452096665",
 	},
+	{
+		name: `${iconMeta.from}:twitter-x-${iconMeta.type}`,
+		friendlyName: "Twitter",
+		link: "https://twitter.com/jgeorge____",
+	},
 	// {
-	// 	name: "ri:instagram-fill",
+	// 	name: `${iconMeta.from}:instagram-${iconMeta.type}`,
 	// 	friendlyName: "Instagram",
 	// 	link: "https://www.instagram.com/justine.george__",
 	// },
@@ -50,30 +55,49 @@ const socialLinks: Array<{
 <div class="me-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-8">
 	<p>
 		<a
+			href={`/experience`}
+			aria-label="Read more about my work experience"
+			class="group cactus-link-mobile inline-block"
+			>Work Experience
+			<Icon
+				class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 group-hover:text-accent"
+				name={`ri:arrow-right-line`}
+				aria-hidden="true"
+				focusable="false"
+			/>
+		</a>
+		<!-- <a
 			target="_blank"
 			rel="noopener noreferrer"
 			href={resumeLink}
 			aria-label="View my resume"
 			class="group cactus-link-mobile inline-block"
 			>View my résumé
-			<span
-				class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-				set:html={externalArrow}
+			<Icon
+				class="inline-block h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+				name={`ri:arrow-right-up-line`}
+				aria-hidden="true"
+				focusable="false"
 			/>
-		</a>
+		</a> -->
 	</p>
 	<ul class="flex flex-initial items-center gap-x-2">
 		{
 			socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
 				<li class="flex">
 					<a
-						class="inline-block p-1 transition-transform hover:-translate-y-1 sm:hover:text-link"
+						class="inline-block p-1 transition-transform hover:-translate-y-0.5 sm:hover:text-link"
 						href={link}
 						target="_blank"
 						title={friendlyName}
 						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
-						<Icon class="h-6 w-6" name={name} aria-hidden="true" focusable="false" />
+						<Icon
+							class={friendlyName === "Twitter" ? "h-6 w-6" : "h-6 w-6"}
+							name={name}
+							aria-hidden="true"
+							focusable="false"
+						/>
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>

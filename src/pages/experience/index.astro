@@ -1,28 +1,51 @@
 ---
 import PageLayout from "@/layouts/Base";
-import ProjectPreview from "@/components/project/ProjectPreview";
-import { projects } from "@/site-config";
+import ExperiencePreview from "@/components/experience/ExperiencePreview";
+import { experiences } from "@/site-config";
+import { resumeLink } from "@/site-config";
+import { Icon } from "astro-icon/components";
 
 const meta = {
-	title: "All Projects",
-	description:
-		"A list of projects I've done, including open source projects, personal projects, and freelance projects.",
+	title: "Work Experience",
+	description: "A list of all the work experiences I've had.",
 };
 
-const allProjects = projects.filter((project) => !project.isDisabled);
+const allExperiences = experiences.filter((experience) => !experience.isDisabled);
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-8 font-customTitle">Experience</h1>
-	<section class="space-y-6" data-pagefind-body>
+	<h1 class="title mb-10">Experience</h1>
+	<section class="space-y-8" data-pagefind-body>
 		<ul class="list-inside list-disc space-y-8">
 			{
-				allProjects.map((project) => (
-					<li class="flex flex-col flex-wrap gap-2 [&_q]:basis-full">
-						<ProjectPreview project={project} as="h2" />
+				allExperiences.map((experience) => (
+					<li class="group flex list-none flex-col items-start justify-between gap-y-2 sm:flex-row sm:gap-x-4">
+						<ExperiencePreview experience={experience} />
 					</li>
 				))
 			}
 		</ul>
+		<div class="me-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-8">
+			<p>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href={resumeLink}
+					aria-label="View my resume"
+					class="group cactus-link-mobile inline-block"
+					>View Full Résumé
+					<!-- <span
+						class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+						set:html={externalArrow}
+					/> -->
+					<Icon
+						class="inline-block h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+						name={`ri:arrow-right-up-line`}
+						aria-hidden="true"
+						focusable="false"
+					/>
+				</a>
+			</p>
+		</div>
 	</section>
 </PageLayout>

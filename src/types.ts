@@ -20,6 +20,11 @@ export type PaginationLink = {
 	srLabel?: string;
 };
 
+export type IconifyMetadata = {
+	type: "fill" | "line";
+	from: "mdi" | "ri";
+};
+
 export type SiteMeta = {
 	title: string;
 	description?: string;
@@ -88,10 +93,29 @@ export type Project = {
 	description: string;
 	isFeatured?: boolean;
 	isDisabled?: boolean;
-	isOtherProject?: boolean;
 	technologies: string[];
+	thumbnail?: string;
 	links: {
 		github?: string;
 		demo?: string;
+		storepage?: string;
+	};
+	metrics?: {
+		users?: number;
+	};
+};
+
+export type Experience = {
+	title: string;
+	prevTitles?: Array<{ title: string; endDate: Date }>; // to show in reverse chronological order
+	company: string;
+	location?: string;
+	startDate: Date;
+	endDate: Date;
+	description: string;
+	technologies: string[];
+	isDisabled?: boolean;
+	links: {
+		company?: string;
 	};
 };

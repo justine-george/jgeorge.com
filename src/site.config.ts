@@ -1,4 +1,4 @@
-import type { Project, SiteConfig } from "@/types";
+import type { Experience, Project, SiteConfig } from "@/types";
 import cat1 from "./assets/cat_not_working_1.jpeg";
 import cat2 from "./assets/cat_not_working_2.jpeg";
 import cat3 from "./assets/cat_not_working_3.jpeg";
@@ -6,6 +6,12 @@ import cat4 from "./assets/cat_not_working_4.jpeg";
 import cat5 from "./assets/cat_not_working_5.jpeg";
 import cat6 from "./assets/cat_not_working_6.jpeg";
 import cat7 from "./assets/cat_not_working_7.jpeg";
+import cat8 from "./assets/cat_not_working_8.jpeg";
+import cat9 from "./assets/cat_not_working_9.jpeg";
+
+import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
+import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
+import planetThumbnail from "/thumbnails/planet-thumbnail.png?url";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
@@ -14,14 +20,14 @@ export const siteConfig: SiteConfig = {
 	title: "Justine George",
 	// Meta property used as the default description meta property
 	description:
-		"Hey, I'm Justine! I'm a software engineer based in USA, and I love to build things.",
+		"Hey, I'm Justine! I'm a software engineer based in the US, and I love to build things.",
 	// HTML lang property, found in src/layouts/Base.astro L:18
-	lang: "en-GB",
+	lang: "en-US",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "en_US",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "en-US",
 		options: {
 			day: "numeric",
 			month: "short",
@@ -30,7 +36,7 @@ export const siteConfig: SiteConfig = {
 	},
 	webmentions: {
 		link: "",
-		// link: "https://webmention.io/jgeorge.pages.dev/webmention",
+		// link: "https://webmention.io/www.jgeorge.dev/webmention",
 	},
 };
 
@@ -43,7 +49,17 @@ export const siteConfig: SiteConfig = {
 // 			(await import(/* @vite-ignore */ `${baseCatPath}${index + 1}.jpeg`)).default,
 // 	),
 // );
-export const notFoundImages: Array<ImageMetadata> = [cat1, cat2, cat3, cat4, cat5, cat6, cat7];
+export const notFoundImages: Array<ImageMetadata> = [
+	cat1,
+	cat2,
+	cat3,
+	cat4,
+	cat5,
+	cat6,
+	cat7,
+	cat8,
+	cat9,
+];
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: Array<{ title: string; path: string }> = [
@@ -51,10 +67,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "About",
 		path: "/",
 	},
-	// {
-	// 	title: "Experience",
-	// 	path: "/experience/",
-	// },
+	{
+		title: "Experience",
+		path: "/experience/",
+	},
 	{
 		title: "Projects",
 		path: "/projects/",
@@ -75,18 +91,98 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 
 export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
+export const experiences: Array<Experience> = [
+	{
+		title: "Software Engineer Intern (Backend)",
+		// prevTitles: [{ title: "", endDate: new Date("") }],
+		company: "Resi Media",
+		// location: "Allen, TX", // ? Maybe add this back in later
+		startDate: new Date("2023-05-22"),
+		endDate: new Date("2023-08-18"),
+		// description: "Content Library Team — Resi On Demand.",
+		description:
+			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
+			"At Resi Media's Content Library Team, I engineered REST APIs and a GCP-based alert system, improving content access for 5,000+ churches and system responsiveness. Led a research project on audio format conversion, enhancing download features.",
+		technologies: [
+			"Java",
+			"Spring Boot",
+			"TypeScript",
+			"Docker",
+			"GCP",
+			"Redis",
+			"Cassandra",
+			"TestNG",
+		],
+		links: {
+			company: "https://resi.io/resi-on-demand/",
+		},
+	},
+	{
+		title: "Software Developer (Full Stack)",
+		company: "Oracle Financial Services",
+		// location: "Bengaluru, India", // ? Maybe add this back in later
+		startDate: new Date("2019-08-12"),
+		endDate: new Date("2022-07-16"),
+		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
+		description:
+			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built over 20 REST APIs with Spring Boot and Java, improving service for 900+ global banks. I designed a Python automation tool for database updates, simplifying the process for the Interest and Charges module, which became a standard across teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
+		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
+		technologies: [
+			"Java",
+			"Spring Boot",
+			"JUnit",
+			"Docker",
+			"Oracle SQL",
+			"Swagger",
+			"JavaScript",
+			"HTML",
+			"CSS",
+		],
+		links: {
+			company: "https://www.oracle.com/financial-services/banking/flexcube/core-banking-software/",
+		},
+	},
+	{
+		title: "Software Developer Intern (Android)",
+		company: "Storilabs",
+		// location: "Calicut, India", // ? Maybe add this back in later
+		startDate: new Date("2018-04-01"),
+		endDate: new Date("2018-07-31"),
+		// description: "Storimart Team — B2B E-commerce Platform",
+		description:
+			// "In the Storimart Team for the B2B E-commerce Platform at Storilabs, as a Software Developer Intern focused on Android, I built a native app to enhance wholesaler-retailer interactions and purchasing processes. By integrating caching with OkHttp Interceptor and enabling local data storage with Room, I improved the app's performance and introduced offline functionality for the product catalog page, streamlining user access and transactions.",
+			"At Storilabs, I created a native Android app for B2B communication, enhancing wholesaler-retailer transactions. Implemented caching and offline capabilities, significantly boosting app performance and user experience.",
+		technologies: [
+			"Java",
+			"Retrofit",
+			"Firebase",
+			"XML",
+			"SQlite (Room)",
+			"OkHttp",
+			"Material Design",
+		],
+		links: {
+			company: "https://storimart.com/",
+		},
+	},
+];
+
 export const projects: Array<Project> = [
 	{
-		// title: "Tab Keeper (Featured on Chrome Web Store)",
 		title: "Tab Keeper (Featured on Web Store)",
 		description:
 			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API.",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
-			demo: "https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
+			storepage:
+				"https://chromewebstore.google.com/detail/tab-keeper-chrome-tab-man/gpibgniomobngodpnikhheifblbpbbah?ref=portfolio",
 		},
 		technologies: ["TypeScript", "React", "Redux", "Cloud Firestore", "Emotion CSS", "Vitest"],
 		isFeatured: true,
+		thumbnail: tabkeeperThumbnail,
+		metrics: {
+			users: 531,
+		},
 	},
 	{
 		title: "Book Fellow: For Bibliophiles",
@@ -98,9 +194,10 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
 		isFeatured: true,
+		thumbnail: bookfellowThumbnail,
 	},
 	{
-		title: "Planet: Event Planner Application",
+		title: "Planet: Event Planner App",
 		description:
 			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management.",
 		links: {
@@ -108,8 +205,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
-		// isOtherProject: true,
 		isFeatured: true,
+		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
@@ -120,7 +217,6 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["C", "POSIX Threads", "Mutex Locks", "Semaphores", "GDB"],
-		// isOtherProject: true,
 		// isFeatured: true,
 	},
 	{
@@ -132,6 +228,16 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
+	},
+	{
+		title: "URL Shortener Microservice",
+		description:
+			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection.",
+		links: {
+			github: "https://github.com/justine-george/url-shortener-service",
+			demo: "",
+		},
+		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
 	},
 	{
 		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
@@ -164,19 +270,9 @@ export const projects: Array<Project> = [
 		technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
 	},
 	{
-		title: "URL Shortener Microservice",
-		description:
-			"Node.js and MongoDB based microservice for URL shortening, offering JSON responses and original URL redirection.",
-		links: {
-			github: "https://github.com/justine-george/url-shortener-service",
-			demo: "",
-		},
-		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
-	},
-	{
 		title: "EZ Cart",
 		description:
-			"React-based ecommerce application enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
+			"React-based ecommerce app enabling product browsing, detailed views, and cart and wishlist management, with Material-UI and Axios integration.",
 		links: {
 			github: "https://github.com/justine-george/EZCart-Web",
 			demo: "",
@@ -193,14 +289,14 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
 	},
-	{
-		title: "File System Integrity Validator for xv6",
-		description:
-			"File system consistency checker for xv6 ensuring inode and block integrity in file system Images.",
-		links: {
-			github: "https://github.com/justine-george/File-System-Checker-for-XV6",
-			demo: "",
-		},
-		technologies: ["C", "xv6", "GDB"],
-	},
+	// {
+	// 	title: "File System Integrity Validator for xv6",
+	// 	description:
+	// 		"File system consistency checker for xv6 ensuring inode and block integrity in file system Images.",
+	// 	links: {
+	// 		github: "https://github.com/justine-george/File-System-Checker-for-XV6",
+	// 		demo: "",
+	// 	},
+	// 	technologies: ["C", "xv6", "GDB"],
+	// },
 ];

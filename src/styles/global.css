@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,8 +49,13 @@
 	}
 
 	p.project-description,
+	p.experience-description,
 	q.post-description {
-		@apply text-[0.85rem] leading-[1.75rem] sm:text-[0.85rem] sm:leading-[1.75rem];
+		@apply text-[0.85rem] leading-[1.75rem] brightness-90 sm:text-[0.85rem] sm:leading-[1.75rem];
+	}
+
+	p.project-metrics {
+		@apply text-[0.85rem] leading-[1.5rem] sm:text-[0.85rem] sm:leading-[1.5rem];
 	}
 
 	ul,

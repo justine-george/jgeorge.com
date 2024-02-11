@@ -8,24 +8,34 @@ export default function CatNotFound() {
 
 	useEffect(() => {
         const img = new Image();
-        const randomImage = notFoundImages[Math.floor(Math.random() * notFoundImages.length)] || defaultNotFoundImage;
+		const currentIndex = parseInt(localStorage.getItem("catNotFoundIndex") || Math.floor(Math.random() * notFoundImages.length));
+		const nextIndex = (currentIndex + 1) % notFoundImages.length;
+        const nextImage = notFoundImages[nextIndex] || defaultNotFoundImage;
         
         img.onload = () => {
-            setCatImgSrc(randomImage.src);
+            setCatImgSrc(nextImage.src);
 			setIsImageLoaded(true);
+			localStorage.setItem("catNotFoundIndex", nextIndex.toString());
         };
-        img.src = randomImage.src;
+
+		img.onerror = () => {
+            setCatImgSrc(defaultNotFoundImage.src);
+            setIsImageLoaded(true);
+            localStorage.setItem("catNotFoundIndex", "0");
+        };
+
+        img.src = nextImage.src;
     }, []);
 
 	return isImageLoaded ? (
 			<img
 			src={catImgSrc}
-			className={"h-64 w-full rounded-lg object-cover object-center"}
+			className={"w-full max-w-xs max-h-96 rounded-lg object-cover object-center saturate-50"}
 			alt="A confused cat stopped working, indicating its confused about the current page"
 		/>
 		): (
 			<div>
-				<code>Loading...</code>
+				<code></code>
 			</div>
 		);
 }

@@ -1,10 +1,11 @@
 ---
 import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import FeaturedProjects from "@/components/project/FeaturedProjects";
+// import FeaturedProjects from "../components/project/FeaturedProjectsCSR";
 import SocialList from "@/components/SocialList";
-import externalArrow from "@/assets/external_arrow.svg?raw";
-import forwardArrow from "@/assets/forward_arrow.svg?raw";
+import { getAllPosts, sortMDByDate } from "@/utils";
+import { Icon } from "astro-icon/components";
 import { projects } from "@/site-config";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
@@ -15,9 +16,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section aria-label="Landing page intro" class="space-y-6" data-pagefind-body>
-		<!-- <h1 class="font-customTitle title">Hey, I'm Justine!</h1> -->
-		<h1 class="title font-customTitle text-4xl">Hello, I'm Justine 👋🏼</h1>
+	<section aria-label="Landing page intro" class="space-y-8" data-pagefind-body>
+		<h1 class="title text-4xl">Hello, I'm Justine 👋🏽</h1>
 		<p>
 			I'm a CS graduate student at UT Dallas, set to graduate in May '24. I am passionate about
 			building scalable and reliable backend systems, with a strong interest in distributed systems
@@ -26,57 +26,30 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			impactful software. I'm always open to discussing tech, opportunities, or swapping pet photos
 			— feel free to reach out!
 		</p>
-
-		<!-- <p>
-			I'm a CS graduate student at UT Dallas, set to graduate in May '24, with a deep interest in
-			backend systems. I've got over 3 years of experience as a Full Stack Software Engineer at
-			Oracle Finance and Resi Media. Please feel free to reach out if you want to talk tech, discuss
-			opportunities, or just send over your pet photos!
-		</p> -->
-
 		<SocialList />
 	</section>
-	<section aria-label="Projects list" class="mt-10 space-y-6">
-		<!-- <p class="mb-4 font-semibold">Featured Projects</p> -->
-		<h2 class="title font-customTitle text-xl">Featured Projects</h2>
-		<ul class="list-inside list-disc space-y-4">
-			{
-				featuredProjects.map((project) => (
-					<li class="flex list-none flex-wrap gap-y-2">
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							class="group cactus-link-mobile inline-block sm:cactus-link"
-							href={project.links.github}
-						>
-							{project.title}
-							<span
-								class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-								set:html={externalArrow}
-							/>
-						</a>
-						<p class="project-description line-clamp-3 block">{project.description}</p>
-					</li>
-				))
-			}
-		</ul>
+	<section aria-label="Projects list" class="mt-12 space-y-8">
+		<h2 class="title text-xl">Featured Projects</h2>
+		<FeaturedProjects projects={featuredProjects} />
 		<p>
 			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
-				<span>View all projects</span>
-				<span
-					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
-					set:html={forwardArrow}
+				<span>View All Projects</span>
+				<Icon
+					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					name="ri:arrow-right-line"
+					aria-hidden="true"
+					focusable="false"
 				/>
 			</a>
 		</p>
 	</section>
 
-	<section aria-label="Blog post list" class="mt-10 space-y-6">
-		<h2 class="title font-customTitle text-xl">Most Recent Posts</h2>
-		<ul class="space-y-4 sm:space-y-4">
+	<section aria-label="Blog post list" class="mt-12 space-y-8">
+		<h2 class="title text-xl">Most Recent Posts</h2>
+		<ul class="space-y-4 sm:space-y-6">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-2">
+					<li class="group flex flex-col gap-2">
 						<PostPreview post={p} />
 					</li>
 				))
@@ -84,16 +57,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 		<p>
 			<a href="/posts" aria-label="View all blog posts" class="group sm:hover:text-accent">
-				<span>Read all blog posts</span>
-				<span
-					class="inline-block -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
-					set:html={forwardArrow}
+				<span>Read All Posts</span>
+				<Icon
+					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
+					name="ri:arrow-right-line"
+					aria-hidden="true"
+					focusable="false"
 				/>
 			</a>
 		</p>
 	</section>
 	<!-- <section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
+		<h2 class="mb-4 text-xl title">Technologies</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				otherProjects.map(({ links, title, description }) => (
@@ -102,7 +77,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 							href={links.demo || links.github}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="cactus-link inline-block"
+							class="inline-block cactus-link"
 						>
 							{title}
 						</a>
