@@ -1,5 +1,6 @@
 ---
 import type { PaginationLink } from "@/types";
+import { Icon } from "astro-icon/components";
 
 interface Props {
 	prevUrl?: PaginationLink;
@@ -13,15 +14,35 @@ const { prevUrl, nextUrl } = Astro.props;
 	(prevUrl || nextUrl) && (
 		<nav class="mt-8 flex items-center gap-x-4">
 			{prevUrl && (
-				<a class="me-auto py-2 sm:hover:text-accent" href={prevUrl.url} data-astro-prefetch>
+				<a
+					class="group me-auto py-2 text-base sm:hover:text-accent"
+					href={prevUrl.url}
+					data-astro-prefetch
+				>
+					<Icon
+						class="me-1.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:-translate-x-1.5 sm:group-hover:text-accent"
+						name="ri:arrow-left-line"
+						aria-hidden="true"
+						focusable="false"
+					/>
 					{prevUrl.srLabel && <span class="sr-only">{prevUrl.srLabel}</span>}
 					{prevUrl.text ? prevUrl.text : "Previous"}
 				</a>
 			)}
 			{nextUrl && (
-				<a class="ms-auto py-2 sm:hover:text-accent" href={nextUrl.url} data-astro-prefetch>
+				<a
+					class="group ms-auto py-2 text-base sm:hover:text-accent"
+					href={nextUrl.url}
+					data-astro-prefetch
+				>
 					{nextUrl.srLabel && <span class="sr-only">{nextUrl.srLabel}</span>}
 					{nextUrl.text ? nextUrl.text : "Next"}
+					<Icon
+						class="ms-1.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
+						name="ri:arrow-right-line"
+						aria-hidden="true"
+						focusable="false"
+					/>
 				</a>
 			)}
 		</nav>

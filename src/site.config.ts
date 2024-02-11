@@ -1,4 +1,4 @@
-import type { Project, SiteConfig } from "@/types";
+import type { Experience, Project, SiteConfig } from "@/types";
 import cat1 from "./assets/cat_not_working_1.jpeg";
 import cat2 from "./assets/cat_not_working_2.jpeg";
 import cat3 from "./assets/cat_not_working_3.jpeg";
@@ -67,10 +67,10 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		title: "About",
 		path: "/",
 	},
-	// {
-	// 	title: "Experience",
-	// 	path: "/experience/",
-	// },
+	{
+		title: "Experience",
+		path: "/experience/",
+	},
 	{
 		title: "Projects",
 		path: "/projects/",
@@ -90,6 +90,76 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 ];
 
 export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
+
+export const experiences: Array<Experience> = [
+	{
+		title: "Software Engineer Intern (Backend)",
+		// prevTitles: [{ title: "", endDate: new Date("") }],
+		company: "Resi Media",
+		// location: "Allen, TX", // ? Maybe add this back in later
+		startDate: new Date("2023-05-22"),
+		endDate: new Date("2023-08-18"),
+		description: "Content Library Team — Resi On Demand",
+		technologies: [
+			"Java",
+			"Spring Boot",
+			"TypeScript",
+			"Cassandra",
+			"Redis",
+			"Docker",
+			"GCP",
+			"FFmpeg",
+			"TestNG",
+		],
+		links: {
+			company: "https://resi.io/resi-on-demand/",
+		},
+	},
+	{
+		title: "Software Developer (Full Stack)",
+		company: "Oracle Financial Services",
+		// location: "Bengaluru, India", // ? Maybe add this back in later
+		startDate: new Date("2019-08-12"),
+		endDate: new Date("2022-07-16"),
+		description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
+		technologies: [
+			"Java",
+			"Spring Boot",
+			"JUnit",
+			"Swagger",
+			"Oracle SQL",
+			"Docker",
+			"Knockout.js",
+			"JavaScript",
+			"HTML",
+			"CSS",
+		],
+		links: {
+			company: "https://www.oracle.com/financial-services/banking/flexcube/core-banking-software/",
+		},
+	},
+	{
+		title: "Software Developer Intern (Android)",
+		company: "Storilabs",
+		// location: "Calicut, India", // ? Maybe add this back in later
+		startDate: new Date("2018-04-01"),
+		endDate: new Date("2018-07-31"),
+		description: "Storimart Team — B2B E-commerce Platform",
+		technologies: [
+			"Java",
+			"XML",
+			"Retrofit",
+			"SQlite (Room)",
+			"OkHttp",
+			"Picasso",
+			"Material Design",
+			"Firebase",
+		],
+		links: {
+			company: "https://storimart.com/",
+		},
+	},
+];
 
 export const projects: Array<Project> = [
 	{

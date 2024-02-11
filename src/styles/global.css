@@ -49,8 +49,9 @@
 	}
 
 	p.project-description,
+	p.experience-description,
 	q.post-description {
-		@apply text-[0.85rem] leading-[1.75rem] sm:text-[0.85rem] sm:leading-[1.75rem];
+		@apply text-[0.85rem] leading-[1.75rem] brightness-90 sm:text-[0.85rem] sm:leading-[1.75rem];
 	}
 
 	p.project-metrics {

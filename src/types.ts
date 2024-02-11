@@ -104,3 +104,18 @@ export type Project = {
 		users?: number;
 	};
 };
+
+export type Experience = {
+	title: string;
+	prevTitles?: Array<{ title: string; endDate: Date }>; // to show in reverse chronological order
+	company: string;
+	location?: string;
+	startDate: Date;
+	endDate: Date;
+	description: string;
+	technologies: string[];
+	isDisabled?: boolean;
+	links: {
+		company?: string;
+	};
+};

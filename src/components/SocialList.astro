@@ -1,8 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 import { IconifyMetadata } from "@/types";
-import { resumeLink } from "@/site-config";
-// import externalArrow from "@/assets/external_arrow.svg?raw";
 
 /** 
 	Uses https://github.com/natemoo-re/astro-icon#readme
@@ -57,23 +55,31 @@ const socialLinks: Array<{
 <div class="me-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-8">
 	<p>
 		<a
+			href={`/experience`}
+			aria-label="Read more about my work experience"
+			class="group cactus-link-mobile inline-block"
+			>Work History
+			<Icon
+				class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 group-hover:text-accent"
+				name={`ri:arrow-right-line`}
+				aria-hidden="true"
+				focusable="false"
+			/>
+		</a>
+		<!-- <a
 			target="_blank"
 			rel="noopener noreferrer"
 			href={resumeLink}
 			aria-label="View my resume"
 			class="group cactus-link-mobile inline-block"
 			>View my résumé
-			<!-- <span
-				class="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
-				set:html={externalArrow}
-			/> -->
 			<Icon
 				class="inline-block h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
 				name={`ri:arrow-right-up-line`}
 				aria-hidden="true"
 				focusable="false"
 			/>
-		</a>
+		</a> -->
 	</p>
 	<ul class="flex flex-initial items-center gap-x-2">
 		{

@@ -1,0 +1,54 @@
+---
+import type { Experience } from "@/types";
+import { Icon } from "astro-icon/components";
+
+type Props = {
+	experience: Experience;
+};
+
+const { experience } = Astro.props;
+
+const options = { year: "numeric", month: "long" };
+function getFormattedDate(date: Date) {
+	return date.toLocaleDateString("en-US", options).toUpperCase();
+}
+---
+
+<a class="mb-2 sm:mb-0" target="_blank" rel="noopener noreferrer" href={experience.links.company}>
+	<span class="flex w-44 translate-y-[0.2rem] text-xs brightness-75 transition-all"
+		>{getFormattedDate(experience.startDate)} — {getFormattedDate(experience.endDate)}</span
+	>
+	<!-- <span
+		class="flex w-44 translate-y-[0.2rem] text-xs transition-all sm:brightness-90 sm:group-hover:brightness-100"
+		>{getFormattedDate(experience.startDate)} — {getFormattedDate(experience.endDate)}</span
+	> -->
+</a>
+<div class="flex flex-col items-start">
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		class="cactus-link-mobile inline-block flex-row group-hover:cactus-link-mobile sm:cactus-link"
+		href={experience.links.company}
+	>
+		{experience.title} • {experience.company}
+		<Icon
+			class="inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+			name="ri:arrow-right-up-line"
+			aria-hidden="true"
+			focusable="false"
+		/>
+	</a>
+	<p class="experience-description mt-2 line-clamp-3 block">
+		{experience.description}
+	</p>
+	<div>
+		{
+			experience.technologies.map((tech: string, i: number) => (
+				<span class="mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-sm text-accent sm:text-sm">
+					{tech}
+					{i !== experience.technologies.length - 1 && "•"}
+				</span>
+			))
+		}
+	</div>
+</div>
