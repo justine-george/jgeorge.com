@@ -99,7 +99,10 @@ export const experiences: Array<Experience> = [
 		// location: "Allen, TX", // ? Maybe add this back in later
 		startDate: new Date("2023-05-22"),
 		endDate: new Date("2023-08-18"),
-		description: "Content Library Team — Resi On Demand",
+		// description: "Content Library Team — Resi On Demand.",
+		description:
+			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
+			"At Resi Media's Content Library Team, I engineered REST APIs and a GCP-based alert system, improving content access for 5,000+ churches and system responsiveness. Led a research project on audio format conversion, enhancing download features.",
 		technologies: [
 			"Java",
 			"Spring Boot",
@@ -120,7 +123,10 @@ export const experiences: Array<Experience> = [
 		// location: "Bengaluru, India", // ? Maybe add this back in later
 		startDate: new Date("2019-08-12"),
 		endDate: new Date("2022-07-16"),
-		description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
+		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
+		description:
+			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built over 20 REST APIs with Spring Boot and Java, improving service for 900+ global banks. I designed a Python automation tool for database updates, simplifying the process for the Interest and Charges module, which became a standard across teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
+		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
 		technologies: [
 			"Java",
 			"Spring Boot",
@@ -142,7 +148,10 @@ export const experiences: Array<Experience> = [
 		// location: "Calicut, India", // ? Maybe add this back in later
 		startDate: new Date("2018-04-01"),
 		endDate: new Date("2018-07-31"),
-		description: "Storimart Team — B2B E-commerce Platform",
+		// description: "Storimart Team — B2B E-commerce Platform",
+		description:
+			// "In the Storimart Team for the B2B E-commerce Platform at Storilabs, as a Software Developer Intern focused on Android, I built a native app to enhance wholesaler-retailer interactions and purchasing processes. By integrating caching with OkHttp Interceptor and enabling local data storage with Room, I improved the app's performance and introduced offline functionality for the product catalog page, streamlining user access and transactions.",
+			"At Storilabs, I created a native Android app for B2B communication, enhancing wholesaler-retailer transactions. Implemented caching and offline capabilities, significantly boosting app performance and user experience.",
 		technologies: [
 			"Java",
 			"Retrofit",
