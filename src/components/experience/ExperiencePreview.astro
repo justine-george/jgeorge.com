@@ -14,7 +14,7 @@ function getFormattedDate(date: Date) {
 ---
 
 <a class="mb-2 sm:mb-0" target="_blank" rel="noopener noreferrer" href={experience.links.company}>
-	<span class="flex w-44 translate-y-[0.2rem] text-xs brightness-75 transition-all"
+	<span class="flex w-44 translate-y-[0.4rem] text-xs brightness-75 transition-all"
 		>{getFormattedDate(experience.startDate)} — {getFormattedDate(experience.endDate)}</span
 	>
 	<!-- <span
@@ -26,7 +26,7 @@ function getFormattedDate(date: Date) {
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		class="cactus-link-mobile inline-block flex-row group-hover:cactus-link-mobile sm:cactus-link"
+		class="cactus-link-mobile inline-block flex-row font-semibold group-hover:cactus-link-mobile sm:cactus-link"
 		href={experience.links.company}
 	>
 		{experience.title} • {experience.company}
@@ -40,14 +40,7 @@ function getFormattedDate(date: Date) {
 	<p class="experience-description mt-2 line-clamp-3 block">
 		{experience.description}
 	</p>
-	<div>
-		{
-			experience.technologies.map((tech: string, i: number) => (
-				<span class="mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-sm text-accent sm:text-sm">
-					{tech}
-					{i !== experience.technologies.length - 1 && "•"}
-				</span>
-			))
-		}
+	<div class="mt-2.5">
+		{experience.technologies.map((tech: string) => <span class="technologies">{tech}</span>)}
 	</div>
 </div>

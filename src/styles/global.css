@@ -45,22 +45,28 @@
 	p,
 	q {
 		/* @apply text-base leading-[1.75rem] sm:text-sm sm:leading-[1.75rem]; */
-		@apply text-[0.95rem] leading-[1.75rem] sm:text-[0.95rem] sm:leading-[1.75rem];
+		@apply text-[1rem] leading-[1.75rem] sm:text-[1rem] sm:leading-[1.75rem];
 	}
 
 	p.project-description,
 	p.experience-description,
 	q.post-description {
-		@apply text-[0.85rem] leading-[1.75rem] brightness-90 sm:text-[0.85rem] sm:leading-[1.75rem];
+		@apply text-[0.9rem] leading-[1.5rem] brightness-90 sm:text-[0.9rem] sm:leading-[1.5rem];
 	}
 
 	p.project-metrics {
-		@apply text-[0.85rem] leading-[1.5rem] sm:text-[0.85rem] sm:leading-[1.5rem];
+		@apply text-[0.9rem] font-semibold leading-[1.5rem] sm:text-[0.9rem] sm:leading-[1.5rem];
+	}
+
+	span.technologies {
+		/* @apply mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-sm text-accent sm:text-sm; */
+		/* @apply mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-custom text-sm text-accent sm:text-sm; */
+		@apply mb-[0.45rem] mr-1.5 inline-block select-none rounded-full border-none bg-accent/20 px-2.5 pb-0.5 pt-0.5 font-custom text-[0.75rem] font-semibold text-accent sm:text-[0.75rem];
 	}
 
 	ul,
 	li {
 		/* @apply text-base leading-[1.5rem] sm:text-sm sm:leading-[1.5rem]; */
-		@apply text-[0.95rem] leading-[1.5rem] sm:text-[0.95rem] sm:leading-[1.5rem];
+		@apply text-[1rem] leading-[1.5rem] sm:text-[1rem] sm:leading-[1.5rem];
 	}
 }

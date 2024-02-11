@@ -31,12 +31,12 @@ export default {
 			},
 			fontFamily: {
 				// custom: [...fontFamily.sans],
-				custom: ["Merriweather", "serif"],
-				customBlogText: ["Merriweather", "serif"],
+				// custom: ["Merriweather", "serif"],
+				// customBlogText: ["Merriweather", "serif"],
 				customTitle: ["DM Serif Display", "serif"],
 
-				// custom: ["Inter", "sans-serif"],
-				// customBlogText: ["Inter", "sans-serif"],
+				custom: ["Inter", "sans-serif"],
+				customBlogText: ["Inter", "sans-serif"],
 				// customTitle: ["Inter", "sans-serif"],
 
 				sans: [...fontFamily.sans],

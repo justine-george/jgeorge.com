@@ -41,7 +41,7 @@ const tabkeeperUserCount: string = await fetch(
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						class="cactus-link-mobile inline-block flex-row group-hover:cactus-link-mobile sm:cactus-link"
+						class="cactus-link-mobile inline-block flex-row font-semibold group-hover:cactus-link-mobile sm:cactus-link"
 						href={project.links.github}
 					>
 						{project.title}
@@ -55,7 +55,7 @@ const tabkeeperUserCount: string = await fetch(
 					<p class="project-description mt-2 line-clamp-3 block">{project.description}</p>
 					{project.metrics && project.metrics.users && (
 						<a
-							class="mb-2 mt-2 flex flex-row items-center justify-start sm:hover:text-accent"
+							class="mb-0 mt-2 flex flex-row items-center justify-start sm:hover:text-accent"
 							href={project.links.storepage}
 							target="_blank"
 							rel={`noopener noreferrer`}
@@ -75,6 +75,11 @@ const tabkeeperUserCount: string = await fetch(
 							<span class="sr-only">{"Weekly Active Users Count"}</span>
 						</a>
 					)}
+					<div class="mt-2.5">
+						{project.technologies.map((tech: string) => (
+							<span class="technologies">{tech}</span>
+						))}
+					</div>
 				</div>
 			</li>
 		))

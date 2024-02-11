@@ -14,7 +14,7 @@ const { project, as: Tag = "div" } = Astro.props;
 	<a
 		target="_blank"
 		rel="noopener noreferrer"
-		class="cactus-link-mobile inline-block group-hover:cactus-link-mobile sm:cactus-link"
+		class="cactus-link-mobile inline-block font-semibold group-hover:cactus-link-mobile sm:cactus-link"
 		href={project.links.github}
 	>
 		{project.title}
@@ -26,12 +26,5 @@ const { project, as: Tag = "div" } = Astro.props;
 </Tag>
 <p class="project-description line-clamp-3 block">{project.description}</p>
 <div>
-	{
-		project.technologies.map((tech: string, i: number) => (
-			<span class="mb-0 mr-1 inline-block rounded-full px-0.5 py-0 font-mono text-sm text-accent sm:text-sm">
-				{tech}
-				{i !== project.technologies.length - 1 && "•"}
-			</span>
-		))
-	}
+	{project.technologies.map((tech: string) => <span class="technologies">{tech}</span>)}
 </div>
