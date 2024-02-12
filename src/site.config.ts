@@ -102,7 +102,7 @@ export const experiences: Array<Experience> = [
 		// description: "Content Library Team — Resi On Demand.",
 		description:
 			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
-			"At Resi Media's Content Library Team, I engineered REST APIs and a GCP-based alert system, improving content access for 5,000+ churches and system responsiveness. Led a research project on audio format conversion, enhancing download features.",
+			"At Resi Media's Content Library Team, I engineered Spring Boot REST APIs to streamline content access for over 5,000 churches and developed a GCP-based alert system with Terraform for improved system alerts via Slack. I also led research on MP4-to-M4A audio conversion, which informed the media team's strategy to implement an audio-only download feature for archived videos.",
 		technologies: [
 			"Java",
 			"Spring Boot",
@@ -250,16 +250,6 @@ export const projects: Array<Project> = [
 		technologies: ["Python", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
 	},
 	{
-		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
-		description:
-			"Machine learning interface for the Indian Judicial System, featuring NLP applications like case analysis, centralized databases, and bilingual translation.",
-		links: {
-			github: "https://github.com/justine-george/Application-of-NLP-in-Indian-Judiciary",
-			demo: "",
-		},
-		technologies: ["Natural Language Processing", "Python", "Kivy", "NLTK", "Scikit-learn"],
-	},
-	{
 		title: "Customer Churn Prediction Using Machine Learning and Data Analysis",
 		description:
 			"Machine learning project for predicting telco customer churn, featuring extensive EDA, class imbalance handling, and multiple algorithm evaluations.",
@@ -288,6 +278,16 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
+	},
+	{
+		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
+		description:
+			"Machine learning interface for the Indian Judicial System, featuring NLP applications like case analysis, centralized databases, and bilingual translation.",
+		links: {
+			github: "https://github.com/justine-george/Application-of-NLP-in-Indian-Judiciary",
+			demo: "",
+		},
+		technologies: ["Natural Language Processing", "Python", "Kivy", "NLTK", "Scikit-learn"],
 	},
 	// {
 	// 	title: "File System Integrity Validator for xv6",
