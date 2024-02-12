@@ -9,7 +9,7 @@ type Props = {
 const { projects: featuredProjects } = Astro.props;
 
 const tabkeeperUserCount: string = await fetch(
-	"https://project-metrics-flask.fly.dev/projects/usercount?name=tab-keeper-react-chrome-extension",
+	"https://project-metrics-flask.fly.dev/extensions/gpibgniomobngodpnikhheifblbpbbah/usercount",
 )
 	.then((res) => res.json())
 	.then(
@@ -61,7 +61,7 @@ const tabkeeperUserCount: string = await fetch(
 							rel={`noopener noreferrer`}
 						>
 							<Icon
-								class="me-2 h-4 w-4"
+								class="me-2 h-4 w-4 -translate-y-[0.05rem]"
 								name="ri:group-fill"
 								aria-hidden="true"
 								focusable="false"
