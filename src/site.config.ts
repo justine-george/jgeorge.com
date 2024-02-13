@@ -187,7 +187,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Book Fellow: For Bibliophiles",
 		description:
-			"Spring Boot and PostgreSQL-based social media platform for book enthusiasts to share favorites and connect with readers.",
+			"A Spring Boot-powered social media platform for book lovers, enabling users to write reviews, curate favorite lists, and follow the reading activities of fellow readers.",
 		links: {
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
@@ -199,7 +199,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Planet: Event Planner App",
 		description:
-			"Next.js-based event planner with React, MongoDB, Redux, and Passport.js for intuitive planning and user role management.",
+			"An event planning platform built with Next.js, facilitating seamless event organization and providing role-specific access for users and administrators.",
 		links: {
 			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
