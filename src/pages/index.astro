@@ -47,7 +47,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<h2 id="featured-projects" class="title text-xl">Featured Projects</h2>
 		<FeaturedProjects projects={featuredProjects} />
 		<p>
-			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
+			<a
+				href="/projects"
+				aria-label="View all projects"
+				class="group sm:hover:text-accent"
+				data-astro-prefetch
+			>
 				<span>View All Projects</span>
 				<Icon
 					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
@@ -71,7 +76,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			}
 		</ul>
 		<p>
-			<a href="/posts" aria-label="View all blog posts" class="group sm:hover:text-accent">
+			<a
+				href="/posts"
+				aria-label="View all blog posts"
+				class="group sm:hover:text-accent"
+				data-astro-prefetch
+			>
 				<span>Read All Posts</span>
 				<Icon
 					class="ms-0.5 inline-block h-4 w-4 -translate-y-[0.05rem] transition-transform group-hover:translate-x-1.5 sm:group-hover:text-accent"
