@@ -44,7 +44,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<SocialList />
 	</section>
 	<section aria-label="Projects list" class="mt-12 space-y-8">
-		<h2 class="title text-xl">Featured Projects</h2>
+		<h2 id="featured-projects" class="title text-xl">Featured Projects</h2>
 		<FeaturedProjects projects={featuredProjects} />
 		<p>
 			<a href="/projects" aria-label="View all projects" class="group sm:hover:text-accent">
