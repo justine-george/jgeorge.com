@@ -16,9 +16,12 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
+      - name: Pull latest changes from the main branch
+        run: git pull origin main
+
       - name: Create empty commit and push
         run: |
           echo "Last deployment triggered at $(date -u)" > DEPLOYMENT_TRIGGER.md
           git add DEPLOYMENT_TRIGGER.md
           git commit -m "Daily deployment trigger"
-          git push
+          git push origin main
