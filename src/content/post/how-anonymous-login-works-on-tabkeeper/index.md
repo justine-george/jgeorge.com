@@ -27,7 +27,7 @@ The process is simple:
 ![Tab Keeper's Anonymous Login Flow](./figure-1-dark.png)
 _Figure 1_
 
-Here's a simplified version of the implementation shown in Figure 1. The `getUserTokenFromChromeStorageSync` function is called when the component mounts, ensuring that the user's token is retrieved from `storage.sync` and used to access their data in Cloud Firestore. Here's the code snippet:
+Here's a simplified version of the implementation shown in Figure 1. The `getUserTokenFromChromeStorageSync` function is called when the component mounts, ensuring that the user's token is retrieved from `storage.sync` and used to access their data in Cloud Firestore.
 
 ```jsx
 useEffect(() => {
