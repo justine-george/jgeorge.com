@@ -68,6 +68,7 @@ export async function GET({ params: { slug } }: APIContext) {
 			month: "long",
 		},
 	);
+	// @ts-expect-error:next-line
 	const svg = await satori(markup(title, postDate), ogOptions);
 	const png = new Resvg(svg).render().asPng();
 	return new Response(png, {
