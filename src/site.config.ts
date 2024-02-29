@@ -93,7 +93,7 @@ export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
 
 export const experiences: Array<Experience> = [
 	{
-		title: "Software Engineer Intern (Backend)",
+		title: "Software Engineer Grad Intern (Backend)",
 		// prevTitles: [{ title: "", endDate: new Date("") }],
 		company: "Resi Media",
 		// location: "Allen, TX", // ? Maybe add this back in later
@@ -192,7 +192,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
-		technologies: ["Java", "PostgreSQL", "Docker", "AWS EC2", "Prometheus", "Grafana", "JUnit"],
+		technologies: ["Java", "PostgreSQL", "Docker", "AWS", "Prometheus", "Grafana", "JUnit"],
 		isFeatured: true,
 		thumbnail: bookfellowThumbnail,
 	},
