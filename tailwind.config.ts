@@ -31,13 +31,9 @@ export default {
 			},
 			fontFamily: {
 				// custom: [...fontFamily.sans],
-				// custom: ["Merriweather", "serif"],
-				// customBlogText: ["Merriweather", "serif"],
-				customTitle: ["DM Serif Display", "serif"],
-
 				custom: ["Inter", "sans-serif"],
 				customBlogText: ["Inter", "sans-serif"],
-				// customTitle: ["Inter", "sans-serif"],
+				customTitle: ["DM Serif Display", "serif"],
 
 				sans: [...fontFamily.sans],
 				serif: [...fontFamily.serif],

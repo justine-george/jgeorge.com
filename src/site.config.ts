@@ -102,7 +102,7 @@ export const experiences: Array<Experience> = [
 		// description: "Content Library Team — Resi On Demand.",
 		description:
 			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
-			"At Resi Media's Content Library Team, I engineered Spring Boot REST APIs to streamline content access for over 5,000 churches and developed a GCP-based alert system with Terraform for improved system alerts via Slack. I also led research on MP4-to-M4A audio conversion, which informed the media team's strategy to implement an audio-only download feature for archived videos.",
+			"At Resi Media's Content Library Team, I engineered Spring Boot REST APIs to streamline content access for 5,000+ churches, managing 1 million metadata requests monthly. I developed a GCP-based alert system with Terraform, analyzing 1,000+ video uploads weekly for improved system alerts via Slack. Additionally, I led technical research on extracting M4A audio from DASH MP4 streams with FFmpeg, enabling single-click audio downloads from the video archive.",
 		technologies: [
 			"Java",
 			"Spring Boot",
@@ -125,7 +125,7 @@ export const experiences: Array<Experience> = [
 		endDate: new Date("2022-07-16"),
 		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
 		description:
-			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built over 20 REST APIs with Spring Boot and Java, improving service for 900+ global banks. I designed a Python automation tool for database updates, simplifying the process for the Interest and Charges module, which became a standard across teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
+			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built 20+ REST APIs with Spring Boot and Java, improving service for 900+ global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%, and it was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed 30+ responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
 		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
 		technologies: [
 			"Java",
