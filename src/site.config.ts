@@ -125,7 +125,7 @@ export const experiences: Array<Experience> = [
 		endDate: new Date("2022-07-16"),
 		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
 		description:
-			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built 20+ REST APIs with Spring Boot and Java, improving service for 900+ global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%, and it was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed 30+ responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
+			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built more than 20 REST APIs using Spring Boot and Java, improving service for over 900 global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%. This tool was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed more than 30 responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
 		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
 		technologies: [
 			"Java",
