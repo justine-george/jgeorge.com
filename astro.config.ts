@@ -71,7 +71,7 @@ export default defineConfig({
 		"/projects/tab-keeper": "https://github.com/justine-george/tab-keeper-react-chrome-extension",
 		"/projects/book-fellow": "https://github.com/justine-george/book-fellow-backend-spring",
 		"/projects/planet-nextjs": "https://github.com/justine-george/planet-nextjs",
-		"/resume.pdf": "/docs/Justine_George_Resume.pdf",
+		"/resume": "/docs/Justine_George_Resume.pdf",
 	},
 });
 function rawFonts(ext: Array<string>) {
