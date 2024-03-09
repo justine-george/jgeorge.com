@@ -132,7 +132,7 @@ export const experiences: Array<Experience> = [
 			"Spring Boot",
 			"JUnit",
 			"Docker",
-			"Oracle SQL",
+			"Oracle Database",
 			"Swagger",
 			"JavaScript",
 			"HTML",
