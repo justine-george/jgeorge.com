@@ -20,7 +20,7 @@
 		"@iconify-json/mdi": "^1.1.64",
 		"@iconify-json/ri": "^1.1.19",
 		"@types/react": "^18.2.55",
-		"astro": "4.2.4",
+		"astro": "4.5.12",
 		"astro-expressive-code": "^0.32.4",
 		"astro-google-analytics": "^1.0.3",
 		"astro-icon": "^1.1.0",
