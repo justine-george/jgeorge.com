@@ -93,7 +93,7 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
-		title: "Software Engineer Grad Intern (Backend)",
+		title: "Software Engineer Grad Intern",
 		// prevTitles: [{ title: "", endDate: new Date("") }],
 		company: "Resi Media",
 		// location: "Allen, TX", // ? Maybe add this back in later
@@ -102,48 +102,52 @@ export const experiences: Array<Experience> = [
 		// description: "Content Library Team — Resi On Demand.",
 		description:
 			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
-			"At Resi Media's Content Library Team, I engineered Spring Boot REST APIs to streamline content access for over 5,000 churches, managing 1 million metadata requests monthly. I developed a GCP-based alert system with Terraform, analyzing over 1,000 video uploads weekly for improved system alerts via Slack. Additionally, I led technical research on extracting M4A audio from DASH MP4 streams with FFmpeg, enabling single-click audio downloads from the video archive.",
+			"At Resi Media's Content Library Team, I engineered Spring Boot RESTful APIs to streamline content access for over 5,000 non-profit orgs, managing 1 million metadata requests monthly. I developed a GCP-based alert system with Terraform, analyzing over 1,000 video uploads weekly for improved system alerts via Slack. Additionally, I led technical research on extracting M4A audio from DASH MP4 streams with FFmpeg, enabling single-click audio downloads from the video archive.",
 		technologies: [
 			"Java",
 			"Spring Boot",
-			"TypeScript",
 			"Docker",
-			"GCP",
+			"GCP (Pub/Sub)",
 			"Redis",
 			"Cassandra",
 			"TestNG",
+			"Node.js",
+			"TypeScript",
 		],
 		links: {
 			company: "https://resi.io/resi-on-demand/",
 		},
 	},
 	{
-		title: "Software Developer (Full Stack)",
-		company: "Oracle Financial Services",
+		title: "Software Development Engineer",
+		company: "Oracle",
 		// location: "Bengaluru, India", // ? Maybe add this back in later
 		startDate: new Date("2019-08-12"),
 		endDate: new Date("2022-07-16"),
 		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
 		description:
-			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built more than 20 REST APIs using Spring Boot and Java, improving service for over 900 global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%. This tool was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed more than 30 responsive UI components that increased our page load speed by 60%, significantly boosting system performance.",
+			"In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built more than 30 RESTful APIs using Spring Boot and Spring Batch, improving service for over 900 global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%. This tool was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed responsive UI components for a React-based SPA that increased our page load speed by 60%, significantly boosting system performance",
 		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
 		technologies: [
 			"Java",
 			"Spring Boot",
-			"JUnit",
+			"Spring Batch",
 			"Docker",
-			"Oracle Database",
+			"Redis",
+			"Python",
+			"JUnit",
+			"SQL",
+			"Oracle",
 			"Swagger",
+			"React",
 			"JavaScript",
-			"HTML",
-			"CSS",
 		],
 		links: {
 			company: "https://www.oracle.com/financial-services/banking/flexcube/core-banking-software/",
 		},
 	},
 	{
-		title: "Software Developer Intern (Android)",
+		title: "Software Developer Intern",
 		company: "Storilabs",
 		// location: "Calicut, India", // ? Maybe add this back in later
 		startDate: new Date("2018-04-01"),
@@ -156,9 +160,9 @@ export const experiences: Array<Experience> = [
 			"Java",
 			"Retrofit",
 			"Firebase",
-			"XML",
 			"SQlite (Room)",
 			"OkHttp",
+			"XML",
 			"Material Design",
 		],
 		links: {
@@ -168,6 +172,30 @@ export const experiences: Array<Experience> = [
 ];
 
 export const projects: Array<Project> = [
+	{
+		title: "Book Fellow: For Bibliophiles",
+		description:
+			"A social media platform for book lovers, enabling users to write reviews, curate favorite lists, and follow the reading activities of fellow readers.",
+		links: {
+			github: "https://github.com/justine-george/book-fellow-backend-spring",
+			demo: "",
+		},
+		technologies: ["Java", "PostgreSQL", "Hibernate ORM", "Docker", "AWS (EC2, ElastiCache, SNS)"],
+		isFeatured: true,
+		thumbnail: bookfellowThumbnail,
+	},
+	{
+		title: "Planet: Event Planner App",
+		description:
+			"An event planning platform built with Next.js, facilitating seamless event organization and providing role-specific access for users and administrators.",
+		links: {
+			github: "https://github.com/justine-george/planet-nextjs",
+			demo: "",
+		},
+		technologies: ["Next.js", "React", "Docker", "MongoDB", "AWS (Amplify, SQS)", "Passport.js"],
+		isFeatured: true,
+		thumbnail: planetThumbnail,
+	},
 	{
 		title: "Tab Keeper (Featured on Web Store)",
 		description:
@@ -183,30 +211,6 @@ export const projects: Array<Project> = [
 		metrics: {
 			users: 531,
 		},
-	},
-	{
-		title: "Book Fellow: For Bibliophiles",
-		description:
-			"A Spring Boot-powered social media platform for book lovers, enabling users to write reviews, curate favorite lists, and follow the reading activities of fellow readers.",
-		links: {
-			github: "https://github.com/justine-george/book-fellow-backend-spring",
-			demo: "",
-		},
-		technologies: ["Java", "PostgreSQL", "Docker", "AWS", "Prometheus", "Grafana", "JUnit"],
-		isFeatured: true,
-		thumbnail: bookfellowThumbnail,
-	},
-	{
-		title: "Planet: Event Planner App",
-		description:
-			"An event planning platform built with Next.js, facilitating seamless event organization and providing role-specific access for users and administrators.",
-		links: {
-			github: "https://github.com/justine-george/planet-nextjs",
-			demo: "",
-		},
-		technologies: ["Next.js", "React", "Redux", "MongoDB", "Passport.js", "Emotion CSS"],
-		isFeatured: true,
-		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
