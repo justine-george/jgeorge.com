@@ -89,7 +89,7 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 	// },
 ];
 
-export const resumeLink: string = "/docs/Justine_George_Resume.pdf";
+export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.pdf";
 
 export const experiences: Array<Experience> = [
 	{
