@@ -192,14 +192,14 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
-		technologies: ["Next.js", "React", "Docker", "MongoDB", "AWS (Amplify, SQS)", "Passport.js"],
+		technologies: ["Next.js", "React", "DynamoDB", "Docker", "AWS (Amplify, SQS)", "Passport.js"],
 		isFeatured: true,
 		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Tab Keeper (Featured on Web Store)",
 		description:
-			"Chrome extension for efficient tab management and cross-device syncing using the chrome.storage API.",
+			"Chrome extension for efficient tab management and cross-device syncing between Chrome browsers on desktop devices.",
 		links: {
 			github: "https://github.com/justine-george/tab-keeper-react-chrome-extension",
 			storepage:
