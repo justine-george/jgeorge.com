@@ -192,7 +192,7 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/planet-nextjs",
 			demo: "",
 		},
-		technologies: ["Next.js", "React", "DynamoDB", "Docker", "AWS (Amplify, SQS)", "Passport.js"],
+		technologies: ["Next.js", "React", "DynamoDB", "GraphQL", "Docker", "AWS (Amplify, SQS)"],
 		isFeatured: true,
 		thumbnail: planetThumbnail,
 	},
