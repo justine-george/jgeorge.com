@@ -93,7 +93,7 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
-		title: "Software Engineer Grad Intern",
+		title: "Software Engineer Grad Intern (Backend)",
 		// prevTitles: [{ title: "", endDate: new Date("") }],
 		company: "Resi Media",
 		// location: "Allen, TX", // ? Maybe add this back in later
@@ -119,7 +119,7 @@ export const experiences: Array<Experience> = [
 		},
 	},
 	{
-		title: "Software Development Engineer",
+		title: "Software Development Engineer (Full Stack)",
 		company: "Oracle",
 		// location: "Bengaluru, India", // ? Maybe add this back in later
 		startDate: new Date("2019-08-12"),
@@ -147,7 +147,7 @@ export const experiences: Array<Experience> = [
 		},
 	},
 	{
-		title: "Software Developer Intern",
+		title: "Software Developer Intern (Android)",
 		company: "Storilabs",
 		// location: "Calicut, India", // ? Maybe add this back in later
 		startDate: new Date("2018-04-01"),
