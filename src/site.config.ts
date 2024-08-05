@@ -180,21 +180,9 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
-		technologies: ["Java", "PostgreSQL", "Hibernate ORM", "Docker", "AWS (EC2, ElastiCache, SNS)"],
+		technologies: ["Java", "PostgreSQL", "Go", "Docker", "AWS (EC2, ElastiCache, SNS)"],
 		isFeatured: true,
 		thumbnail: bookfellowThumbnail,
-	},
-	{
-		title: "Planet: Event Planner App",
-		description:
-			"An event planning platform built with Next.js, facilitating seamless event organization and providing role-specific access for users and administrators.",
-		links: {
-			github: "https://github.com/justine-george/planet-nextjs",
-			demo: "",
-		},
-		technologies: ["Next.js", "React", "DynamoDB", "GraphQL", "Docker", "AWS (Amplify, SQS)"],
-		isFeatured: true,
-		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Tab Keeper (Featured on Web Store)",
@@ -211,6 +199,18 @@ export const projects: Array<Project> = [
 		metrics: {
 			users: 531,
 		},
+	},
+	{
+		title: "Planet: Event Planner App",
+		description:
+			"An event planning platform built with Next.js, facilitating seamless event organization and providing role-specific access for users and administrators.",
+		links: {
+			github: "https://github.com/justine-george/planet-nextjs",
+			demo: "",
+		},
+		technologies: ["Next.js", "React", "DynamoDB", "GraphQL", "Docker", "AWS (Amplify, SQS)"],
+		isFeatured: true,
+		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
