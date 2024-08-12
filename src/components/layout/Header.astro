@@ -25,7 +25,7 @@ items-center">
 				menuLinks.map((link) => (
 					<a
 						href={link.path}
-						class="px-4 py-4 text-base sm:py-0 sm:hover:underline sm:hover:underline-offset-4"
+						class={`px-4 py-4 text-base sm:py-0 ${url.pathname === link.path || (link.title !== "About" && url.pathname.includes(link.path)) ? "sm:underline sm:underline-offset-8" : "sm:hover:underline sm:hover:underline-offset-[12px]"}`}
 						aria-current={url.pathname === link.path ? "page" : false}
 						data-astro-prefetch
 					>
