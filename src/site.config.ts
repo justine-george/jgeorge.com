@@ -243,7 +243,7 @@ export const projects: Array<Project> = [
 	{
 		title: "Lottery Scheduler Implementation in xv6",
 		description:
-			"An enhancement to the xv6 operating system kernel introducing a lottery scheduler. This implementation improves CPU resource distribution through randomized process selection, ensuring fair and efficient resource allocation.",
+			"An enhancement to the xv6 operating system kernel introducing a lottery scheduler. This implementation improves CPU resource distribution by using randomized process selection, which ensures a fair and efficient allocation of CPU time among processes.",
 		links: {
 			github: "https://github.com/justine-george/Lottery-Scheduling-XV6",
 			demo: "",
