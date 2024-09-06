@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const AnimatedIntro: React.FC<{ children: React.ReactNode }> = () => {
@@ -11,8 +10,8 @@ const AnimatedIntro: React.FC<{ children: React.ReactNode }> = () => {
 			className="space-y-8"
 			data-pagefind-body
 		>
-			<h1 class="title text-4xl">I am Justine George.</h1>
-			<p class="font-semibold">
+			<h1 className="title text-4xl">I am Justine George.</h1>
+			<p className="font-semibold">
 				An adaptive and detail-oriented software engineer with a Master's degree in Computer Science
 				from UT Dallas and over 3 years of professional experience.
 			</p>
