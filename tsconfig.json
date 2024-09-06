@@ -5,6 +5,7 @@
 		"baseUrl": ".",
 		"lib": ["es2022", "dom", "dom.iterable"],
 		"paths": {
+			"@/*": ["src/*"],
 			"@/assets/*": ["src/assets/*"],
 			"@/components/*": ["src/components/*.astro"],
 			"@/layouts/*": ["src/layouts/*.astro"],
