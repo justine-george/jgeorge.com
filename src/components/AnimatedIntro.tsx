@@ -6,7 +6,7 @@ const AnimatedIntro: React.FC<{ children: React.ReactNode }> = () => {
 		<motion.section
 			initial={{ opacity: 0, y: -10 }}
 			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.3 }}
+			transition={{ duration: 0.5 }}
 			aria-label="Landing page intro"
 			className="space-y-8"
 			data-pagefind-body
