@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const AnimatedIntro: React.FC<{ children: React.ReactNode }> = () => {
+const AnimatedIntro: React.FC = () => {
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: -10 }}

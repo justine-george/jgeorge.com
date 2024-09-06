@@ -7,7 +7,7 @@ import SocialList from "@/components/SocialList";
 import { getAllPosts, sortMDByDate } from "@/utils";
 import { Icon } from "astro-icon/components";
 import { projects } from "@/site-config";
-import AnimatedIntro from "@/components/AnimatedIntro";
+import AnimatedIntro from "../components/AnimatedIntro";
 
 const featuredProjects = projects.filter((project) => project.isFeatured && !project.isDisabled);
 
@@ -17,9 +17,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<!-- <section aria-label="Landing page intro" class="space-y-8" data-pagefind-body> -->
 	<AnimatedIntro client:load />
-	<!-- </section> -->
 	<section aria-label="Social links" class="pt-8">
 		<SocialList />
 	</section>
