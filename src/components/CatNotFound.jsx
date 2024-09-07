@@ -7,35 +7,37 @@ export default function CatNotFound() {
 	const [isImageLoaded, setIsImageLoaded] = useState(false);
 
 	useEffect(() => {
-        const img = new Image();
-		const currentIndex = parseInt(localStorage.getItem("catNotFoundIndex") || Math.floor(Math.random() * notFoundImages.length));
+		const img = new Image();
+		const currentIndex = parseInt(
+			localStorage.getItem("catNotFoundIndex") || Math.floor(Math.random() * notFoundImages.length),
+		);
 		const nextIndex = (currentIndex + 1) % notFoundImages.length;
-        const nextImage = notFoundImages[nextIndex] || defaultNotFoundImage;
-        
-        img.onload = () => {
-            setCatImgSrc(nextImage.src);
+		const nextImage = notFoundImages[nextIndex] || defaultNotFoundImage;
+
+		img.onload = () => {
+			setCatImgSrc(nextImage.src);
 			setIsImageLoaded(true);
 			localStorage.setItem("catNotFoundIndex", nextIndex.toString());
-        };
+		};
 
 		img.onerror = () => {
-            setCatImgSrc(defaultNotFoundImage.src);
-            setIsImageLoaded(true);
-            localStorage.setItem("catNotFoundIndex", "0");
-        };
+			setCatImgSrc(defaultNotFoundImage.src);
+			setIsImageLoaded(true);
+			localStorage.setItem("catNotFoundIndex", "0");
+		};
 
-        img.src = nextImage.src;
-    }, []);
+		img.src = nextImage.src;
+	}, []);
 
 	return isImageLoaded ? (
-			<img
+		<img
 			src={catImgSrc}
-			className={"w-full max-w-xs max-h-96 rounded-lg object-cover object-center saturate-50"}
+			className={"max-h-96 w-full max-w-xs rounded-lg object-cover object-center saturate-50"}
 			alt="A confused cat stopped working, indicating its confused about the current page"
 		/>
-		): (
-			<div>
-				<code></code>
-			</div>
-		);
+	) : (
+		<div>
+			<code></code>
+		</div>
+	);
 }

@@ -9,10 +9,9 @@ import cat7 from "./assets/cat_not_working_7.jpeg";
 import cat8 from "./assets/cat_not_working_8.jpeg";
 import cat9 from "./assets/cat_not_working_9.jpeg";
 
-import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
-import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
-import planetThumbnail from "/thumbnails/planet-thumbnail.png?url";
 import nexusThumbnail from "/thumbnails/nexus-thumbnail.png?url";
+import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
+import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
@@ -182,7 +181,6 @@ export const projects: Array<Project> = [
 			"A decentralized messaging service that ensures secure, peer-to-peer communication with end-to-end encryption. Built using Go and WebRTC, Nexus offers a scalable infrastructure for seamless and private messaging.",
 		links: {
 			github: "https://github.com/justine-george/nexus-decentralized-messaging",
-			// github: "https://github.com/justine-george/book-fellow-backend-spring",
 			demo: "",
 		},
 		technologies: ["Go", "WebRTC", "Docker", "gRPC", "Kubernetes", "TLS"],
@@ -195,7 +193,7 @@ export const projects: Array<Project> = [
 			"A social media platform designed for book enthusiasts, Book Fellow allows users to write detailed reviews, create and share personalized reading lists, and track the reading activities of others in the community.",
 		links: {
 			github: "https://github.com/justine-george/book-fellow-backend-spring",
-			demo: "",
+			demo: "https://book-fellow-frontend-react.pages.dev/",
 		},
 		technologies: ["Java", "Spring", "PostgreSQL", "Next.js", "AWS (EC2, S3, SNS, Lambda)"],
 		isFeatured: true,
@@ -227,7 +225,6 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["Next.js", "React", "DynamoDB", "GraphQL", "Docker", "AWS (Amplify, SQS)"],
 		isFeatured: false,
-		thumbnail: planetThumbnail,
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",

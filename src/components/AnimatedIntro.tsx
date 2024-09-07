@@ -16,10 +16,11 @@ const AnimatedIntro: React.FC = () => {
 				from UT Dallas and over 3 years of professional experience.
 			</p>
 			<p>
-				I specialize in developing and optimizing scalable backend systems using Java, Python, Go, and
-				TypeScript. My expertise includes building robust RESTful APIs, microservices architectures,
-				and full-stack applications, all with a strong focus on performance and security. I have also
-				deployed and managed distributed systems using AWS and GCP cloud services.
+				I specialize in developing and optimizing scalable backend systems using Java, Python, Go,
+				and TypeScript. My expertise includes building robust RESTful APIs, microservices
+				architectures, and full-stack applications, all with a strong focus on performance and
+				security. I have also deployed and managed distributed systems using AWS and GCP cloud
+				services.
 			</p>
 			<p>
 				My professional experience includes working as a full-stack software development engineer at
