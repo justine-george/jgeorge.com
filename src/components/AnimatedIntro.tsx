@@ -19,8 +19,10 @@ const AnimatedIntro: React.FC = () => {
 				I specialize in developing and optimizing scalable backend systems using Java, Python, Go,
 				and TypeScript. My expertise includes building robust RESTful APIs, microservices
 				architectures, and full-stack applications, all with a strong focus on performance and
-				security. I have also deployed and managed distributed systems using AWS and GCP cloud
-				services.
+				security. I have deployed and managed distributed systems on AWS and GCP cloud platforms,
+				and implemented AI-driven features using Large Language Models (LLMs) and
+				Retrieval-Augmented Generation (RAG) techniques to deliver personalized content and improve
+				user engagement.
 			</p>
 			<p>
 				My professional experience includes working as a full-stack software development engineer at

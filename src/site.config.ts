@@ -10,6 +10,7 @@ import cat8 from "./assets/cat_not_working_8.jpeg";
 import cat9 from "./assets/cat_not_working_9.jpeg";
 
 import nexusThumbnail from "/thumbnails/nexus-thumbnail.png?url";
+import ragMdChatThumbnail from "/thumbnails/rag-md-chat-thumbnail.png?url";
 import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
 import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
 
@@ -186,6 +187,18 @@ export const projects: Array<Project> = [
 		technologies: ["Go", "WebRTC", "Docker", "gRPC", "Kubernetes", "TLS"],
 		isFeatured: true,
 		thumbnail: nexusThumbnail,
+	},
+	{
+		title: "VectorDB-LLM Query Engine",
+		description:
+			"An AI-powered document query system using LangChain, ChromaDB, and OpenAI for efficient RAG-based information retrieval. It enables users to create a searchable database from markdown documents and query it using natural language.",
+		links: {
+			github: "https://github.com/justine-george/ai-markdown-llm-retrieval",
+			demo: "",
+		},
+		technologies: ["Python", "LangChain", "RAG", "OpenAI API", "Vector databases", "ChromaDB"],
+		isFeatured: true,
+		thumbnail: ragMdChatThumbnail,
 	},
 	{
 		title: "Book Fellow - Social Media Web App",
