@@ -9,7 +9,6 @@ import cat7 from "./assets/cat_not_working_7.jpeg";
 import cat8 from "./assets/cat_not_working_8.jpeg";
 import cat9 from "./assets/cat_not_working_9.jpeg";
 
-import nexusThumbnail from "/thumbnails/nexus-thumbnail.png?url";
 import ragMdChatThumbnail from "/thumbnails/rag-md-chat-thumbnail.png?url";
 import bookfellowThumbnail from "/thumbnails/bookfellow-thumbnail.png?url";
 import tabkeeperThumbnail from "/thumbnails/tab-keeper-thumbnail.png?url";
@@ -210,7 +209,7 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["Go", "WebRTC", "Docker", "gRPC", "Kubernetes", "TLS"],
 		isFeatured: true,
-		thumbnail: nexusThumbnail,
+		// thumbnail: nexusThumbnail,
 		ogImageLink:
 			"https://opengraph.githubassets.com/511c03c1df2de44185b7190aba3d06ac59728c0488a230be9603b30a5f2a2988/justine-george/nexus-decentralized-messaging",
 	},
