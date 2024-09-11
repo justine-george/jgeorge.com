@@ -8,7 +8,7 @@ type Props = {
 
 const { experience } = Astro.props;
 
-function getFormattedDate(date: Date) {
+function getFormattedDate(date: Date | null) {
 	if (date === null) return "PRESENT";
 	return date.toLocaleDateString("en-US", { year: "numeric", month: "long" }).toUpperCase();
 }
