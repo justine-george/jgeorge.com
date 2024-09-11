@@ -93,14 +93,14 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
-		title: "Software Engineer (Full Stack)",
+		title: "Software Engineer (Full-Stack)",
 		// prevTitles: [{ title: "" }],
 		company: "Holiday Channel",
 		// location: "Seattle, WA", // ? Maybe add this back in later
 		startDate: new Date("2024-08-13"),
 		endDate: null,
 		description:
-			"At Holiday Channel, I'm leading a team of 10 developers building a holiday-themed e-commerce platform. We're using event-driven design to handle 300% traffic spikes during peak seasons. I'm also developing an AI chatbot with LangChain and OpenAI's API. It uses RAG to combine product data, customer history, and holiday info for personalized gift suggestions.",
+			"Build and maintain a holiday-themed e-commerce platform using event-driven design to handle traffic spikes during peak seasons. Lead a team of 10 developers in implementing scalable solutions. Develop an AI-powered chatbot using LangChain and OpenAI's API, integrating RAG technology to provide personalized gift suggestions based on product data, customer history, and holiday information.",
 		technologies: [
 			"TypeScript",
 			"LangChain",
@@ -125,8 +125,8 @@ export const experiences: Array<Experience> = [
 		endDate: new Date("2023-08-18"),
 		// description: "Content Library Team — Resi On Demand.",
 		description:
-			// "In the Content Library Team for Resi On Demand, I developed scalable REST APIs, enabling enhanced access for over 5,000 churches to digital content. I implemented a monitoring solution on Google Cloud Platform using Terraform, which automates Slack notifications for video upload discrepancies, thus optimizing system alertness. Additionally, I directed a research project on converting MP4 videos to M4A audio formats with FFmpeg, guiding the roadmap for an audio-only download functionality.",
-			"As an intern on the Content Library Team for Resi On Demand, I developed scalable RESTful APIs using Spring Boot to support non-profit organizations globally. I improved system performance by implementing a Terraform-automated GCP alert system, reducing anomaly response time by 40%. Additionally, I designed an FFmpeg-based feature for the Content Library, which enhanced user accessibility by enabling efficient audio extraction from video streams.",
+			// "As an intern on the Content Library Team for Resi On Demand, I developed scalable RESTful APIs using Spring Boot to support non-profit organizations globally. I improved system performance by implementing a Terraform-automated GCP alert system, reducing anomaly response time by 40%. Additionally, I designed an FFmpeg-based feature for the Content Library, which enhanced user accessibility by enabling efficient audio extraction from video streams.",
+			"Built and maintained scalable RESTful APIs using Spring Boot to support non-profit organizations globally. Improved system performance by implementing a Terraform-automated GCP alert system, reducing anomaly response time. Designed and developed an FFmpeg-based feature for efficient audio extraction from video streams, enhancing user accessibility in the Content Library.",
 		technologies: [
 			"Java",
 			"Spring",
@@ -152,9 +152,8 @@ export const experiences: Array<Experience> = [
 		endDate: new Date("2022-07-16"),
 		// description: "Interest and Charges Team — Oracle FLEXCUBE Universal Banking",
 		description:
-			"As a member of the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I engineered over 30 RESTful API endpoints and Spring Batch processes, enhancing the core banking platform's efficiency for global financial institutions. I developed a Python CLI tool that accelerated Flyway SQL migration script creation by 95% and improved page load times by 60% through UI component optimization. Additionally, I streamlined app architecture, reducing Docker image size by 40%, and conducted over 350 code reviews, resulting in a 20% reduction in technical debt and enhanced overall product functionality.",
-		// "In the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I built more than 30 RESTful APIs using Spring Boot and Spring Batch, improving service for over 900 global banks. I engineered a Python-based automation tool for SQL entry generation, significantly optimizing database updates for a crucial financial module, reducing processing time by 95%. This tool was adopted across cross-functional teams. By optimizing our app's architecture, I reduced its Docker image size by 40%, enhancing deployment speed. Additionally, I developed responsive UI components for a React-based SPA that increased our page load speed by 60%, significantly boosting system performance.",
-		// "In Oracle's Interest and Charges Team, I developed REST APIs and a Python automation tool, streamlining operations for 900+ banks. Optimized application architecture, reducing Docker size by 40% and improving page load times by 60%.",
+			// "As a member of the Interest and Charges Team for Oracle FLEXCUBE Universal Banking, I engineered over 30 RESTful API endpoints and Spring Batch processes, enhancing the core banking platform's efficiency for global financial institutions. I developed a Python CLI tool that accelerated Flyway SQL migration script creation by 95% and improved page load times by 60% through UI component optimization. Additionally, I streamlined app architecture, reducing Docker image size by 40%, and conducted over 350 code reviews, resulting in a 20% reduction in technical debt and enhanced overall product functionality.",
+			"Engineered RESTful API endpoints and Spring Batch processes for Oracle FLEXCUBE Universal Banking, enhancing core banking platform efficiency for global financial institutions. Developed a Python CLI tool to accelerate SQL migration script creation and optimized UI components to improve page load times. Streamlined app architecture, reducing Docker image size, and conducted extensive code reviews to reduce technical debt and enhance product functionality.",
 		technologies: [
 			"Java",
 			"Spring",
@@ -181,8 +180,8 @@ export const experiences: Array<Experience> = [
 		endDate: new Date("2018-07-31"),
 		// description: "Storimart Team — B2B E-commerce Platform",
 		description:
-			// "In the Storimart Team for the B2B E-commerce Platform at Storilabs, as a Software Developer Intern focused on Android, I built a native app to enhance wholesaler-retailer interactions and purchasing processes. By integrating caching with OkHttp Interceptor and enabling local data storage with Room, I improved the app's performance and introduced offline functionality for the product catalog page, streamlining user access and transactions.",
-			"During my internship at Storilabs, I developed a native Android app designed for B2B communication, which streamlined transactions between wholesalers and retailers. I implemented caching and offline capabilities, leading to a significant improvement in app performance and user experience.",
+			// "During my internship at Storilabs, I developed a native Android app designed for B2B communication, which streamlined transactions between wholesalers and retailers. I implemented caching and offline capabilities, leading to a significant improvement in app performance and user experience.",
+			"Developed a native Android app for B2B communication at Storilabs, streamlining transactions between wholesalers and retailers. Implemented caching and offline capabilities, significantly improving app performance and user experience.",
 		technologies: [
 			"Java",
 			"Retrofit",
