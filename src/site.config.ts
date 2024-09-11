@@ -94,6 +94,30 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
+		title: "Software Engineer (Full Stack)",
+		// prevTitles: [{ title: "" }],
+		company: "Holiday Channel",
+		// location: "Seattle, WA", // ? Maybe add this back in later
+		startDate: new Date("2024-08-13"),
+		endDate: null,
+		description:
+			"At Holiday Channel, I'm leading a team of 10 developers building a holiday-themed e-commerce platform. We're using event-driven design to handle 300% traffic spikes during peak seasons. I'm also developing an AI chatbot with LangChain and OpenAI's API. It uses RAG to combine product data, customer history, and holiday info for personalized gift suggestions.",
+		technologies: [
+			"TypeScript",
+			"LangChain",
+			"OpenAI API",
+			"Node.js",
+			"Express",
+			"PostgreSQL",
+			"MongoDB",
+			"AWS",
+			"React",
+		],
+		links: {
+			company: "https://www.linkedin.com/company/holidaychannel",
+		},
+	},
+	{
 		title: "Software Engineer Grad Intern (Backend)",
 		// prevTitles: [{ title: "", endDate: new Date("") }],
 		company: "Resi Media",
@@ -187,6 +211,8 @@ export const projects: Array<Project> = [
 		technologies: ["Go", "WebRTC", "Docker", "gRPC", "Kubernetes", "TLS"],
 		isFeatured: true,
 		thumbnail: nexusThumbnail,
+		ogImageLink:
+			"https://opengraph.githubassets.com/511c03c1df2de44185b7190aba3d06ac59728c0488a230be9603b30a5f2a2988/justine-george/nexus-decentralized-messaging",
 	},
 	{
 		title: "VectorDB-LLM Query Engine",
@@ -196,9 +222,11 @@ export const projects: Array<Project> = [
 			github: "https://github.com/justine-george/ai-markdown-llm-retrieval",
 			demo: "",
 		},
-		technologies: ["Python", "LangChain", "RAG", "OpenAI API", "Vector databases", "ChromaDB"],
+		technologies: ["Python", "LangChain", "Retrieval-Augmented Generation (RAG)", "Vector DBs"],
 		isFeatured: true,
 		thumbnail: ragMdChatThumbnail,
+		ogImageLink:
+			"https://opengraph.githubassets.com/b69f3d86723c9d0ad1308418c1fbf2a10b8c3668e67e6089c625dc799a8e458f/justine-george/ai-markdown-llm-retrieval",
 	},
 	{
 		title: "Book Fellow - Social Media Web App",
@@ -211,6 +239,8 @@ export const projects: Array<Project> = [
 		technologies: ["Java", "Spring", "PostgreSQL", "Next.js", "AWS (EC2, S3, SNS, Lambda)"],
 		isFeatured: true,
 		thumbnail: bookfellowThumbnail,
+		ogImageLink:
+			"https://opengraph.githubassets.com/0249be65c0ca36f3201a33737ab34e7e404f5a1385233f244286dfdeedbc2b35/justine-george/book-fellow-backend-spring",
 	},
 	{
 		title: "Tab Keeper - Chrome Extension",
@@ -225,8 +255,10 @@ export const projects: Array<Project> = [
 		isFeatured: true,
 		thumbnail: tabkeeperThumbnail,
 		metrics: {
-			users: 1600,
+			users: 1832,
 		},
+		ogImageLink:
+			"https://opengraph.githubassets.com/bc38a30fb87a8ce5e21ec69c9d91e1ca4c4eb1d137b407c125378acbdf7581b9/justine-george/tab-keeper-react-chrome-extension",
 	},
 	{
 		title: "Planet: Event Planner App",
@@ -238,6 +270,8 @@ export const projects: Array<Project> = [
 		},
 		technologies: ["Next.js", "React", "DynamoDB", "GraphQL", "Docker", "AWS (Amplify, SQS)"],
 		isFeatured: false,
+		ogImageLink:
+			"https://opengraph.githubassets.com/fd8e597738ce5a59568fc81dc797c9b706164c188619480ab606a49918ef68a6/justine-george/planet-nextjs",
 	},
 	{
 		title: "Multi-threaded Simulation of a Tutoring Center with Priority Scheduling",
@@ -248,7 +282,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["C", "POSIX Threads", "Mutex Locks", "Semaphores", "GDB"],
-		// isFeatured: true,
+		ogImageLink:
+			"https://opengraph.githubassets.com/5208d1fafaea3caa61f832339a5bc262f385d02bc13e83db9002f6fa4b2ec4b2/justine-george/Seeking-Tutor-Problem-POSIX-Threads",
 	},
 	{
 		title: "Lottery Scheduler Implementation in xv6",
@@ -259,16 +294,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["C", "Kernel Programming", "xv6", "GDB"],
-	},
-	{
-		title: "URL Shortener Microservice",
-		description:
-			"A microservice for URL shortening built with Node.js and MongoDB, featuring JSON responses and seamless redirection from shortened URLs to their original destinations.",
-		links: {
-			github: "https://github.com/justine-george/url-shortener-service",
-			demo: "",
-		},
-		technologies: ["Node.js", "Express.js", "MongoDB", "Mongoose", "Jest"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/112a92019025d542745fed7621f59709130af54794829c32627879e87042982f/justine-george/Lottery-Scheduling-XV6",
 	},
 	{
 		title: "8 Men Morris Game AI: MiniMax vs Alpha-Beta Pruning",
@@ -279,6 +306,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Python", "MiniMax", "Alpha-Beta Pruning", "Game Theory"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/e7b6ea5bea45699c671d2c479732b0b8a857273c6c1f61c3c9f82e7d0bd4c0d3/justine-george/morris-game-variant-project",
 	},
 	{
 		title: "Customer Churn Prediction Using Machine Learning and Data Analysis",
@@ -289,26 +318,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn", "Google Colab"],
-	},
-	{
-		title: "EZ Cart",
-		description:
-			"An ecommerce application built with React, featuring product browsing, detailed item views, and comprehensive cart and wishlist management. Integrated with Material-UI and Axios for a smooth and responsive user experience.",
-		links: {
-			github: "https://github.com/justine-george/EZCart-Web",
-			demo: "",
-		},
-		technologies: ["Spring Boot", "React", "Material-UI", "Axios"],
-	},
-	{
-		title: "Vegetable Price Catalog Generator for Local Businesses",
-		description:
-			"A multilingual catalogue generator tailored for local Kerala businesses, enabling the creation of dynamic PNG catalogues with customizable pricing and vegetable selection.",
-		links: {
-			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
-			demo: "",
-		},
-		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/3b1467ee155cbaad73bcf4eb2964c5d90548e0676634b906641568296ccd123e/justine-george/telco-customer-churn-prediction",
 	},
 	{
 		title: "Indian Judiciary ML Tool for NLP-Driven Case Analysis and Bilingual Translation",
@@ -319,6 +330,8 @@ export const projects: Array<Project> = [
 			demo: "",
 		},
 		technologies: ["Natural Language Processing", "Python", "Kivy", "NLTK", "Scikit-learn"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/e9db2636ff7d70d6455d05475c6d75062e9f89f5288d98fa08ca9f8bb995b059/justine-george/Application-of-NLP-in-Indian-Judiciary",
 	},
 	// {
 	// 	title: "File System Integrity Validator for xv6",
@@ -329,5 +342,30 @@ export const projects: Array<Project> = [
 	// 		demo: "",
 	// 	},
 	// 	technologies: ["C", "xv6", "GDB"],
+	//  ogImageLink: "",
 	// },
+	{
+		title: "EZ Cart",
+		description:
+			"An ecommerce application built with React, featuring product browsing, detailed item views, and comprehensive cart and wishlist management. Integrated with Material-UI and Axios for a smooth and responsive user experience.",
+		links: {
+			github: "https://github.com/justine-george/EZCart-Web",
+			demo: "",
+		},
+		technologies: ["Spring Boot", "React", "Material-UI", "Axios"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/12890d28fc2a27d934d3f203fcc1942e8961e2645ec6276323804db29b277671/justine-george/EZCart-Web",
+	},
+	{
+		title: "Vegetable Price Catalog Generator for Local Businesses",
+		description:
+			"A multilingual catalogue generator tailored for local Kerala businesses, enabling the creation of dynamic PNG catalogues with customizable pricing and vegetable selection.",
+		links: {
+			github: "https://github.com/justine-george/store-catalogue-graphic-generator",
+			demo: "",
+		},
+		technologies: ["React", "Emotion CSS", "i18next", "html-to-image", "Vite"],
+		ogImageLink:
+			"https://opengraph.githubassets.com/49b7803aa52154941ce4f2be391a73b99f4ab15db39e8e8c87a60069c9e95449/justine-george/store-catalogue-graphic-generator",
+	},
 ];

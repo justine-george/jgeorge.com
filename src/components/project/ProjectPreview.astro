@@ -25,6 +25,18 @@ const { project, as: Tag = "div" } = Astro.props;
 	</a>
 </Tag>
 <p class="project-description line-clamp-3 block">{project.description}</p>
+<a
+	class="mb-2 py-0 sm:mb-0 sm:py-1"
+	target="_blank"
+	rel="noopener noreferrer"
+	href={project.links.github}
+>
+	<img
+		class="flex h-fit w-[14rem] min-w-[12rem] rounded-[0.2rem] border border-textColor/20 transition-all sm:w-[12rem] sm:brightness-90 sm:group-hover:border-textColor/25 sm:group-hover:brightness-100"
+		src={project.ogImageLink}
+		alt={project.title}
+	/>
+</a>
 <div>
 	{project.technologies.map((tech: string) => <span class="technologies">{tech}</span>)}
 </div>

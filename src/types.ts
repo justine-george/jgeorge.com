@@ -103,6 +103,7 @@ export type Project = {
 	metrics?: {
 		users?: number;
 	};
+	ogImageLink?: string;
 };
 
 export type Experience = {
@@ -111,7 +112,7 @@ export type Experience = {
 	company: string;
 	location?: string;
 	startDate: Date;
-	endDate: Date;
+	endDate: Date | null;
 	description: string;
 	technologies: string[];
 	isDisabled?: boolean;
