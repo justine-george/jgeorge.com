@@ -30,32 +30,50 @@ _Figure 1_
 Here's a simplified version of the implementation shown in Figure 1. The `getUserTokenFromChromeStorageSync` function is called when the component mounts, ensuring that the user's token is retrieved from `storage.sync` and used to access their data in Cloud Firestore.
 
 ```jsx
-useEffect(() => {
-	getUserTokenFromChromeStorageSync();
-}, []);
+import { v4 as uuidv4 } from "uuid";
 
-function getUserTokenFromChromeStorageSync() {
-	chrome.storage.sync.get(["tokenValue"]).then((result) => {
-		let { tokenValue: token } = result;
+const TOKEN_KEY = "tokenValue";
 
-		if (!token) {
-			token = uuidv4();
-			chrome.storage.sync
-				.set({ tokenValue: token })
-				.then(() => {
-					dispatch(setSignedIn());
-					dispatch(setUserId(token));
-				})
-				.catch(() => {
-					dispatch(setLoggedOut());
-					dispatch(removeUserId());
-				});
-		} else {
-			dispatch(setSignedIn());
-			dispatch(setUserId(token));
-		}
-	});
+async function getUserToken() {
+	try {
+		const result = await chrome.storage.sync.get([TOKEN_KEY]);
+		return result[TOKEN_KEY];
+	} catch (error) {
+		console.error("Error getting user token:", error);
+		return null;
+	}
 }
+
+async function setUserToken(token) {
+	try {
+		await chrome.storage.sync.set({ [TOKEN_KEY]: token });
+		return true;
+	} catch (error) {
+		console.error("Error setting user token:", error);
+		return false;
+	}
+}
+
+async function manageUserToken() {
+	let token = await getUserToken();
+
+	if (!token) {
+		token = uuidv4();
+		const success = await setUserToken(token);
+		if (!success) {
+			dispatch(setLoggedOut());
+			dispatch(removeUserId());
+			return;
+		}
+	}
+
+	dispatch(setSignedIn());
+	dispatch(setUserId(token));
+}
+
+useEffect(() => {
+	manageUserToken();
+}, []);
 ```
 
 The system is designed to work optimally when users have Chrome sync enabled. If Chrome sync is not enabled, the extension uses a fallback strategy using `storage.local`, [almost](https://developer.chrome.com/docs/extensions/reference/api/storage#storage_areas) resembling `localStorage`, ensuring data persistence locally without synchronization.
