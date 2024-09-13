@@ -1,6 +1,53 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+const SkeletonLoader: React.FC = () => (
+	<div className="animate-pulse space-y-9">
+		<div className="h-11 w-1/2 rounded-lg bg-gray-500"></div>
+		<div className="space-y-2">
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 w-1/3 rounded bg-gray-600"></div>
+		</div>
+		<div className="space-y-2">
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 w-4/5 rounded bg-gray-600"></div>
+		</div>
+		<div className="space-y-2">
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 w-1/4 rounded bg-gray-600"></div>
+		</div>
+		<div className="space-y-2">
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 rounded bg-gray-600"></div>
+			<div className="h-5 w-1/4 rounded bg-gray-600"></div>
+		</div>
+	</div>
+);
+
 const AnimatedIntro: React.FC = () => {
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		// Simulate content loading
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 0); // Adjust this time as needed
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	if (isLoading) {
+		return <SkeletonLoader />;
+	}
+
 	return (
 		<motion.section
 			initial={{ opacity: 0, y: -10 }}
