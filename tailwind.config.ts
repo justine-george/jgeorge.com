@@ -30,6 +30,7 @@ export default {
 				logoBorderHoverColor: "hsl(var(--theme-logo-border-hover) / <alpha-value>)",
 				loadingSkeletonHeader: "hsl(var(--theme-skeleton-header) / <alpha-value>)",
 				loadingSkeleton: "hsl(var(--theme-skeleton) / <alpha-value>)",
+				thumbnailBorderColor: "hsl(var(--theme-thumbnail-border) / <alpha-value>)",
 			},
 			fontFamily: {
 				// custom: [...fontFamily.sans],
