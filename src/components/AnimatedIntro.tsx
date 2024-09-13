@@ -12,8 +12,10 @@ const AnimatedIntro: React.FC = () => {
 		>
 			<h1 className="title text-4xl">I am Justine George.</h1>
 			<p className="font-semibold">
-				An adaptive and detail-oriented software engineer with a Master's degree in Computer Science
-				from UT Dallas and over 3 years of professional experience.
+				An adaptive and detail-oriented Senior Software Engineer with a Master's degree in Computer
+				Science from UT Dallas and over 3 years of professional experience. I currently lead a
+				remote team of 10 developers at Holiday Channel, a Colorado-based startup revolutionizing
+				the holiday-themed e-commerce space.
 			</p>
 			<p>
 				I specialize in developing and optimizing scalable backend systems using Java, Python, Go,

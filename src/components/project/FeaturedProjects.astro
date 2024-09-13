@@ -9,7 +9,7 @@ type Props = {
 const { projects: featuredProjects } = Astro.props;
 
 const tabkeeperUserCount: string = await fetch(
-	"https://project-metrics-flask.onrender.com/extensions/gpibgniomobngodpnikhheifblbpbbah/usercount"
+	"https://project-metrics-flask.fly.dev/extensions/gpibgniomobngodpnikhheifblbpbbah/usercount"
 )
 	.then((res) => res.json())
 	.then(
