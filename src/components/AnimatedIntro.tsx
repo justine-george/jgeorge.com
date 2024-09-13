@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SkeletonLoader: React.FC = () => (
-	<div className="animate-pulse space-y-9">
+	<div className="animate-pulse space-y-[39px]">
 		<div className="h-11 w-1/2 rounded-lg bg-gray-500"></div>
 		<div className="space-y-2">
 			<div className="h-5 rounded bg-gray-600"></div>
@@ -58,7 +58,7 @@ const AnimatedIntro: React.FC = () => {
 				</motion.div>
 			) : (
 				<motion.section
-					initial={{ opacity: 0, y: -10 }}
+					initial={{ opacity: 0, y: -5 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 					aria-label="Landing page intro"
