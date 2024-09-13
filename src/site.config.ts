@@ -227,20 +227,6 @@ export const projects: Array<Project> = [
 			"https://opengraph.githubassets.com/b69f3d86723c9d0ad1308418c1fbf2a10b8c3668e67e6089c625dc799a8e458f/justine-george/ai-markdown-llm-retrieval",
 	},
 	{
-		title: "Book Fellow - Social Media Web App",
-		description:
-			"A social media platform designed for book enthusiasts, Book Fellow allows users to write detailed reviews, create and share personalized reading lists, and track the reading activities of others in the community.",
-		links: {
-			github: "https://github.com/justine-george/book-fellow-backend-spring",
-			demo: "https://book-fellow-frontend-react.pages.dev/",
-		},
-		technologies: ["Java", "Spring", "PostgreSQL", "Next.js", "AWS (EC2, S3, SNS, Lambda)"],
-		isFeatured: true,
-		thumbnail: bookfellowThumbnail,
-		ogImageLink:
-			"https://opengraph.githubassets.com/0249be65c0ca36f3201a33737ab34e7e404f5a1385233f244286dfdeedbc2b35/justine-george/book-fellow-backend-spring",
-	},
-	{
 		title: "Tab Keeper - Chrome Extension",
 		description:
 			"A Chrome extension for streamlined tab management and cross-device synchronization, enabling users to effortlessly manage and access their open tabs across multiple desktop devices.",
@@ -257,6 +243,20 @@ export const projects: Array<Project> = [
 		},
 		ogImageLink:
 			"https://opengraph.githubassets.com/bc38a30fb87a8ce5e21ec69c9d91e1ca4c4eb1d137b407c125378acbdf7581b9/justine-george/tab-keeper-react-chrome-extension",
+	},
+	{
+		title: "Book Fellow - Social Media Web App",
+		description:
+			"A social media platform designed for book enthusiasts, Book Fellow allows users to write detailed reviews, create and share personalized reading lists, and track the reading activities of others in the community.",
+		links: {
+			github: "https://github.com/justine-george/book-fellow-backend-spring",
+			demo: "https://book-fellow-frontend-react.pages.dev/",
+		},
+		technologies: ["Java", "Spring", "PostgreSQL", "Next.js", "AWS (EC2, S3, SNS, Lambda)"],
+		isFeatured: true,
+		thumbnail: bookfellowThumbnail,
+		ogImageLink:
+			"https://opengraph.githubassets.com/0249be65c0ca36f3201a33737ab34e7e404f5a1385233f244286dfdeedbc2b35/justine-george/book-fellow-backend-spring",
 	},
 	{
 		title: "Planet: Event Planner App",

@@ -2,13 +2,17 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const SkeletonLoader = React.memo(() => (
-	<div className="animate-pulse space-y-[39px]">
-		<div className="bg-loadingSkeletonHeader h-11 w-1/2 rounded-lg"></div>
+	<div className="animate-pulse space-y-[40px] sm:space-y-[39px]">
+		<div className="bg-loadingSkeletonHeader h-9 w-5/6 rounded-lg sm:h-11 sm:w-1/2"></div>
 		<div className="space-y-2">
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 w-1/3 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 w-2/12 rounded sm:w-1/3"></div>
 		</div>
 		<div className="space-y-2">
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
@@ -16,18 +20,30 @@ const SkeletonLoader = React.memo(() => (
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 w-4/5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 w-1/2 rounded sm:w-4/5"></div>
 		</div>
 		<div className="space-y-2">
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 w-1/4 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 w-10/12 rounded sm:w-1/4"></div>
 		</div>
 		<div className="space-y-2">
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
 			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 w-1/4 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
+			<div className="bg-loadingSkeleton h-5 w-7/12 rounded sm:w-1/4"></div>
 		</div>
 	</div>
 ));
