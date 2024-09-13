@@ -3,31 +3,31 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SkeletonLoader = React.memo(() => (
 	<div className="animate-pulse space-y-[39px]">
-		<div className="h-11 w-1/2 rounded-lg bg-gray-500"></div>
+		<div className="bg-loadingSkeletonHeader h-11 w-1/2 rounded-lg"></div>
 		<div className="space-y-2">
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 w-1/3 rounded bg-gray-600"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 w-1/3 rounded"></div>
 		</div>
 		<div className="space-y-2">
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 w-4/5 rounded bg-gray-600"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 w-4/5 rounded"></div>
 		</div>
 		<div className="space-y-2">
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 w-1/4 rounded bg-gray-600"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 w-1/4 rounded"></div>
 		</div>
 		<div className="space-y-2">
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 rounded bg-gray-600"></div>
-			<div className="h-5 w-1/4 rounded bg-gray-600"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 rounded"></div>
+			<div className="bg-loadingSkeleton h-5 w-1/4 rounded"></div>
 		</div>
 	</div>
 ));

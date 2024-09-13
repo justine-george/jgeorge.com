@@ -28,6 +28,8 @@ export default {
 				quote: "hsl(var(--theme-quote) / <alpha-value>)",
 				logoBorderColor: "hsl(var(--theme-logo-border) / <alpha-value>)",
 				logoBorderHoverColor: "hsl(var(--theme-logo-border-hover) / <alpha-value>)",
+				loadingSkeletonHeader: "hsl(var(--theme-skeleton-header) / <alpha-value>)",
+				loadingSkeleton: "hsl(var(--theme-skeleton) / <alpha-value>)",
 			},
 			fontFamily: {
 				// custom: [...fontFamily.sans],

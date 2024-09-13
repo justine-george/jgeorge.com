@@ -19,6 +19,8 @@
 		--theme-quote: 172deg 50% 35%;
 		--theme-logo-border: 0deg 0% 98%;
 		--theme-logo-border-hover: 172deg 70% 27%;
+		--theme-skeleton: 0deg 0% 90%;
+		--theme-skeleton-header: 0deg 0% 85%;
 	}
 
 	:root.dark {
@@ -31,6 +33,8 @@
 		--theme-quote: 159deg 55% 55%;
 		--theme-logo-border: 210deg 6% 12%;
 		--theme-logo-border-hover: 186deg 94% 82%;
+		--theme-skeleton: 210deg 6% 20%;
+		--theme-skeleton-header: 210deg 6% 25%;
 	}
 
 	html {
