@@ -3,47 +3,42 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SkeletonLoader = React.memo(() => (
 	<div className="animate-pulse space-y-[40px] sm:space-y-[39px]">
-		<div className="bg-loadingSkeletonHeader h-9 w-5/6 rounded-lg sm:h-11 sm:w-1/2"></div>
+		<div className="h-9 w-5/6 rounded-lg bg-loadingSkeletonHeader sm:h-11 sm:w-1/2"></div>
 		<div className="space-y-2">
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 w-2/12 rounded sm:w-1/3"></div>
+			{[...Array(3)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
+			))}
+			{[...Array(4)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
+			))}
+			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/3" />
 		</div>
 		<div className="space-y-2">
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 w-1/2 rounded sm:w-4/5"></div>
+			{[...Array(5)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
+			))}
+			{[...Array(7)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
+			))}
+			<div className="h-5 w-1/2 rounded bg-loadingSkeleton sm:w-4/5" />
 		</div>
 		<div className="space-y-2">
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 w-10/12 rounded sm:w-1/4"></div>
+			{[...Array(3)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
+			))}
+			{[...Array(3)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
+			))}
+			<div className="h-5 w-10/12 rounded bg-loadingSkeleton sm:w-1/4" />
 		</div>
 		<div className="space-y-2">
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 rounded sm:hidden"></div>
-			<div className="bg-loadingSkeleton h-5 w-7/12 rounded sm:w-1/4"></div>
+			{[...Array(2)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
+			))}
+			{[...Array(2)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
+			))}
+			<div className="h-5 w-7/12 rounded bg-loadingSkeleton sm:w-1/4" />
 		</div>
 	</div>
 ));

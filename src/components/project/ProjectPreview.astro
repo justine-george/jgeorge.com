@@ -32,7 +32,7 @@ const { project, as: Tag = "div" } = Astro.props;
 	href={project.links.github}
 >
 	<img
-		class="border-thumbnailBorderColor sm:group-hover:border-thumbnailBorderColor flex h-fit w-[22rem] min-w-[20rem] rounded-[0.4rem] border transition-all sm:w-[26rem] sm:brightness-95 sm:group-hover:brightness-100"
+		class="flex h-fit w-[22rem] min-w-[20rem] rounded-[0.4rem] border border-thumbnailBorderColor transition-all sm:w-[26rem] sm:brightness-95 sm:group-hover:border-thumbnailBorderColor sm:group-hover:brightness-100"
 		src={project.thumbnail || project.ogImageLink}
 		alt={project.title}
 	/>
