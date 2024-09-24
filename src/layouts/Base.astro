@@ -1,7 +1,7 @@
 ---
 import type { SiteMeta } from "@/types";
 import BaseHead from "@/components/BaseHead";
-import ThemeProvider from "@/components/ThemeProvider";
+// import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
@@ -17,13 +17,13 @@ const {
 } = Astro.props;
 ---
 
-<html lang={siteConfig.lang}>
+<html lang={siteConfig.lang} class="dark">
 	<head>
 		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
 		<GoogleAnalytics id="G-PVGQK8LYWR" />
 	</head>
 	<body>
-		<ThemeProvider />
+		<!-- <ThemeProvider /> -->
 		<SkipLink />
 		<Header />
 		<main id="main">
