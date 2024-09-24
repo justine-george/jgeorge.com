@@ -93,7 +93,7 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
-		title: "Software Engineer (Full-Stack)",
+		title: "Senior Software Engineer (Full-Stack)",
 		// prevTitles: [{ title: "" }],
 		company: "Holiday Channel",
 		// location: "Seattle, WA", // ? Maybe add this back in later
