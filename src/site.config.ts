@@ -239,7 +239,7 @@ export const projects: Array<Project> = [
 		isFeatured: true,
 		thumbnail: tabkeeperThumbnail,
 		metrics: {
-			users: 1832,
+			users: 2175,
 		},
 		ogImageLink:
 			"https://opengraph.githubassets.com/bc38a30fb87a8ce5e21ec69c9d91e1ca4c4eb1d137b407c125378acbdf7581b9/justine-george/tab-keeper-react-chrome-extension",
