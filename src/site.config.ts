@@ -100,7 +100,7 @@ export const experiences: Array<Experience> = [
 		startDate: new Date("2024-08-13"),
 		endDate: null,
 		description:
-			"Build and maintain a holiday-themed e-commerce platform using event-driven design to handle traffic spikes during peak seasons. Lead a team of 10 developers in implementing scalable solutions. Develop an AI-powered chatbot using LangChain and OpenAI's API, integrating RAG technology to provide personalized gift suggestions based on product data, customer history, and holiday information.",
+			"Build and maintain a holiday-themed e-commerce platform using event-driven design to handle traffic spikes during peak seasons. Lead a team of 6 developers in implementing scalable solutions. Develop an AI-powered chatbot using LangChain and OpenAI's API, integrating RAG technology to provide personalized gift suggestions based on product data, customer history, and holiday information.",
 		technologies: [
 			"TypeScript",
 			"LangChain",
