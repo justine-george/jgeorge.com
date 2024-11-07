@@ -8,7 +8,7 @@ const SkeletonLoader = React.memo(() => (
 			{[...Array(2)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
-			{[...Array(2)].map((_, index) => (
+			{[...Array(3)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
 			<div className="h-5 w-4/12 rounded bg-loadingSkeleton sm:w-2/3" />
@@ -17,7 +17,7 @@ const SkeletonLoader = React.memo(() => (
 			{[...Array(4)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
-			{[...Array(3)].map((_, index) => (
+			{[...Array(4)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
 			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/5" />
