@@ -79,17 +79,18 @@ const socialLinks: Array<{
 			/>
 		</a>
 	</p>
-	<ul class="flex flex-initial items-center gap-x-2">
+	<ul class="flex flex-initial items-center gap-x-4">
 		{
-			socialLinks.map(({ link, name, friendlyName, isWebmention }) => (
+			socialLinks.map(({ link, name, friendlyName, isWebmention }, index) => (
 				<li class="flex">
 					<a
-						class="inline-block p-1 transition-transform hover:-translate-y-0.5 sm:hover:text-link"
+						class="inline-flex items-center p-0 transition-transform hover:-translate-y-0.5 sm:hover:text-link"
 						href={link}
 						target="_blank"
 						title={friendlyName}
 						rel={`noopener noreferrer ${isWebmention ? "me authn" : ""}`}
 					>
+						{index === 0 && <span class="mr-2">Résumé</span>}
 						<Icon
 							class={friendlyName === "Twitter" ? "h-6 w-6" : "h-6 w-6"}
 							name={name}

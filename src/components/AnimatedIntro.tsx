@@ -3,42 +3,33 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const SkeletonLoader = React.memo(() => (
 	<div className="animate-pulse space-y-[40px] sm:space-y-[39px]">
-		<div className="h-9 w-5/6 rounded-lg bg-loadingSkeletonHeader sm:h-11 sm:w-1/2"></div>
+		<div className="h-9 w-5/6 rounded-lg bg-loadingSkeletonHeader sm:h-11 sm:w-5/12"></div>
 		<div className="space-y-2">
-			{[...Array(3)].map((_, index) => (
+			{[...Array(2)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
+			{[...Array(2)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
+			))}
+			<div className="h-5 w-4/12 rounded bg-loadingSkeleton sm:w-2/3" />
+		</div>
+		<div className="space-y-2">
 			{[...Array(4)].map((_, index) => (
-				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
-			))}
-			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/3" />
-		</div>
-		<div className="space-y-2">
-			{[...Array(5)].map((_, index) => (
-				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
-			))}
-			{[...Array(7)].map((_, index) => (
-				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
-			))}
-			<div className="h-5 w-1/2 rounded bg-loadingSkeleton sm:w-4/5" />
-		</div>
-		<div className="space-y-2">
-			{[...Array(3)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
 			{[...Array(3)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
-			<div className="h-5 w-10/12 rounded bg-loadingSkeleton sm:w-1/4" />
+			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/5" />
 		</div>
 		<div className="space-y-2">
-			{[...Array(2)].map((_, index) => (
+			{[...Array(1)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
-			{[...Array(2)].map((_, index) => (
+			{[...Array(1)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
-			<div className="h-5 w-7/12 rounded bg-loadingSkeleton sm:w-1/4" />
+			<div className="h-5 w-4/12 rounded bg-loadingSkeleton sm:w-4/12" />
 		</div>
 	</div>
 ));
@@ -55,29 +46,20 @@ const ContentSection = React.memo(() => (
 	>
 		<h1 className="title text-4xl">I am Justine George.</h1>
 		<p className="font-semibold">
-			An adaptive and detail-oriented Senior Software Engineer with a Master's degree in Computer
-			Science from UT Dallas and over 3.5 years of professional experience. I currently lead a
-			remote team of 6 developers at Holiday Channel, a Colorado-based startup revolutionizing the
-			holiday-themed e-commerce space.
+			A Senior Software Engineer with a Master's in Computer Science from UT Dallas and over 3.5
+			years of experience in scalable backend systems. I lead a remote team at Holiday Channel,
+			driving innovation in the holiday-themed e-commerce space.
 		</p>
 		<p>
-			I specialize in developing and optimizing scalable backend systems using Java, Python, Go, and
-			TypeScript. My expertise includes building robust RESTful APIs, microservices architectures,
-			and full-stack applications, all with a strong focus on performance and security. I have
-			deployed and managed distributed systems on AWS and GCP cloud platforms, and implemented
-			AI-driven features using Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG)
-			techniques to deliver personalized content and improve user engagement.
+			Specializing in Java, Python, Go, and TypeScript, I build robust RESTful APIs and
+			microservices with a focus on performance and security. I've deployed distributed systems on
+			AWS and GCP and implemented AI-driven personalization using LLMs and RAG to enhance user
+			engagement. Previously at Oracle, I optimized banking services globally, and at Resi Media, I
+			improved backend scalability.
 		</p>
 		<p>
-			My professional experience includes working as a full-stack software development engineer at
-			Oracle, where I contributed to key projects enhancing global banking services, and as a
-			backend software engineer intern at Resi Media, where I focused on backend improvements and
-			system optimizations.
-		</p>
-		<p>
-			I am eager to tackle complex challenges and contribute to impactful projects in backend or
-			full-stack roles. Outside of work, I enjoy exploring indie PC games and capturing street and
-			landscape photography.
+			Ready to tackle complex challenges in backend or full-stack roles. Outside of work, I enjoy
+			indie PC games and street photography.
 		</p>
 	</motion.section>
 ));
