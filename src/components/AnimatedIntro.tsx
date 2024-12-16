@@ -5,13 +5,13 @@ const SkeletonLoader = React.memo(() => (
 	<div className="animate-pulse space-y-[40px] sm:space-y-[39px]">
 		<div className="h-9 w-5/6 rounded-lg bg-loadingSkeletonHeader sm:h-11 sm:w-5/12"></div>
 		<div className="space-y-2">
-			{[...Array(2)].map((_, index) => (
-				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
-			))}
 			{[...Array(3)].map((_, index) => (
+				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
+			))}
+			{[...Array(4)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
-			<div className="h-5 w-4/12 rounded bg-loadingSkeleton sm:w-2/3" />
+			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/2" />
 		</div>
 		<div className="space-y-2">
 			{[...Array(4)].map((_, index) => (
@@ -20,16 +20,16 @@ const SkeletonLoader = React.memo(() => (
 			{[...Array(4)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
-			<div className="h-5 w-2/12 rounded bg-loadingSkeleton sm:w-1/5" />
+			<div className="h-5 w-3/12 rounded bg-loadingSkeleton sm:w-3/12" />
 		</div>
 		<div className="space-y-2">
 			{[...Array(1)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton" />
 			))}
-			{[...Array(1)].map((_, index) => (
+			{[...Array(2)].map((_, index) => (
 				<div key={index} className="h-5 rounded bg-loadingSkeleton sm:hidden" />
 			))}
-			<div className="h-5 w-4/12 rounded bg-loadingSkeleton sm:w-4/12" />
+			<div className="h-5 w-3/12 rounded bg-loadingSkeleton sm:w-2/3" />
 		</div>
 	</div>
 ));
@@ -46,20 +46,21 @@ const ContentSection = React.memo(() => (
 	>
 		<h1 className="title text-4xl">I am Justine George.</h1>
 		<p className="font-semibold">
-			A Senior Software Engineer with a Master's in Computer Science from UT Dallas and over 3.5
-			years of experience in scalable backend systems. I lead a remote team at Holiday Channel,
-			driving innovation in the holiday-themed e-commerce space.
+			A Software Engineer with a Master's in Computer Science from UT Dallas and over 3.5 years of
+			experience in scalable backend systems. I'm currently focused on building backend systems for
+			entitlements management and authorization platforms within the Digital Identity team at SoFi,
+			contributing to SoFi's growth in the fintech space.
 		</p>
 		<p>
-			Specializing in Java, Python, Go, and TypeScript, I build robust RESTful APIs and
-			microservices with a focus on performance and security. I've deployed distributed systems on
-			AWS and GCP and implemented AI-driven personalization using LLMs and RAG to enhance user
-			engagement. Previously at Oracle, I optimized banking services globally, and at Resi Media, I
-			improved backend scalability.
+			Specializing in Java, Kotlin, and building scalable REST APIs and performant backend
+			applications, I work on mission-critical systems with a strong focus on performance and
+			security. I've deployed distributed systems on AWS and GCP, and previously at Oracle, I
+			optimized banking services globally. At Resi Media, I improved backend scalability to support
+			video streaming operations.
 		</p>
 		<p>
-			Ready to tackle complex challenges in backend or full-stack roles. Outside of work, I enjoy
-			indie PC games and street photography.
+			Ready to tackle complex challenges in backend roles, particularly in the fintech space.
+			Outside of work, I enjoy indie PC/console games and street photography.
 		</p>
 	</motion.section>
 ));

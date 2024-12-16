@@ -93,12 +93,35 @@ export const resumeLink: string = "/docs/Justine_George_SoftwareEngineer_Resume.
 
 export const experiences: Array<Experience> = [
 	{
+		title: "Software Engineer II, Digital Identity (Backend)",
+		// prevTitles: [{ title: "" }],
+		company: "SoFi",
+		// location: "Seattle, WA", // ? Maybe add this back in later
+		startDate: new Date("2024-12-16"),
+		endDate: null,
+		description:
+			"Platform team focused on building backend systems for entitlements management and authorization platforms within the Digital Identity team at SoFi, contributing to SoFi's growth in the fintech space.",
+		technologies: [
+			"Java",
+			"Kotlin",
+			"Spring Boot",
+			"Kubernetes",
+			"AWS",
+			"Docker",
+			"Kafka",
+			"PostgreSQL",
+		],
+		links: {
+			company: "https://www.sofi.com/",
+		},
+	},
+	{
 		title: "Senior Software Engineer (Full-Stack)",
 		// prevTitles: [{ title: "" }],
 		company: "Holiday Channel",
 		// location: "Seattle, WA", // ? Maybe add this back in later
 		startDate: new Date("2024-08-13"),
-		endDate: null,
+		endDate: new Date("2024-12-16"),
 		description:
 			"Build and maintain a holiday-themed e-commerce platform using event-driven design to handle traffic spikes during peak seasons. Lead a team of 6 developers in implementing scalable solutions. Develop an AI-powered chatbot using LangChain and OpenAI's API, integrating RAG technology to provide personalized gift suggestions based on product data, customer history, and holiday information.",
 		technologies: [
