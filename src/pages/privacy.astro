@@ -54,6 +54,12 @@ const lastUpdated = "August 24, 2026";
 				Only me. Data is processed by PostHog acting on my behalf, and is stored on PostHog's US
 				infrastructure. Nothing is sold, and nothing is shared with anyone else.
 			</p>
+			<p class="mt-4">
+				Email me at <a
+					class="cactus-link-mobile inline-block sm:cactus-link"
+					href={`mailto:${contactEmail}`}>{contactEmail}</a
+				> with anything privacy-related.
+			</p>
 		</div>
 
 		<div>
@@ -78,12 +84,11 @@ const lastUpdated = "August 24, 2026";
 		</div>
 
 		<div>
-			<p class="title mb-4 text-xl">Questions</p>
+			<p class="title mb-4 text-xl">How you're identified</p>
 			<p>
-				Email me at <a
-					class="cactus-link-mobile inline-block sm:cactus-link"
-					href={`mailto:${contactEmail}`}>{contactEmail}</a
-				> with anything privacy-related, including if you'd like data associated with your visits deleted.
+				There's no account or login, so visits are tied to a random identifier generated in your
+				browser rather than to your name or email. That identifier stays the same between visits, so
+				repeat visits from the same browser are recognised as the same visitor.
 			</p>
 		</div>
 
