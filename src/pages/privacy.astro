@@ -1,0 +1,92 @@
+---
+import PageLayout from "@/layouts/Base";
+
+const meta = {
+	title: "Privacy",
+	description: "What this site collects, why, and how to opt out.",
+};
+
+const contactEmail = "justine.george.work@gmail.com";
+const lastUpdated = "August 24, 2026";
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-7">Privacy</h1>
+
+	<section class="space-y-6">
+		<p>
+			This is a personal site. It collects as little as possible, and nothing at all unless you
+			agree to it first.
+		</p>
+
+		<div>
+			<p class="title mb-4 text-xl">Analytics</p>
+			<p>
+				If you accept cookies, this site uses <a
+					class="cactus-link-mobile inline-block sm:cactus-link"
+					href="https://posthog.com"
+					target="_blank"
+					rel="noopener noreferrer">PostHog</a
+				> for analytics and session replay. Nothing is sent to PostHog until you accept — if you decline,
+				or simply ignore the banner, no analytics data leaves your browser.
+			</p>
+		</div>
+
+		<div>
+			<p class="title mb-4 text-xl">What gets collected</p>
+			<ul class="list-inside list-disc space-y-2">
+				<li>Pages you visit, and when.</li>
+				<li>Clicks and similar interactions with the page.</li>
+				<li>
+					Session recordings — a replay of how the page was used. Text you type into form fields is
+					masked by default and is not recorded.
+				</li>
+				<li>
+					General technical information your browser sends anyway: approximate location derived from
+					IP address, browser, operating system, and screen size.
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<p class="title mb-4 text-xl">Who sees it</p>
+			<p>
+				Only me. Data is processed by PostHog acting on my behalf, and is stored on PostHog's US
+				infrastructure. Nothing is sold, and nothing is shared with anyone else.
+			</p>
+		</div>
+
+		<div>
+			<p class="title mb-4 text-xl">Changing your mind</p>
+			<p>
+				You can change your choice at any time — it takes effect immediately and applies to this
+				browser.
+			</p>
+			<p class="mt-4">
+				<button
+					type="button"
+					data-cookie-preferences
+					class="cactus-link-mobile inline-block sm:cactus-link"
+				>
+					Manage cookie preferences
+				</button>
+			</p>
+			<p class="mt-4">
+				Clearing your browser's storage for this site also resets the choice, and the banner will
+				appear again on your next visit.
+			</p>
+		</div>
+
+		<div>
+			<p class="title mb-4 text-xl">Questions</p>
+			<p>
+				Email me at <a
+					class="cactus-link-mobile inline-block sm:cactus-link"
+					href={`mailto:${contactEmail}`}>{contactEmail}</a
+				> with anything privacy-related, including if you'd like data associated with your visits deleted.
+			</p>
+		</div>
+
+		<p class="text-sm text-gray-400 dark:text-gray-600">Last updated {lastUpdated}.</p>
+	</section>
+</PageLayout>

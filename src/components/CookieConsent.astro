@@ -1,0 +1,126 @@
+---
+// Consent gate for PostHog. The snippet in PostHog.astro starts opted out, so
+// capture only begins once someone accepts here.
+//
+// Choice is stored per browser in localStorage:
+//   "accepted" -> opt in on every load, no banner
+//   "declined" -> stay opted out, no banner
+//   unset      -> show the banner, capture nothing
+---
+
+<cookie-consent>
+	<div
+		id="cookie-banner"
+		role="dialog"
+		aria-label="Cookie consent"
+		aria-live="polite"
+		hidden
+		class="fixed inset-x-0 bottom-0 z-50 border-t border-gray-700 bg-bgColor/95 p-4 backdrop-blur sm:inset-x-4 sm:bottom-4 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:border"
+	>
+		<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+			<p class="text-sm">
+				I use cookies for analytics to see what's useful here. Nothing is collected unless you
+				accept. <a class="cactus-link-mobile inline-block sm:cactus-link" href="/privacy">Details</a
+				>.
+			</p>
+			<div class="flex shrink-0 gap-2">
+				<button
+					type="button"
+					data-consent="declined"
+					class="rounded-md px-3 py-1.5 text-sm ring-1 ring-gray-500 transition-colors hover:bg-gray-500/10"
+				>
+					Decline
+				</button>
+				<button
+					type="button"
+					data-consent="accepted"
+					class="rounded-md bg-accent px-3 py-1.5 text-sm text-bgColor transition-opacity hover:opacity-80"
+				>
+					Accept
+				</button>
+			</div>
+		</div>
+	</div>
+</cookie-consent>
+
+<script>
+	const STORAGE_KEY = "cookie-consent";
+
+	// Private browsing and blocked-storage modes throw on access rather than
+	// returning null, so every read and write has to tolerate failing.
+	function readChoice(): string | null {
+		try {
+			return localStorage.getItem(STORAGE_KEY);
+		} catch {
+			return null;
+		}
+	}
+
+	function storeChoice(choice: string) {
+		try {
+			localStorage.setItem(STORAGE_KEY, choice);
+		} catch {
+			// Choice can't persist; it still applies for this page view.
+		}
+	}
+
+	class CookieConsent extends HTMLElement {
+		banner: HTMLElement | null;
+
+		constructor() {
+			super();
+			this.banner = this.querySelector<HTMLElement>("#cookie-banner");
+
+			this.querySelectorAll<HTMLButtonElement>("[data-consent]").forEach((button) => {
+				button.addEventListener("click", () => this.choose(button.dataset.consent ?? "declined"));
+			});
+
+			// Lets the privacy page (or anywhere else) re-open the banner.
+			document.addEventListener("click", (event) => {
+				const trigger = (event.target as HTMLElement | null)?.closest("[data-cookie-preferences]");
+				if (trigger) {
+					event.preventDefault();
+					this.show();
+				}
+			});
+
+			this.applyStoredChoice();
+		}
+
+		applyStoredChoice() {
+			const choice = readChoice();
+
+			// "accepted" is already handled by PostHog.astro, which loads the SDK from
+			// <head> so the initial pageview isn't missed. Nothing to do here.
+			if (choice === "accepted" || choice === "declined") return;
+
+			this.show();
+		}
+
+		choose(choice: string) {
+			storeChoice(choice);
+
+			if (choice === "accepted") {
+				// Loads and initialises PostHog for the first time. Absent in dev builds
+				// and when no project key is configured, hence the optional call.
+				window.__loadPostHog?.();
+			} else {
+				// Only reachable if consent was previously accepted in this browser and
+				// is being withdrawn; stops capture without waiting for a reload.
+				window.posthog?.opt_out_capturing?.();
+			}
+
+			this.hide();
+		}
+
+		show() {
+			this.banner?.removeAttribute("hidden");
+		}
+
+		hide() {
+			this.banner?.setAttribute("hidden", "");
+		}
+	}
+
+	customElements.define("cookie-consent", CookieConsent);
+</script>
