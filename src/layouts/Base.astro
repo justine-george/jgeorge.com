@@ -5,6 +5,7 @@ import BaseHead from "@/components/BaseHead";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
+import PostHog from "@/components/PostHog";
 import { siteConfig } from "@/site-config";
 
 interface Props {
@@ -19,6 +20,7 @@ const {
 <html lang={siteConfig.lang} class="dark">
 	<head>
 		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
+		<PostHog />
 	</head>
 	<body>
 		<!-- <ThemeProvider /> -->
