@@ -1,0 +1,42 @@
+name: Update extension metrics
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # 2 AM UTC daily
+  workflow_dispatch: # allow running it by hand
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: Refresh Chrome Web Store user counts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+        # Fails the job if a listing can't be read, so a broken scrape is visible
+        # rather than silently leaving a stale count in place.
+      - name: Scrape user counts
+        run: node scripts/update-extension-metrics.mjs
+
+        # Only commit when a count actually moved. The store reports rounded values,
+        # so most runs change nothing and should not produce a commit.
+      - name: Commit if a count changed
+        run: |
+          if git diff --quiet; then
+            echo "No metric changes — nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update Chrome Web Store user counts"
+          git push
