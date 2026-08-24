@@ -40,6 +40,11 @@ const enabled = import.meta.env.PROD && Boolean(apiKey);
 				posthog.init(apiKey, {
 					api_host: apiHost,
 					defaults: "2026-05-30",
+					// The 2026-05-30 defaults set capture_pageview to "history_change", which
+					// only fires on pushState/replaceState. This is a static multi-page site —
+					// every navigation is a full page load — so that never fires and no
+					// $pageview is ever captured. Capture on load instead.
+					capture_pageview: true,
 				});
 			};
 
