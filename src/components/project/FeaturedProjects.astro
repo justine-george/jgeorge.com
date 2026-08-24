@@ -7,6 +7,43 @@ type Props = {
 };
 
 const { projects: featuredProjects } = Astro.props;
+
+const TABKEEPER_USERCOUNT_URL =
+	"https://project-metrics-flask.fly.dev/extensions/gpibgniomobngodpnikhheifblbpbbah/usercount";
+
+// Live count, falling back to the value in site.config.ts. The fetch must never
+// fail the build, so every failure path keeps the configured number instead.
+async function getTabkeeperUserCount(fallback: number | undefined) {
+	try {
+		const res = await fetch(TABKEEPER_USERCOUNT_URL, { signal: AbortSignal.timeout(10_000) });
+
+		if (!res.ok) {
+			console.warn(`[tabkeeper] usercount returned ${res.status}, using configured count`);
+			return fallback;
+		}
+
+		const data = (await res.json()) as { users?: string; source?: string };
+
+		if (!data.users) {
+			console.warn("[tabkeeper] usercount had no users field, using configured count");
+			return fallback;
+		}
+
+		// The endpoint reports whether it scraped the store or served its own stale
+		// copy. Surface that here so a frozen number shows up in the build log.
+		if (data.source === "fallback") {
+			console.warn("[tabkeeper] usercount is stale (source=fallback) — check the scraper");
+		}
+
+		return data.users;
+	} catch (error) {
+		console.warn(`[tabkeeper] usercount unreachable, using configured count: ${error}`);
+		return fallback;
+	}
+}
+
+const tabkeeperProject = featuredProjects.find((p) => p.title.includes("Tab Keeper"));
+const tabkeeperUserCount = await getTabkeeperUserCount(tabkeeperProject?.metrics?.users);
 ---
 
 <ul class="list-inside list-disc space-y-8">
@@ -55,7 +92,7 @@ const { projects: featuredProjects } = Astro.props;
 								focusable="false"
 							/>
 							<p class="project-metrics">
-								{project.metrics.users}
+								{project === tabkeeperProject ? tabkeeperUserCount : project.metrics.users}
 								weekly active users
 							</p>
 							<span class="sr-only">{"Weekly Active Users Count"}</span>
