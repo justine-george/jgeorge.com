@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import PostHog from "@/components/PostHog";
+import CookieConsent from "@/components/CookieConsent";
 import { siteConfig } from "@/site-config";
 
 interface Props {
@@ -30,5 +31,6 @@ const {
 			<slot />
 		</main>
 		<Footer />
+		<CookieConsent />
 	</body>
 </html>
