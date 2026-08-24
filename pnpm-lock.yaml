@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -35,9 +35,6 @@ dependencies:
   astro-expressive-code:
     specifier: ^0.32.4
     version: 0.32.4(astro@4.2.4)
-  astro-google-analytics:
-    specifier: ^1.0.3
-    version: 1.0.3
   astro-icon:
     specifier: ^1.1.0
     version: 1.1.1
@@ -2436,10 +2433,6 @@ packages:
       astro: 4.2.4(typescript@5.5.4)
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.32.4
-    dev: false
-
-  /astro-google-analytics@1.0.3:
-    resolution: {integrity: sha512-5bD7jA15yxVaUFVVEFG6KKMphYJ4AKP4+HSqCVBpTBnqh8LL0giTdAHpG9KJs3JaFbGQUTWP5Pqt8+twz7f55Q==}
     dev: false
 
   /astro-icon@1.1.1:
