@@ -1,4 +1,6 @@
 import type { Experience, Project, SiteConfig } from "@/types";
+// Written by .github/workflows/update-metrics.yml — edit the workflow, not the numbers.
+import extensionMetrics from "./data/extension-metrics.json";
 import cat1 from "./assets/cat_not_working_1.jpeg";
 import cat2 from "./assets/cat_not_working_2.jpeg";
 import cat3 from "./assets/cat_not_working_3.jpeg";
@@ -262,7 +264,7 @@ export const projects: Array<Project> = [
 		isFeatured: true,
 		thumbnail: tabkeeperThumbnail,
 		metrics: {
-			users: 4000,
+			users: extensionMetrics.tabKeeper.users,
 		},
 		ogImageLink:
 			"https://opengraph.githubassets.com/bc38a30fb87a8ce5e21ec69c9d91e1ca4c4eb1d137b407c125378acbdf7581b9/justine-george/tab-keeper-react-chrome-extension",
