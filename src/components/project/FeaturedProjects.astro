@@ -14,13 +14,13 @@ const { projects: featuredProjects } = Astro.props;
 		featuredProjects.map((project) => (
 			<li class="group flex list-none flex-col-reverse items-start gap-y-2 sm:flex-row sm:gap-x-4">
 				<a
-					class="mb-2 py-0 sm:mb-0 sm:py-2"
+					class="mb-2 block w-full max-w-[16rem] py-0 sm:mb-0 sm:max-w-[24rem] sm:py-2"
 					target="_blank"
 					rel="noopener noreferrer"
 					href={project.links.github}
 				>
 					<img
-						class="flex h-fit w-[16rem] min-w-[14rem] rounded-[0.3rem] border border-thumbnailBorderColor transition-all sm:w-[24rem] sm:brightness-90 sm:group-hover:border-thumbnailBorderColor sm:group-hover:brightness-100"
+						class="h-auto w-full rounded-[0.3rem] border border-thumbnailBorderColor transition-all sm:brightness-90 sm:group-hover:border-thumbnailBorderColor sm:group-hover:brightness-100"
 						src={project.thumbnail || project.ogImageLink}
 						alt={project.title}
 					/>

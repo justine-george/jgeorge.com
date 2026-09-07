@@ -26,13 +26,13 @@ const { project, as: Tag = "div" } = Astro.props;
 </Tag>
 <p class="project-description line-clamp-3 block">{project.description}</p>
 <a
-	class="mb-2 py-0 sm:mb-0 sm:py-1"
+	class="mb-2 block w-full max-w-[22rem] py-0 sm:mb-0 sm:max-w-[26rem] sm:py-1"
 	target="_blank"
 	rel="noopener noreferrer"
 	href={project.links.github}
 >
 	<img
-		class="flex h-fit w-[22rem] min-w-[20rem] rounded-[0.4rem] border border-thumbnailBorderColor transition-all sm:w-[26rem] sm:brightness-95 sm:group-hover:border-thumbnailBorderColor sm:group-hover:brightness-100"
+		class="h-auto w-full rounded-[0.4rem] border border-thumbnailBorderColor transition-all sm:brightness-95 sm:group-hover:border-thumbnailBorderColor sm:group-hover:brightness-100"
 		src={project.thumbnail || project.ogImageLink}
 		alt={project.title}
 	/>
